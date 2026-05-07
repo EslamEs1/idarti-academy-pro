@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>استعراض الدورات — منصة إدارتي</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../assets/css/output.css" />
+</head>
+<body class="bg-surface-50 text-text-base font-sans antialiased">
+<div class="min-h-screen flex">
+
+  <!-- ═══ SIDEBAR: Student, active = استعراض الدورات ═══ -->
+  <aside id="app-sidebar"
+    class="fixed inset-y-0 end-0 z-40 w-80 max-w-[85vw] bg-primary-900 flex flex-col translate-x-full transition-transform duration-200 ease-out lg:relative lg:inset-auto lg:sticky lg:top-0 lg:h-screen lg:w-72 lg:translate-x-0 lg:flex-shrink-0 lg:transition-none"
+    aria-label="قائمة الطالب">
+
+    <div class="flex h-16 items-center justify-between px-4 border-b border-primary-800 flex-shrink-0">
+      <a href="../../index.html" class="flex items-center gap-2 rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500">
+        <span class="text-xl font-extrabold text-white tracking-tight">إدارتي</span>
+        <span class="h-2 w-2 rounded-full bg-accent-500 flex-shrink-0" aria-hidden="true"></span>
+      </a>
+      <button data-sidebar-close aria-label="إغلاق القائمة"
+        class="lg:hidden inline-flex h-9 w-9 items-center justify-center rounded-lg text-white/70 hover:text-white hover:bg-primary-800 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+    </div>
+
+    <div class="px-4 pt-3 pb-1">
+      <span class="inline-flex items-center rounded-full bg-primary-800 px-2.5 py-1 text-xs font-medium text-accent-400">طالب</span>
+    </div>
+
+    <nav class="flex-1 overflow-y-auto py-2 scrollbar-hide" aria-label="روابط الطالب">
+      <ul class="space-y-0.5 px-3">
+
+        <!-- 1. الرئيسية -->
+        <li>
+          <a href="dashboard.html"
+             class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+            <span class="text-sm">الرئيسية</span>
+          </a>
+        </li>
+
+        <!-- 2. استعراض الدورات — ACTIVE -->
+        <li>
+          <a href="browse-courses.html"
+             class="is-active flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary-800 text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2"
+             aria-current="page">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+            <span class="text-sm font-semibold">استعراض الدورات</span>
+          </a>
+        </li>
+
+        <!-- 3. دوراتي -->
+        <li>
+          <a href="my-courses.html"
+             class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
+            <span class="text-sm">دوراتي</span>
+          </a>
+        </li>
+
+        <!-- 4. الحصص المباشرة -->
+        <li>
+          <a href="live-sessions.html"
+             class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg>
+            <span class="text-sm">الحصص المباشرة</span>
+          </a>
+        </li>
+
+        <!-- 5. الواجبات -->
+        <li>
+          <a href="assignments.html"
+             class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></svg>
+            <span class="text-sm">الواجبات</span>
+          </a>
+        </li>
+
+        <!-- 6. الاختبارات -->
+        <li>
+          <a href="exams.html"
+             class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+            <span class="text-sm">الاختبارات</span>
+          </a>
+        </li>
+
+        <!-- 7. الإنجازات -->
+        <li>
+          <a href="achievements.html"
+             class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></svg>
+            <span class="text-sm">الإنجازات</span>
+          </a>
+        </li>
+
+        <!-- 8. رحلتي التعليمية -->
+        <li>
+          <a href="learning-journey.html"
+             class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z"/><circle cx="12" cy="12" r="10"/></svg>
+            <span class="text-sm">رحلتي التعليمية</span>
+          </a>
+        </li>
+
+        <!-- 9. التقارير -->
+        <li>
+          <a href="reports.html"
+             class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><path d="M5 21v-6"/><path d="M12 21V3"/><path d="M19 21V9"/></svg>
+            <span class="text-sm">التقارير</span>
+          </a>
+        </li>
+
+        <!-- 10. المجتمع التعليمي -->
+        <li>
+          <a href="social-hub.html"
+             class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg>
+            <span class="text-sm">المجتمع التعليمي</span>
+          </a>
+        </li>
+
+        <!-- 11. لوحة المتميزين -->
+        <li>
+          <a href="leaderboard.html"
+             class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><path d="M10 14.66v1.626a2 2 0 0 1-.976 1.696A5 5 0 0 0 7 21.978"/><path d="M14 14.66v1.626a2 2 0 0 0 .976 1.696A5 5 0 0 1 17 21.978"/><path d="M18 9h1.5a1 1 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M6 9a6 6 0 0 0 12 0V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1z"/><path d="M6 9H4.5a1 1 0 0 1 0-5H6"/></svg>
+            <span class="text-sm">لوحة المتميزين</span>
+          </a>
+        </li>
+
+        <!-- 12. التقويم -->
+        <li>
+          <a href="calendar.html"
+             class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg>
+            <span class="text-sm">التقويم</span>
+          </a>
+        </li>
+
+        <!-- 13. خطة الأسبوع -->
+        <li>
+          <a href="weekly-plan.html"
+             class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></svg>
+            <span class="text-sm">خطة الأسبوع</span>
+          </a>
+        </li>
+
+        <!-- 14. سجل المدفوعات -->
+        <li>
+          <a href="payment-history.html"
+             class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
+            <span class="text-sm">سجل المدفوعات</span>
+          </a>
+        </li>
+
+        <!-- 15. الملف الشخصي -->
+        <li>
+          <a href="profile.html"
+             class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <span class="text-sm">الملف الشخصي</span>
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+
+    <div class="flex-shrink-0 px-3 pb-4 pt-2 border-t border-primary-800">
+      <a href="../../index.html"
+         class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/70 hover:bg-danger-700/30 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><path d="m16 17 5-5-5-5"/><path d="M21 12H9"/><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/></svg>
+        <span class="text-sm">تسجيل الخروج</span>
+      </a>
+    </div>
+
+  </aside>
+
+  <!-- Sidebar backdrop (mobile) -->
+  <div data-sidebar-backdrop class="fixed inset-0 z-30 bg-black/50 hidden lg:hidden" aria-hidden="true"></div>
+
+  <!-- ═══ MAIN COLUMN ═══ -->
+  <div class="flex flex-1 flex-col min-w-0">
+
+    <!-- ═══ HEADER ═══ -->
+    <header id="app-header"
+      class="sticky top-0 z-30 flex h-16 items-center justify-between gap-4 bg-white border-b border-slate-200 px-4 md:px-6 lg:px-8 flex-shrink-0">
+
+      <div class="flex items-center gap-3 min-w-0">
+        <button data-sidebar-open aria-label="فتح القائمة" aria-expanded="false"
+          class="lg:hidden inline-flex h-10 w-10 items-center justify-center rounded-full text-text-base hover:bg-surface-50 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg>
+          <span class="sr-only">فتح القائمة</span>
+        </button>
+        <div class="min-w-0">
+          <h1 class="text-base md:text-lg font-bold text-text-base leading-tight truncate">استعراض الدورات</h1>
+          <p class="text-xs text-text-muted leading-tight hidden md:block">8 دورات متاحة عبر 5 مسارات تعليمية</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-1.5 flex-shrink-0 relative">
+
+        <a href="notifications.html" aria-label="الإشعارات"
+          class="relative inline-flex h-10 w-10 items-center justify-center rounded-full text-text-base hover:bg-surface-50 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true"><path d="M10.268 21a2 2 0 0 0 3.464 0"/><path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"/></svg>
+          <span class="absolute -top-0.5 -end-0.5 inline-flex h-5 min-w-[1.25rem] items-center justify-center rounded-full bg-danger-600 px-1 text-[0.625rem] font-bold text-white leading-none" aria-label="3 إشعارات">3</span>
+        </a>
+
+        <a href="messages.html" aria-label="الرسائل"
+          class="relative inline-flex h-10 w-10 items-center justify-center rounded-full text-text-base hover:bg-surface-50 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/></svg>
+          <span class="absolute -top-0.5 -end-0.5 inline-flex h-5 min-w-[1.25rem] items-center justify-center rounded-full bg-accent-500 px-1 text-[0.625rem] font-bold text-white leading-none" aria-label="2 رسائل">2</span>
+        </a>
+
+        <div class="hidden md:block h-6 w-px bg-slate-200 mx-1" aria-hidden="true"></div>
+
+        <button type="button" data-dropdown-toggle="user-menu"
+          class="flex items-center gap-2.5 rounded-xl px-2 py-1.5 hover:bg-surface-50 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+          <div class="h-9 w-9 rounded-full bg-primary-700 text-white inline-flex items-center justify-center text-sm font-semibold flex-shrink-0">ع.م</div>
+          <div class="hidden md:block text-start min-w-0 max-w-[10rem]">
+            <p class="text-sm font-semibold text-text-base leading-tight truncate">عبد الرحمن مؤمن</p>
+            <p class="text-xs text-text-muted leading-tight truncate">طالب</p>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden md:block h-4 w-4 text-text-muted flex-shrink-0" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+
+        <div id="user-menu" data-dropdown
+             class="hidden absolute top-full end-0 mt-1 w-48 rounded-xl border border-slate-200 bg-white shadow-lg z-50 py-1">
+          <a href="profile.html" class="flex items-center gap-2.5 px-4 py-2.5 text-sm text-text-base hover:bg-surface-50 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 text-text-muted" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            الملف الشخصي
+          </a>
+          <div class="my-1 border-t border-slate-100" aria-hidden="true"></div>
+          <a href="../../index.html" class="flex items-center gap-2.5 px-4 py-2.5 text-sm text-danger-600 hover:bg-danger-50 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4" aria-hidden="true"><path d="m16 17 5-5-5-5"/><path d="M21 12H9"/><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/></svg>
+            تسجيل الخروج
+          </a>
+        </div>
+
+      </div>
+    </header>
+
+    <!-- ═══ BROWSE COURSES CONTENT ═══ -->
+    <main class="flex-1 overflow-y-auto p-4 md:p-6 lg:p-8">
+      <div class="max-w-screen-xl mx-auto space-y-6">
+
+        <!-- ── Block 1: Hero ── -->
+        <section id="bc-hero" class="bg-gradient-to-l from-primary-700 to-primary-900 text-white rounded-2xl p-6 md:p-8 shadow-md">
+          <h2 class="text-xl md:text-2xl font-bold leading-tight">اكتشف مساراتك التعليمية في إدارتي</h2>
+          <p class="text-white/85 text-sm md:text-base mt-2 leading-7 max-w-3xl">
+            تعلّم القرآن الكريم، اللغة العربية، الإنجليزية، الرياضيات، والدراسات الإسلامية —
+            مع معلمين معتمدين وأسعار مرنة تناسب الطلاب العرب وغير الناطقين بالعربية.
+          </p>
+          <div class="flex flex-wrap gap-2 mt-4">
+            <span class="inline-flex items-center gap-1.5 rounded-full bg-white/15 text-white px-3 py-1 text-xs font-semibold">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+              القرآن الكريم
+            </span>
+            <span class="inline-flex items-center gap-1.5 rounded-full bg-white/15 text-white px-3 py-1 text-xs font-semibold">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5" aria-hidden="true"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg>
+              اللغة العربية
+            </span>
+            <span class="inline-flex items-center gap-1.5 rounded-full bg-white/15 text-white px-3 py-1 text-xs font-semibold">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+              اللغة الإنجليزية
+            </span>
+            <span class="inline-flex items-center gap-1.5 rounded-full bg-white/15 text-white px-3 py-1 text-xs font-semibold">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5" aria-hidden="true"><rect width="16" height="20" x="4" y="2" rx="2"/><line x1="8" x2="16" y1="6" y2="6"/><line x1="16" x2="16" y1="14" y2="14"/><line x1="16" x2="16" y1="18" y2="18"/><line x1="8" x2="8" y1="14" y2="14"/><line x1="8" x2="8" y1="18" y2="18"/><line x1="12" x2="12" y1="14" y2="14"/><line x1="12" x2="12" y1="18" y2="18"/></svg>
+              الرياضيات
+            </span>
+            <span class="inline-flex items-center gap-1.5 rounded-full bg-white/15 text-white px-3 py-1 text-xs font-semibold">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5" aria-hidden="true"><line x1="3" x2="21" y1="22" y2="22"/><line x1="6" x2="6" y1="18" y2="22"/><line x1="10" x2="10" y1="18" y2="22"/><line x1="14" x2="14" y1="18" y2="22"/><line x1="18" x2="18" y1="18" y2="22"/><polygon points="1 14 12 2 23 14"/><line x1="3" x2="21" y1="14" y2="14"/></svg>
+              الدراسات الإسلامية
+            </span>
+          </div>
+        </section>
+
+        <!-- ── Block 2: Search + Filter bar ── -->
+        <section id="bc-search-filters" class="bg-white rounded-2xl p-5 md:p-6 shadow-sm border border-slate-200 space-y-4">
+          <div class="relative">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                 class="absolute top-1/2 -translate-y-1/2 start-3 h-4 w-4 text-text-muted pointer-events-none" aria-hidden="true">
+              <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+            </svg>
+            <input type="text"
+                   placeholder="ابحث عن دورة، معلم، أو مهارة..."
+                   class="block w-full rounded-xl border border-slate-200 bg-surface-50 ps-10 pe-4 py-2.5 text-sm placeholder:text-text-muted focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500" />
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <button type="button" class="inline-flex items-center gap-1.5 rounded-full bg-surface-100 hover:bg-surface-200 text-text-base px-3.5 py-1.5 text-sm font-medium border border-slate-200 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+              القرآن الكريم
+            </button>
+            <button type="button" class="inline-flex items-center gap-1.5 rounded-full bg-surface-100 hover:bg-surface-200 text-text-base px-3.5 py-1.5 text-sm font-medium border border-slate-200 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5" aria-hidden="true"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg>
+              العربية
+            </button>
+            <button type="button" class="inline-flex items-center gap-1.5 rounded-full bg-surface-100 hover:bg-surface-200 text-text-base px-3.5 py-1.5 text-sm font-medium border border-slate-200 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+              الإنجليزية
+            </button>
+            <button type="button" class="inline-flex items-center gap-1.5 rounded-full bg-surface-100 hover:bg-surface-200 text-text-base px-3.5 py-1.5 text-sm font-medium border border-slate-200 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5" aria-hidden="true"><rect width="16" height="20" x="4" y="2" rx="2"/><line x1="8" x2="16" y1="6" y2="6"/><line x1="16" x2="16" y1="14" y2="14"/><line x1="16" x2="16" y1="18" y2="18"/><line x1="8" x2="8" y1="14" y2="14"/><line x1="8" x2="8" y1="18" y2="18"/><line x1="12" x2="12" y1="14" y2="14"/><line x1="12" x2="12" y1="18" y2="18"/></svg>
+              الرياضيات
+            </button>
+            <button type="button" class="inline-flex items-center gap-1.5 rounded-full bg-surface-100 hover:bg-surface-200 text-text-base px-3.5 py-1.5 text-sm font-medium border border-slate-200 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5" aria-hidden="true"><line x1="3" x2="21" y1="22" y2="22"/><line x1="6" x2="6" y1="18" y2="22"/><line x1="10" x2="10" y1="18" y2="22"/><line x1="14" x2="14" y1="18" y2="22"/><line x1="18" x2="18" y1="18" y2="22"/><polygon points="1 14 12 2 23 14"/><line x1="3" x2="21" y1="14" y2="14"/></svg>
+              الدراسات الإسلامية
+            </button>
+            <button type="button" class="inline-flex items-center gap-1.5 rounded-full bg-surface-100 hover:bg-surface-200 text-text-base px-3.5 py-1.5 text-sm font-medium border border-slate-200 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              حصص خاصة
+            </button>
+            <button type="button" class="inline-flex items-center gap-1.5 rounded-full bg-surface-100 hover:bg-surface-200 text-text-base px-3.5 py-1.5 text-sm font-medium border border-slate-200 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              حصص جماعية
+            </button>
+          </div>
+        </section>
+
+        <!-- ── Block 3: Course Grid ── -->
+        <section id="bc-grid">
+          <h3 class="text-base font-semibold text-text-base mb-4">الدورات المتاحة (8)</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+
+            <!-- Card 1: قرآن المستوى الثالث — Recommended -->
+            <article class="relative bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow flex flex-col">
+              <span class="absolute top-3 end-3 inline-flex items-center gap-1 rounded-full bg-primary-100 text-primary-700 px-2.5 py-1 text-[0.625rem] font-bold uppercase tracking-wide z-10">
+                موصى بك
+              </span>
+              <div class="h-28 bg-gradient-to-l from-primary-50 to-primary-100 rounded-t-2xl flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-12 w-12 text-primary-600" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+              </div>
+              <div class="p-4 flex flex-col flex-1">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="inline-flex items-center rounded-full bg-info-100 text-info-700 px-2 py-0.5 text-[0.625rem] font-semibold">جماعية</span>
+                  <span class="inline-flex items-center rounded-full bg-slate-100 text-slate-600 px-2 py-0.5 text-[0.625rem] font-semibold">المستوى الثالث</span>
+                </div>
+                <h3 class="text-base font-bold text-text-base leading-tight">القرآن الكريم — المستوى الثالث</h3>
+                <p class="text-xs text-text-muted leading-6 mt-1.5">تجويد متقدم مع تفسير آيات مختارة ومراجعة حفظ الأجزاء الثلاثة الأخيرة.</p>
+                <div class="flex items-center gap-2 mt-3">
+                  <div class="h-7 w-7 rounded-full bg-primary-700 text-white inline-flex items-center justify-center text-[0.625rem] font-semibold flex-shrink-0">أ.أ</div>
+                  <div class="text-xs">
+                    <p class="font-semibold text-text-base leading-tight">الأستاذ أحمد</p>
+                    <p class="text-text-muted leading-tight">معلم القرآن الكريم</p>
+                  </div>
+                </div>
+                <p class="text-xs text-text-muted mt-2 inline-flex items-center gap-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3 w-3" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  3 أشهر · ساعة أسبوعياً
+                </p>
+                <div class="mt-4 pt-3 border-t border-slate-100">
+                  <div class="flex items-baseline gap-1">
+                    <span class="text-xl font-extrabold text-accent-700">600</span>
+                    <span class="text-sm font-medium text-text-base">ر.س / شهر (للطالب العربي)</span>
+                  </div>
+                  <p class="text-xs text-text-muted mt-1">للطلاب غير الناطقين بالعربية: <span class="font-semibold text-text-base">200 USD / شهر</span></p>
+                </div>
+                <a href="course-details.html" class="mt-4 inline-flex items-center justify-center gap-2 bg-primary-700 hover:bg-primary-800 text-white rounded-lg px-4 py-2 text-sm font-semibold transition-colors">
+                  عرض التفاصيل
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 rtl:rotate-180" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+                </a>
+              </div>
+            </article>
+
+            <!-- Card 2: قرآن للمبتدئين — Popular -->
+            <article class="relative bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow flex flex-col">
+              <span class="absolute top-3 end-3 inline-flex items-center gap-1 rounded-full bg-accent-100 text-accent-700 px-2.5 py-1 text-[0.625rem] font-bold uppercase tracking-wide z-10">
+                الأكثر طلباً
+              </span>
+              <div class="h-28 bg-gradient-to-l from-primary-50 to-primary-100 rounded-t-2xl flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-12 w-12 text-primary-600" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+              </div>
+              <div class="p-4 flex flex-col flex-1">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="inline-flex items-center rounded-full bg-info-100 text-info-700 px-2 py-0.5 text-[0.625rem] font-semibold">جماعية</span>
+                  <span class="inline-flex items-center rounded-full bg-slate-100 text-slate-600 px-2 py-0.5 text-[0.625rem] font-semibold">المستوى الأول</span>
+                </div>
+                <h3 class="text-base font-bold text-text-base leading-tight">القرآن الكريم — للمبتدئين</h3>
+                <p class="text-xs text-text-muted leading-6 mt-1.5">أساسيات النطق والتجويد مع حفظ الجزء الثلاثين وتقويم القراءة من المصحف.</p>
+                <div class="flex items-center gap-2 mt-3">
+                  <div class="h-7 w-7 rounded-full bg-primary-700 text-white inline-flex items-center justify-center text-[0.625rem] font-semibold flex-shrink-0">أ.أ</div>
+                  <div class="text-xs">
+                    <p class="font-semibold text-text-base leading-tight">الأستاذ أحمد</p>
+                    <p class="text-text-muted leading-tight">معلم القرآن الكريم</p>
+                  </div>
+                </div>
+                <p class="text-xs text-text-muted mt-2 inline-flex items-center gap-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3 w-3" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  3 أشهر · ساعة أسبوعياً
+                </p>
+                <div class="mt-4 pt-3 border-t border-slate-100">
+                  <div class="flex items-baseline gap-1">
+                    <span class="text-xl font-extrabold text-accent-700">500</span>
+                    <span class="text-sm font-medium text-text-base">ر.س / شهر (للطالب العربي)</span>
+                  </div>
+                  <p class="text-xs text-text-muted mt-1">للطلاب غير الناطقين بالعربية: <span class="font-semibold text-text-base">175 USD / شهر</span></p>
+                </div>
+                <a href="course-details.html" class="mt-4 inline-flex items-center justify-center gap-2 bg-primary-700 hover:bg-primary-800 text-white rounded-lg px-4 py-2 text-sm font-semibold transition-colors">
+                  عرض التفاصيل
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 rtl:rotate-180" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+                </a>
+              </div>
+            </article>
+
+            <!-- Card 3: البلاغة العربية — New -->
+            <article class="relative bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow flex flex-col">
+              <span class="absolute top-3 end-3 inline-flex items-center gap-1 rounded-full bg-success-100 text-success-700 px-2.5 py-1 text-[0.625rem] font-bold uppercase tracking-wide z-10">
+                جديد
+              </span>
+              <div class="h-28 bg-gradient-to-l from-accent-50 to-accent-100 rounded-t-2xl flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-12 w-12 text-accent-600" aria-hidden="true"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg>
+              </div>
+              <div class="p-4 flex flex-col flex-1">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="inline-flex items-center rounded-full bg-info-100 text-info-700 px-2 py-0.5 text-[0.625rem] font-semibold">جماعية</span>
+                  <span class="inline-flex items-center rounded-full bg-slate-100 text-slate-600 px-2 py-0.5 text-[0.625rem] font-semibold">متقدم</span>
+                </div>
+                <h3 class="text-base font-bold text-text-base leading-tight">البلاغة العربية المتقدمة</h3>
+                <p class="text-xs text-text-muted leading-6 mt-1.5">دراسة أساليب البيان والبديع والمعاني مع تطبيق عملي على نصوص أدبية مختارة.</p>
+                <div class="flex items-center gap-2 mt-3">
+                  <div class="h-7 w-7 rounded-full bg-primary-700 text-white inline-flex items-center justify-center text-[0.625rem] font-semibold flex-shrink-0">أ.أ</div>
+                  <div class="text-xs">
+                    <p class="font-semibold text-text-base leading-tight">الأستاذ أحمد</p>
+                    <p class="text-text-muted leading-tight">معلم اللغة العربية</p>
+                  </div>
+                </div>
+                <p class="text-xs text-text-muted mt-2 inline-flex items-center gap-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3 w-3" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  شهران · ساعة أسبوعياً
+                </p>
+                <div class="mt-4 pt-3 border-t border-slate-100">
+                  <div class="flex items-baseline gap-1">
+                    <span class="text-xl font-extrabold text-accent-700">550</span>
+                    <span class="text-sm font-medium text-text-base">ر.س / شهر (للطالب العربي)</span>
+                  </div>
+                  <p class="text-xs text-text-muted mt-1">للطلاب غير الناطقين بالعربية: <span class="font-semibold text-text-base">185 USD / شهر</span></p>
+                </div>
+                <a href="course-details.html" class="mt-4 inline-flex items-center justify-center gap-2 bg-primary-700 hover:bg-primary-800 text-white rounded-lg px-4 py-2 text-sm font-semibold transition-colors">
+                  عرض التفاصيل
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 rtl:rotate-180" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+                </a>
+              </div>
+            </article>
+
+            <!-- Card 4: النحو والصرف — Private, no badge -->
+            <article class="relative bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow flex flex-col">
+              <div class="h-28 bg-gradient-to-l from-accent-50 to-accent-100 rounded-t-2xl flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-12 w-12 text-accent-600" aria-hidden="true"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg>
+              </div>
+              <div class="p-4 flex flex-col flex-1">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="inline-flex items-center rounded-full bg-success-100 text-success-700 px-2 py-0.5 text-[0.625rem] font-semibold">خاصة</span>
+                  <span class="inline-flex items-center rounded-full bg-slate-100 text-slate-600 px-2 py-0.5 text-[0.625rem] font-semibold">متوسط</span>
+                </div>
+                <h3 class="text-base font-bold text-text-base leading-tight">النحو والصرف — حصص خاصة</h3>
+                <p class="text-xs text-text-muted leading-6 mt-1.5">إعراب الجمل وتحليلها، وتصريف الأفعال والأسماء بأسلوب تفاعلي شخصي.</p>
+                <div class="flex items-center gap-2 mt-3">
+                  <div class="h-7 w-7 rounded-full bg-primary-700 text-white inline-flex items-center justify-center text-[0.625rem] font-semibold flex-shrink-0">أ.أ</div>
+                  <div class="text-xs">
+                    <p class="font-semibold text-text-base leading-tight">الأستاذ أحمد</p>
+                    <p class="text-text-muted leading-tight">معلم اللغة العربية</p>
+                  </div>
+                </div>
+                <p class="text-xs text-text-muted mt-2 inline-flex items-center gap-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3 w-3" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  مرن · حسب الاتفاق
+                </p>
+                <div class="mt-4 pt-3 border-t border-slate-100">
+                  <div class="flex items-baseline gap-1">
+                    <span class="text-xl font-extrabold text-accent-700">700</span>
+                    <span class="text-sm font-medium text-text-base">ر.س / شهر (للطالب العربي)</span>
+                  </div>
+                  <p class="text-xs text-text-muted mt-1">للطلاب غير الناطقين بالعربية: <span class="font-semibold text-text-base">250 USD / شهر</span></p>
+                </div>
+                <a href="course-details.html" class="mt-4 inline-flex items-center justify-center gap-2 bg-primary-700 hover:bg-primary-800 text-white rounded-lg px-4 py-2 text-sm font-semibold transition-colors">
+                  عرض التفاصيل
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 rtl:rotate-180" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+                </a>
+              </div>
+            </article>
+
+            <!-- Card 5: الإنجليزية للناطقين بالعربية — Popular -->
+            <article class="relative bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow flex flex-col">
+              <span class="absolute top-3 end-3 inline-flex items-center gap-1 rounded-full bg-accent-100 text-accent-700 px-2.5 py-1 text-[0.625rem] font-bold uppercase tracking-wide z-10">
+                الأكثر طلباً
+              </span>
+              <div class="h-28 bg-gradient-to-l from-info-50 to-info-100 rounded-t-2xl flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-12 w-12 text-info-600" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+              </div>
+              <div class="p-4 flex flex-col flex-1">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="inline-flex items-center rounded-full bg-info-100 text-info-700 px-2 py-0.5 text-[0.625rem] font-semibold">جماعية</span>
+                  <span class="inline-flex items-center rounded-full bg-slate-100 text-slate-600 px-2 py-0.5 text-[0.625rem] font-semibold">مبتدئ – متوسط</span>
+                </div>
+                <h3 class="text-base font-bold text-text-base leading-tight">الإنجليزية للناطقين بالعربية</h3>
+                <p class="text-xs text-text-muted leading-6 mt-1.5">قواعد، مفردات، ومحادثة بسيطة مُصممة خصيصاً للطلاب العرب في مرحلة البدايات.</p>
+                <div class="flex items-center gap-2 mt-3">
+                  <div class="h-7 w-7 rounded-full bg-info-700 text-white inline-flex items-center justify-center text-[0.625rem] font-semibold flex-shrink-0">س.م</div>
+                  <div class="text-xs">
+                    <p class="font-semibold text-text-base leading-tight">الأستاذة سارة</p>
+                    <p class="text-text-muted leading-tight">معلمة اللغة الإنجليزية</p>
+                  </div>
+                </div>
+                <p class="text-xs text-text-muted mt-2 inline-flex items-center gap-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3 w-3" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  3 أشهر · ساعة أسبوعياً
+                </p>
+                <div class="mt-4 pt-3 border-t border-slate-100">
+                  <div class="flex items-baseline gap-1">
+                    <span class="text-xl font-extrabold text-accent-700">500</span>
+                    <span class="text-sm font-medium text-text-base">ر.س / شهر (للطالب العربي)</span>
+                  </div>
+                  <p class="text-xs text-text-muted mt-1">للطلاب غير الناطقين بالعربية: <span class="font-semibold text-text-base">175 USD / شهر</span></p>
+                </div>
+                <a href="course-details.html" class="mt-4 inline-flex items-center justify-center gap-2 bg-primary-700 hover:bg-primary-800 text-white rounded-lg px-4 py-2 text-sm font-semibold transition-colors">
+                  عرض التفاصيل
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 rtl:rotate-180" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+                </a>
+              </div>
+            </article>
+
+            <!-- Card 6: محادثة إنجليزية — Private, no badge -->
+            <article class="relative bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow flex flex-col">
+              <div class="h-28 bg-gradient-to-l from-info-50 to-info-100 rounded-t-2xl flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-12 w-12 text-info-600" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+              </div>
+              <div class="p-4 flex flex-col flex-1">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="inline-flex items-center rounded-full bg-success-100 text-success-700 px-2 py-0.5 text-[0.625rem] font-semibold">خاصة</span>
+                  <span class="inline-flex items-center rounded-full bg-slate-100 text-slate-600 px-2 py-0.5 text-[0.625rem] font-semibold">متوسط – متقدم</span>
+                </div>
+                <h3 class="text-base font-bold text-text-base leading-tight">محادثة إنجليزية — حصص خاصة</h3>
+                <p class="text-xs text-text-muted leading-6 mt-1.5">تدريب مكثف على المحادثة والنطق الصحيح مع متحدث أصلي في جلسات خاصة.</p>
+                <div class="flex items-center gap-2 mt-3">
+                  <div class="h-7 w-7 rounded-full bg-success-700 text-white inline-flex items-center justify-center text-[0.625rem] font-semibold flex-shrink-0">ج.م</div>
+                  <div class="text-xs">
+                    <p class="font-semibold text-text-base leading-tight">الأستاذ جيمس مارتن</p>
+                    <p class="text-text-muted leading-tight">معلم اللغة الإنجليزية</p>
+                  </div>
+                </div>
+                <p class="text-xs text-text-muted mt-2 inline-flex items-center gap-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3 w-3" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  مرن · حسب الاتفاق
+                </p>
+                <div class="mt-4 pt-3 border-t border-slate-100">
+                  <div class="flex items-baseline gap-1">
+                    <span class="text-xl font-extrabold text-accent-700">650</span>
+                    <span class="text-sm font-medium text-text-base">ر.س / شهر (للطالب العربي)</span>
+                  </div>
+                  <p class="text-xs text-text-muted mt-1">للطلاب غير الناطقين بالعربية: <span class="font-semibold text-text-base">230 USD / شهر</span></p>
+                </div>
+                <a href="course-details.html" class="mt-4 inline-flex items-center justify-center gap-2 bg-primary-700 hover:bg-primary-800 text-white rounded-lg px-4 py-2 text-sm font-semibold transition-colors">
+                  عرض التفاصيل
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 rtl:rotate-180" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+                </a>
+              </div>
+            </article>
+
+            <!-- Card 7: الرياضيات للمرحلة المتوسطة — no badge -->
+            <article class="relative bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow flex flex-col">
+              <div class="h-28 bg-gradient-to-l from-success-50 to-success-100 rounded-t-2xl flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-12 w-12 text-success-600" aria-hidden="true"><rect width="16" height="20" x="4" y="2" rx="2"/><line x1="8" x2="16" y1="6" y2="6"/><line x1="16" x2="16" y1="14" y2="14"/><line x1="16" x2="16" y1="18" y2="18"/><line x1="8" x2="8" y1="14" y2="14"/><line x1="8" x2="8" y1="18" y2="18"/><line x1="12" x2="12" y1="14" y2="14"/><line x1="12" x2="12" y1="18" y2="18"/></svg>
+              </div>
+              <div class="p-4 flex flex-col flex-1">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="inline-flex items-center rounded-full bg-info-100 text-info-700 px-2 py-0.5 text-[0.625rem] font-semibold">جماعية</span>
+                  <span class="inline-flex items-center rounded-full bg-slate-100 text-slate-600 px-2 py-0.5 text-[0.625rem] font-semibold">متوسط</span>
+                </div>
+                <h3 class="text-base font-bold text-text-base leading-tight">الرياضيات للمرحلة المتوسطة</h3>
+                <p class="text-xs text-text-muted leading-6 mt-1.5">جبر، هندسة، وإحصاء لمستوى المرحلة المتوسطة مع حل تدريبات الاختبارات الوزارية.</p>
+                <div class="flex items-center gap-2 mt-3">
+                  <div class="h-7 w-7 rounded-full bg-success-700 text-white inline-flex items-center justify-center text-[0.625rem] font-semibold flex-shrink-0">ع.ع</div>
+                  <div class="text-xs">
+                    <p class="font-semibold text-text-base leading-tight">الأستاذ عمر</p>
+                    <p class="text-text-muted leading-tight">معلم الرياضيات</p>
+                  </div>
+                </div>
+                <p class="text-xs text-text-muted mt-2 inline-flex items-center gap-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3 w-3" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  3 أشهر · ساعتان أسبوعياً
+                </p>
+                <div class="mt-4 pt-3 border-t border-slate-100">
+                  <div class="flex items-baseline gap-1">
+                    <span class="text-xl font-extrabold text-accent-700">450</span>
+                    <span class="text-sm font-medium text-text-base">ر.س / شهر (للطالب العربي)</span>
+                  </div>
+                  <p class="text-xs text-text-muted mt-1">للطلاب غير الناطقين بالعربية: <span class="font-semibold text-text-base">160 USD / شهر</span></p>
+                </div>
+                <a href="course-details.html" class="mt-4 inline-flex items-center justify-center gap-2 bg-primary-700 hover:bg-primary-800 text-white rounded-lg px-4 py-2 text-sm font-semibold transition-colors">
+                  عرض التفاصيل
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 rtl:rotate-180" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+                </a>
+              </div>
+            </article>
+
+            <!-- Card 8: السيرة النبوية والفقه — Recommended -->
+            <article class="relative bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow flex flex-col">
+              <span class="absolute top-3 end-3 inline-flex items-center gap-1 rounded-full bg-primary-100 text-primary-700 px-2.5 py-1 text-[0.625rem] font-bold uppercase tracking-wide z-10">
+                موصى بك
+              </span>
+              <div class="h-28 bg-gradient-to-l from-warning-50 to-warning-100 rounded-t-2xl flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-12 w-12 text-warning-600" aria-hidden="true"><line x1="3" x2="21" y1="22" y2="22"/><line x1="6" x2="6" y1="18" y2="22"/><line x1="10" x2="10" y1="18" y2="22"/><line x1="14" x2="14" y1="18" y2="22"/><line x1="18" x2="18" y1="18" y2="22"/><polygon points="1 14 12 2 23 14"/><line x1="3" x2="21" y1="14" y2="14"/></svg>
+              </div>
+              <div class="p-4 flex flex-col flex-1">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="inline-flex items-center rounded-full bg-info-100 text-info-700 px-2 py-0.5 text-[0.625rem] font-semibold">جماعية</span>
+                  <span class="inline-flex items-center rounded-full bg-slate-100 text-slate-600 px-2 py-0.5 text-[0.625rem] font-semibold">عام</span>
+                </div>
+                <h3 class="text-base font-bold text-text-base leading-tight">السيرة النبوية والفقه الميسر</h3>
+                <p class="text-xs text-text-muted leading-6 mt-1.5">أحداث السيرة النبوية ومسائل الفقه العملي اليومي بأسلوب مبسط ومناسب لجميع الأعمار.</p>
+                <div class="flex items-center gap-2 mt-3">
+                  <div class="h-7 w-7 rounded-full bg-warning-700 text-white inline-flex items-center justify-center text-[0.625rem] font-semibold flex-shrink-0">ش.ع</div>
+                  <div class="text-xs">
+                    <p class="font-semibold text-text-base leading-tight">الشيخ عبد الله</p>
+                    <p class="text-text-muted leading-tight">معلم الدراسات الإسلامية</p>
+                  </div>
+                </div>
+                <p class="text-xs text-text-muted mt-2 inline-flex items-center gap-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3 w-3" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  شهران · ساعة أسبوعياً
+                </p>
+                <div class="mt-4 pt-3 border-t border-slate-100">
+                  <div class="flex items-baseline gap-1">
+                    <span class="text-xl font-extrabold text-accent-700">400</span>
+                    <span class="text-sm font-medium text-text-base">ر.س / شهر (للطالب العربي)</span>
+                  </div>
+                  <p class="text-xs text-text-muted mt-1">للطلاب غير الناطقين بالعربية: <span class="font-semibold text-text-base">150 USD / شهر</span></p>
+                </div>
+                <a href="course-details.html" class="mt-4 inline-flex items-center justify-center gap-2 bg-primary-700 hover:bg-primary-800 text-white rounded-lg px-4 py-2 text-sm font-semibold transition-colors">
+                  عرض التفاصيل
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 rtl:rotate-180" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+                </a>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+  </div><!-- end main column -->
+</div><!-- end min-h-screen flex -->
+
+<script src="../../assets/js/main.js"></script>
+</body>
+</html>
