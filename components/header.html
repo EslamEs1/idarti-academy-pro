@@ -1,0 +1,96 @@
+<!-- REFERENCE — DO NOT LOAD AT RUNTIME.
+     Hand-copy this markup into each in-app page's <header id="app-header"> slot.
+     Replace every {{placeholder}} with page-specific values.
+     Adjust {{relativePathToMainJs}} based on page depth:
+       depth-1 (pages/ui-kit.html)     → ../assets/js/main.js
+       depth-2 (pages/<role>/*.html)   → ../../assets/js/main.js
+     The <script> tag belongs at the bottom of <body>, not inside <header>.
+-->
+
+<header id="app-header"
+  class="sticky top-0 z-30 flex h-16 items-center justify-between gap-4 bg-white border-b border-slate-200 px-4 md:px-6 lg:px-8 flex-shrink-0">
+
+  <!-- ── Start: burger + page title ──────────────────────────────── -->
+  <div class="flex items-center gap-3 min-w-0">
+
+    <!-- Mobile burger (hidden on desktop) -->
+    <button data-sidebar-open
+      aria-label="فتح القائمة"
+      aria-expanded="false"
+      class="lg:hidden inline-flex h-10 w-10 items-center justify-center rounded-full text-text-base hover:bg-surface-50 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true">
+        <path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/>
+      </svg>
+      <span class="sr-only">فتح القائمة</span>
+    </button>
+
+    <!-- Page title block -->
+    <div class="min-w-0">
+      <h1 class="text-base md:text-lg font-bold text-text-base leading-tight truncate">
+        {{pageTitleAr}}
+      </h1>
+      <!-- Remove <p> entirely when no subtitle is needed -->
+      <p class="text-xs text-text-muted leading-tight hidden md:block">{{pageSubtitleAr}}</p>
+    </div>
+  </div>
+
+  <!-- ── End: notification + message + user ──────────────────────── -->
+  <div class="flex items-center gap-1.5 flex-shrink-0">
+
+    <!-- Notification button -->
+    <!-- When notificationCount = 0: remove the <span> badge entirely -->
+    <!-- When notificationCount ≥ 100: replace count with "99+" -->
+    <button type="button"
+      aria-label="الإشعارات"
+      class="relative inline-flex h-10 w-10 items-center justify-center rounded-full text-text-base hover:bg-surface-50 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true">
+        <path d="M10.268 21a2 2 0 0 0 3.464 0"/><path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"/>
+      </svg>
+      <!-- Badge: show only when notificationCount > 0 -->
+      <span class="absolute -top-0.5 -end-0.5 inline-flex h-5 min-w-[1.25rem] items-center justify-center rounded-full bg-danger-600 px-1 text-[0.625rem] font-bold text-white leading-none">
+        {{notificationCount}}
+      </span>
+    </button>
+
+    <!-- Message button -->
+    <!-- Adjust href to the correct messages.html for each role -->
+    <a href="messages.html"
+      aria-label="الرسائل"
+      class="relative inline-flex h-10 w-10 items-center justify-center rounded-full text-text-base hover:bg-surface-50 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true">
+        <path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/>
+      </svg>
+      <!-- Badge: show only when messageCount > 0 -->
+      <span class="absolute -top-0.5 -end-0.5 inline-flex h-5 min-w-[1.25rem] items-center justify-center rounded-full bg-accent-500 px-1 text-[0.625rem] font-bold text-white leading-none">
+        {{messageCount}}
+      </span>
+    </a>
+
+    <!-- Vertical separator -->
+    <div class="hidden md:block h-6 w-px bg-slate-200 mx-1" aria-hidden="true"></div>
+
+    <!-- User block (opens dropdown on click) -->
+    <!-- data-dropdown-toggle targets a dropdown menu element (to be added per page) -->
+    <button type="button"
+      data-dropdown-toggle="user-menu"
+      class="flex items-center gap-2.5 rounded-xl px-2 py-1.5 hover:bg-surface-50 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+
+      <!-- Avatar: replace {{avatarColorBg}}, {{avatarColorText}}, {{initialsAr}} -->
+      <div class="h-9 w-9 rounded-full {{avatarColorBg}} {{avatarColorText}} inline-flex items-center justify-center text-sm font-semibold flex-shrink-0">
+        {{initialsAr}}
+      </div>
+
+      <!-- Name + role: hidden below md -->
+      <div class="hidden md:block text-start min-w-0 max-w-[10rem]">
+        <p class="text-sm font-semibold text-text-base leading-tight truncate">{{nameAr}}</p>
+        <p class="text-xs text-text-muted leading-tight truncate">{{roleAr}}</p>
+      </div>
+
+      <!-- Caret -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden md:block h-4 w-4 text-text-muted flex-shrink-0" aria-hidden="true">
+        <path d="m6 9 6 6 6-6"/>
+      </svg>
+    </button>
+
+  </div>
+</header>

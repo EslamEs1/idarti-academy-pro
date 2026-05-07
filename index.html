@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>إدارتي — منصة التعليم الإسلامي المتكاملة</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/css/output.css" />
+</head>
+<body class="min-h-screen bg-surface-50 text-text-base font-sans antialiased flex items-center justify-center p-4 lg:p-8">
+
+  <div class="w-full max-w-lg mx-auto">
+
+    <!-- Brand -->
+    <div class="text-center mb-8">
+      <div class="inline-flex items-center gap-2.5 mb-2">
+        <span class="text-4xl font-extrabold text-primary-900 tracking-tight">إدارتي</span>
+        <span class="h-3 w-3 rounded-full bg-accent-500 flex-shrink-0" aria-hidden="true"></span>
+      </div>
+      <p class="text-sm text-text-muted">منصة التعليم الإسلامي المتكاملة — إصدار 1.0</p>
+    </div>
+
+    <!-- Welcome card -->
+    <div class="bg-white rounded-2xl shadow-md border border-slate-200 p-8">
+
+      <div class="text-center mb-8">
+        <h1 class="text-xl font-bold text-text-base mb-1">أهلاً بك في منصة إدارتي التعليمية</h1>
+        <p class="text-sm text-text-muted">اختر الدور الذي تريد الدخول به</p>
+      </div>
+
+      <!-- 2×2 grid on sm+, single column on mobile -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+
+        <!-- Student -->
+        <a href="pages/student/dashboard.html"
+           class="flex flex-col items-center gap-3 rounded-xl border-2 border-primary-100 bg-primary-50 p-5 text-center hover:border-primary-500 hover:bg-primary-100 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary-500 focus-visible:outline-offset-2 group">
+          <div class="h-12 w-12 rounded-full bg-primary-900 text-white inline-flex items-center justify-center flex-shrink-0 group-hover:bg-primary-800 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
+          </div>
+          <div>
+            <p class="text-sm font-bold text-primary-900">الدخول كطالب</p>
+            <p class="text-xs text-text-muted mt-0.5">بوابة الطالب التعليمية</p>
+          </div>
+        </a>
+
+        <!-- Parent -->
+        <a href="pages/parent/dashboard.html"
+           class="flex flex-col items-center gap-3 rounded-xl border-2 border-accent-100 bg-accent-50 p-5 text-center hover:border-accent-500 hover:bg-accent-100 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2 group">
+          <div class="h-12 w-12 rounded-full bg-accent-500 text-primary-900 inline-flex items-center justify-center flex-shrink-0 group-hover:bg-accent-600 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/></svg>
+          </div>
+          <div>
+            <p class="text-sm font-bold text-primary-900">الدخول كولي أمر</p>
+            <p class="text-xs text-text-muted mt-0.5">متابعة أبنائك التعليمية</p>
+          </div>
+        </a>
+
+        <!-- Teacher -->
+        <a href="pages/teacher/dashboard.html"
+           class="flex flex-col items-center gap-3 rounded-xl border-2 border-success-100 bg-success-50 p-5 text-center hover:border-success-600 hover:bg-success-100 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-success-600 focus-visible:outline-offset-2 group">
+          <div class="h-12 w-12 rounded-full bg-success-700 text-white inline-flex items-center justify-center flex-shrink-0 group-hover:bg-success-600 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6" aria-hidden="true"><path d="M10 15H6a4 4 0 0 0-4 4v2"/><path d="m14.305 16.53.923-.382"/><path d="m15.228 13.852-.923-.383"/><path d="m16.852 12.228-.383-.923"/><path d="m16.852 17.772-.383.924"/><path d="m19.148 12.228.383-.923"/><path d="m19.53 18.696-.382-.924"/><path d="m20.772 13.852.924-.383"/><path d="m20.772 16.148.924.383"/><circle cx="18" cy="15" r="3"/><circle cx="9" cy="7" r="4"/></svg>
+          </div>
+          <div>
+            <p class="text-sm font-bold text-primary-900">الدخول كمعلم</p>
+            <p class="text-xs text-text-muted mt-0.5">إدارة الحصص والطلاب</p>
+          </div>
+        </a>
+
+        <!-- Admin -->
+        <a href="pages/admin/dashboard.html"
+           class="flex flex-col items-center gap-3 rounded-xl border-2 border-slate-200 bg-slate-50 p-5 text-center hover:border-slate-500 hover:bg-slate-100 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-slate-500 focus-visible:outline-offset-2 group">
+          <div class="h-12 w-12 rounded-full bg-primary-900 text-accent-400 inline-flex items-center justify-center flex-shrink-0 group-hover:bg-primary-800 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6" aria-hidden="true"><path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+          <div>
+            <p class="text-sm font-bold text-primary-900">الدخول كمدير منصة</p>
+            <p class="text-xs text-text-muted mt-0.5">الإدارة الشاملة للمنصة</p>
+          </div>
+        </a>
+
+      </div>
+
+      <!-- Auxiliary link -->
+      <p class="mt-6 text-center text-sm text-text-muted">
+        <a href="pages/ui-kit.html"
+           class="text-accent-600 hover:text-accent-700 hover:underline font-medium transition-colors">
+          عرض دليل الواجهة
+        </a>
+      </p>
+
+    </div>
+
+    <p class="text-center text-xs text-text-muted mt-6">منصة إدارتي التعليمية — جميع الحقوق محفوظة 2026</p>
+
+  </div>
+
+</body>
+</html>
