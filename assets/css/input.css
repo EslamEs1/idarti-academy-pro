@@ -27,7 +27,7 @@
 @media print {
   @page { margin: 0; size: A4 landscape; }
   body { background: white !important; }
-  #app-sidebar, #app-header, #cp-actions, #cp-prototype-notice, [data-sidebar-backdrop] {
+  #app-sidebar, #app-header, #cp-actions, #cp-prototype-notice, #mr-actions, #mr-prototype-notice, #cr-actions, #cr-prototype-notice, [data-sidebar-backdrop] {
     display: none !important;
   }
   #cp-certificate {
