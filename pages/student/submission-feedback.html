@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ملاحظات المعلم: تطبيق أحكام الميم الساكنة — منصة إدارتي</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../assets/css/output.css" />
+</head>
+<body class="bg-surface-50 text-text-base font-sans antialiased">
+<div class="min-h-screen flex">
+
+  <aside id="app-sidebar" class="fixed inset-y-0 end-0 z-40 w-80 max-w-[85vw] bg-primary-900 flex flex-col translate-x-full transition-transform duration-200 ease-out lg:relative lg:inset-auto lg:sticky lg:top-0 lg:h-screen lg:w-72 lg:translate-x-0 lg:flex-shrink-0 lg:transition-none" aria-label="قائمة الطالب">
+    <div class="flex h-16 items-center justify-between px-4 border-b border-primary-800 flex-shrink-0">
+      <a href="../../index.html" class="flex items-center gap-2 rounded"><span class="text-xl font-extrabold text-white tracking-tight">إدارتي</span><span class="h-2 w-2 rounded-full bg-accent-500" aria-hidden="true"></span></a>
+      <button data-sidebar-close aria-label="إغلاق القائمة" class="lg:hidden inline-flex h-9 w-9 items-center justify-center rounded-lg text-white/70 hover:text-white hover:bg-primary-800"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+    </div>
+    <div class="px-4 pt-3 pb-1"><span class="inline-flex items-center rounded-full bg-primary-800 px-2.5 py-1 text-xs font-medium text-accent-400">طالب</span></div>
+    <nav class="flex-1 overflow-y-auto py-2 scrollbar-hide" aria-label="روابط الطالب">
+      <ul class="space-y-0.5 px-3">
+        <li><a href="dashboard.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg><span class="text-sm">الرئيسية</span></a></li>
+        <li><a href="browse-courses.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg><span class="text-sm">استعراض الدورات</span></a></li>
+        <li><a href="my-courses.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/></svg><span class="text-sm">دوراتي</span></a></li>
+        <li><a href="live-sessions.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg><span class="text-sm">الحصص المباشرة</span></a></li>
+        <li><a href="assignments.html" aria-current="page" class="flex items-center gap-3 px-3 py-2.5 rounded-lg is-active"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg><span class="text-sm">الواجبات</span></a></li>
+        <li><a href="exams.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/></svg><span class="text-sm">الاختبارات</span></a></li>
+        <li><a href="achievements.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></svg><span class="text-sm">الإنجازات</span></a></li>
+        <li><a href="learning-journey.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true"><path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z"/><circle cx="12" cy="12" r="10"/></svg><span class="text-sm">رحلتي التعليمية</span></a></li>
+        <li><a href="reports.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true"><path d="M5 21v-6"/><path d="M12 21V3"/><path d="M19 21V9"/></svg><span class="text-sm">التقارير</span></a></li>
+        <li><a href="social-hub.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/></svg><span class="text-sm">المجتمع التعليمي</span></a></li>
+        <li><a href="leaderboard.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true"><path d="M10 14.66v1.626a2 2 0 0 1-.976 1.696A5 5 0 0 0 7 21.978"/><path d="M14 14.66v1.626a2 2 0 0 0 .976 1.696A5 5 0 0 1 17 21.978"/><path d="M18 9h1.5a1 1 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M6 9a6 6 0 0 0 12 0V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1z"/></svg><span class="text-sm">لوحة المتميزين</span></a></li>
+        <li><a href="calendar.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg><span class="text-sm">التقويم</span></a></li>
+        <li><a href="weekly-plan.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg><span class="text-sm">خطة الأسبوع</span></a></li>
+        <li><a href="payment-history.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true"><rect width="20" height="14" x="2" y="5" rx="2"/></svg><span class="text-sm">سجل المدفوعات</span></a></li>
+        <li><a href="profile.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span class="text-sm">الملف الشخصي</span></a></li>
+      </ul>
+    </nav>
+    <div class="flex-shrink-0 px-3 pb-4 pt-2 border-t border-primary-800"><a href="../../index.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/70 hover:bg-danger-700/30 hover:text-white"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true"><path d="m16 17 5-5-5-5"/><path d="M21 12H9"/></svg><span class="text-sm">تسجيل الخروج</span></a></div>
+  </aside>
+
+  <div class="flex flex-1 flex-col min-w-0">
+    <header id="app-header" class="sticky top-0 z-30 flex h-16 items-center justify-between gap-4 bg-white border-b border-slate-200 px-4 md:px-6 lg:px-8 flex-shrink-0">
+      <div class="flex items-center gap-3 min-w-0">
+        <button data-sidebar-open aria-label="فتح القائمة" class="lg:hidden inline-flex h-10 w-10 items-center justify-center rounded-full text-text-base hover:bg-surface-50"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg><span class="sr-only">فتح القائمة</span></button>
+        <div class="min-w-0"><h1 class="text-base md:text-lg font-bold leading-tight truncate">ملاحظات المعلم</h1><p class="text-xs text-text-muted leading-tight hidden md:block">المحاولة 1 — يحتاج تعديل</p></div>
+      </div>
+      <div class="flex items-center gap-1.5 flex-shrink-0 relative">
+        <a href="notifications.html" aria-label="الإشعارات" class="relative inline-flex h-10 w-10 items-center justify-center rounded-full text-text-base hover:bg-surface-50"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true"><path d="M10.268 21a2 2 0 0 0 3.464 0"/><path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"/></svg><span class="absolute -top-0.5 -end-0.5 inline-flex h-5 min-w-[1.25rem] items-center justify-center rounded-full bg-danger-600 px-1 text-[0.625rem] font-bold text-white" aria-label="3 إشعارات">3</span></a>
+        <a href="messages.html" aria-label="الرسائل" class="relative inline-flex h-10 w-10 items-center justify-center rounded-full text-text-base hover:bg-surface-50"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/></svg></a>
+        <div class="hidden md:block h-6 w-px bg-slate-200 mx-1" aria-hidden="true"></div>
+        <button type="button" data-dropdown-toggle="user-menu" class="flex items-center gap-2.5 rounded-xl px-2 py-1.5 hover:bg-surface-50">
+          <div class="h-9 w-9 rounded-full bg-primary-700 text-white inline-flex items-center justify-center text-sm font-semibold">ع.م</div>
+          <div class="hidden md:block text-start max-w-[10rem]"><p class="text-sm font-semibold leading-tight truncate">عبد الرحمن مؤمن</p><p class="text-xs text-text-muted leading-tight">طالب</p></div>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden md:block h-4 w-4 text-text-muted" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div id="user-menu" data-dropdown class="hidden absolute top-full end-0 mt-1 w-48 rounded-xl border border-slate-200 bg-white shadow-lg z-50 py-1">
+          <a href="profile.html" class="flex items-center gap-2.5 px-4 py-2.5 text-sm hover:bg-surface-50">الملف الشخصي</a>
+          <div class="my-1 border-t border-slate-100" aria-hidden="true"></div>
+          <a href="../../index.html" class="flex items-center gap-2.5 px-4 py-2.5 text-sm text-danger-600 hover:bg-danger-50">تسجيل الخروج</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-1 overflow-y-auto p-4 md:p-6 lg:p-8">
+      <div class="max-w-screen-lg mx-auto space-y-6">
+
+        <!-- Block 1: Header (breadcrumb + h1 + meta-strip) -->
+        <section id="sf-header">
+          <nav aria-label="breadcrumb" class="text-xs text-text-muted mb-3 flex items-center flex-wrap gap-1.5">
+            <a href="assignments.html" class="hover:text-primary-700 hover:underline">واجباتي</a>
+            <span aria-hidden="true">/</span>
+            <a href="assignment-details.html" class="hover:text-primary-700 hover:underline">تطبيق أحكام الميم الساكنة...</a>
+            <span aria-hidden="true">/</span>
+            <span aria-current="page" class="text-text-base">ملاحظات المعلم</span>
+          </nav>
+          <h2 class="text-xl md:text-2xl font-bold leading-tight">ملاحظات المعلم على: تطبيق أحكام الميم الساكنة من سورة البقرة (الآيات 1-10)</h2>
+          <div id="sf-meta" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 mt-4">
+            <div class="bg-slate-50 rounded-xl p-3"><p class="text-xs text-text-muted mb-1">الدورة</p><p class="text-sm font-semibold leading-tight">القرآن الكريم — المستوى الثالث</p></div>
+            <div class="bg-slate-50 rounded-xl p-3"><p class="text-xs text-text-muted mb-1">المعلم</p><div class="flex items-center gap-2"><div class="h-6 w-6 rounded-full bg-primary-700 text-white inline-flex items-center justify-center text-[0.5rem] font-semibold">أ.أ</div><p class="text-sm font-semibold leading-tight">الأستاذ أحمد</p></div></div>
+            <div class="bg-warning-50 border border-warning-200 rounded-xl p-3"><p class="text-xs text-text-muted mb-1">الحالة</p><span class="inline-flex items-center gap-1 rounded-full bg-warning-100 text-warning-700 px-2 py-0.5 text-xs font-semibold"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3 w-3" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>يحتاج تعديل</span></div>
+            <div class="bg-warning-50 border border-warning-200 rounded-xl p-3"><p class="text-xs text-text-muted mb-1">الدرجة</p><p class="text-lg font-bold text-warning-700 leading-none">65 <span class="text-xs font-normal">/ 100</span></p><div class="h-1.5 bg-slate-200 rounded-full overflow-hidden mt-1.5"><div class="h-full bg-warning-500" style="width: 65%"></div></div></div>
+            <div class="bg-slate-50 rounded-xl p-3"><p class="text-xs text-text-muted mb-1">تاريخ التقييم</p><p class="text-sm font-semibold leading-tight">7 مايو 2026</p><p class="text-xs text-text-muted">14:32 م</p></div>
+            <div class="bg-slate-50 rounded-xl p-3"><p class="text-xs text-text-muted mb-1">المحاولة</p><p class="text-sm font-semibold">1 من 3</p></div>
+          </div>
+        </section>
+
+        <!-- Block 2: Teacher feedback quote -->
+        <section id="sf-feedback" class="bg-white rounded-2xl p-5 md:p-6 shadow-sm border border-slate-200 border-r-4 border-r-primary-500">
+          <header class="flex items-center gap-3 mb-3">
+            <div class="h-12 w-12 rounded-xl bg-primary-700 text-white inline-flex items-center justify-center text-base font-bold flex-shrink-0">أ.أ</div>
+            <div>
+              <p class="text-sm font-semibold">الأستاذ أحمد بن عبد الله</p>
+              <p class="text-xs text-text-muted">معلم القرآن الكريم — 7 مايو 2026 — الساعة 14:32 م</p>
+            </div>
+          </header>
+          <blockquote class="text-sm md:text-base text-text-base leading-8 ps-4 border-s-2 border-primary-200">
+            أداؤك في هذه المحاولة جيد، عبد الرحمن، خاصة في الإظهار الشفوي عند ملاقاتك للحروف الخمسة في الآية الأولى — كان واضحاً وسليماً وأشكرك على الالتزام بمدة التسجيل. لكنّ تركيزك على الإخفاء الشفوي يحتاج تحسيناً ملحوظاً، خصوصاً في الآية الثالثة عند "لِمَنْ آمَنَ" — لاحظ كيف أظهرتَ الميم بدل إخفائها مع الباء بعدها. كذلك في الآية السابعة عند "وَعَلَى أَبْصَارِهِمْ" — كانت الغنّة قصيرة جداً، يجب أن تكون بمقدار حركتين. أنصحك بالاستماع إلى تسجيل الشيخ المنشاوي المرفق في تفاصيل الواجب، والتركيز على التطبيق الأبطأ في المحاولة الثانية حتى يتضح الفرق بين الأحكام الثلاثة. أنا واثق أنك ستتقن هذه الأحكام في المحاولة القادمة بإذن الله.
+          </blockquote>
+        </section>
+
+        <!-- Block 3: Strengths / Improvements -->
+        <section id="sf-strengths-improvements" class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div class="bg-success-50 border border-success-200 rounded-2xl p-5">
+            <div class="flex items-center gap-2 mb-4"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-success-700" aria-hidden="true"><path d="M7 10v12"/><path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H7V10z"/></svg><h2 class="text-base md:text-lg font-semibold text-success-900">نقاط قوّتك</h2></div>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-3 text-sm leading-7"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-success-600 flex-shrink-0 mt-0.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg><span>الإظهار الشفوي مطبَّق بشكل ممتاز في الآيات 1 و 2 و 5.</span></li>
+              <li class="flex items-start gap-3 text-sm leading-7"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-success-600 flex-shrink-0 mt-0.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg><span>الحفظ مكتمل بدون أخطاء جوهرية في كلمات الآيات.</span></li>
+              <li class="flex items-start gap-3 text-sm leading-7"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-success-600 flex-shrink-0 mt-0.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg><span>جودة التسجيل ممتازة — صوت واضح وخالٍ من التشويش.</span></li>
+              <li class="flex items-start gap-3 text-sm leading-7"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-success-600 flex-shrink-0 mt-0.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg><span>الالتزام بمدة التسجيل المطلوبة (60-90 ثانية).</span></li>
+            </ul>
+          </div>
+          <div class="bg-warning-50 border border-warning-200 rounded-2xl p-5">
+            <div class="flex items-center gap-2 mb-4"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-warning-700" aria-hidden="true"><path d="M12 13V2l8 4-8 4"/><path d="M20.561 10.222a9 9 0 1 1-12.55-5.29"/><path d="M8.002 9.997a5 5 0 1 0 8.9 2.02"/></svg><h2 class="text-base md:text-lg font-semibold text-warning-900">نقاط للتحسين</h2></div>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-3 text-sm leading-7"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-warning-600 flex-shrink-0 mt-0.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="8" y2="12"/><line x1="12" x2="12.01" y1="16" y2="16"/></svg><span>الإخفاء الشفوي يحتاج تركيزاً أكبر — خاصة عند الالتقاء بالباء في الآية 3.</span></li>
+              <li class="flex items-start gap-3 text-sm leading-7"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-warning-600 flex-shrink-0 mt-0.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="8" y2="12"/><line x1="12" x2="12.01" y1="16" y2="16"/></svg><span>الغنّة في الإدغام الشفوي قصيرة جداً — يجب أن تكون بمقدار حركتين.</span></li>
+              <li class="flex items-start gap-3 text-sm leading-7"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-warning-600 flex-shrink-0 mt-0.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="8" y2="12"/><line x1="12" x2="12.01" y1="16" y2="16"/></svg><span>توقفات قصيرة بين الكلمات تكسر الطلاقة — حاول الربط بين الآيات.</span></li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Block 4: Quran evaluation -->
+        <section id="sf-quran" class="bg-white rounded-2xl p-5 md:p-6 shadow-sm border border-slate-200">
+          <div class="flex items-center gap-2 mb-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-primary-700" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg><h2 class="text-base md:text-lg font-semibold">تقييم الأداء القرآني</h2></div>
+          <p class="text-xs text-text-muted leading-7 mb-5 italic bg-slate-50 rounded-lg p-3">المحاور أدناه تفصيلية لأدائك في كل مهارة. التقييم العام (65 / 100) في الأعلى تقدير شامل من المعلم يأخذ في الاعتبار جودة التسجيل، الالتزام، وسلوكيات الأدب القرآني إلى جانب المهارات.</p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-slate-50 rounded-xl p-4 md:p-5">
+              <div class="flex items-center justify-between mb-2"><h3 class="text-sm font-semibold flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 text-primary-700" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/></svg>الحفظ</h3><span class="text-lg font-bold text-success-700">85 <span class="text-xs font-normal">/ 100</span></span></div>
+              <div class="h-2 bg-slate-200 rounded-full overflow-hidden mb-2"><div class="h-full bg-success-500" style="width: 85%"></div></div>
+              <p class="text-xs text-text-muted leading-7">حفظ ممتاز للآيات — كلمات قليلة جداً تحتاج تثبيتاً.</p>
+            </div>
+            <div class="bg-slate-50 rounded-xl p-4 md:p-5">
+              <div class="flex items-center justify-between mb-2"><h3 class="text-sm font-semibold flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 text-primary-700" aria-hidden="true"><path d="m9 12 2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>التجويد</h3><span class="text-lg font-bold text-warning-700">60 <span class="text-xs font-normal">/ 100</span></span></div>
+              <div class="h-2 bg-slate-200 rounded-full overflow-hidden mb-2"><div class="h-full bg-warning-500" style="width: 60%"></div></div>
+              <p class="text-xs text-text-muted leading-7">تطبيق الإخفاء الشفوي يحتاج تركيزاً أكبر — خاصة عند الالتقاء بالباء.</p>
+            </div>
+            <div class="bg-slate-50 rounded-xl p-4 md:p-5">
+              <div class="flex items-center justify-between mb-2"><h3 class="text-sm font-semibold flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 text-primary-700" aria-hidden="true"><path d="M12 19v3"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><rect x="9" y="2" width="6" height="13" rx="3"/></svg>النطق</h3><span class="text-lg font-bold text-info-700">75 <span class="text-xs font-normal">/ 100</span></span></div>
+              <div class="h-2 bg-slate-200 rounded-full overflow-hidden mb-2"><div class="h-full bg-info-500" style="width: 75%"></div></div>
+              <p class="text-xs text-text-muted leading-7">النطق واضح بشكل عام — المخارج الجانبية تحتاج تعديلاً.</p>
+            </div>
+            <div class="bg-slate-50 rounded-xl p-4 md:p-5">
+              <div class="flex items-center justify-between mb-2"><h3 class="text-sm font-semibold flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 text-primary-700" aria-hidden="true"><path d="m13 19 9-7-9-7v4c-9 0-9 9-9 10 0 0 4-7 9-7z"/></svg>الطلاقة</h3><span class="text-lg font-bold text-info-700">70 <span class="text-xs font-normal">/ 100</span></span></div>
+              <div class="h-2 bg-slate-200 rounded-full overflow-hidden mb-2"><div class="h-full bg-info-500" style="width: 70%"></div></div>
+              <p class="text-xs text-text-muted leading-7">الطلاقة جيدة — حاول تقليل الوقفات الطويلة بين الآيات.</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mt-5 pt-5 border-t border-slate-100">
+            <div class="flex items-center gap-3 text-sm bg-warning-50 rounded-lg p-3"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-warning-600 flex-shrink-0" aria-hidden="true"><polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"/><line x1="12" x2="12" y1="8" y2="12"/><line x1="12" x2="12.01" y1="16" y2="16"/></svg><span><strong>عدد الأخطاء المرصودة:</strong> 5 أخطاء</span></div>
+            <div class="flex items-start gap-3 text-sm bg-info-50 rounded-lg p-3"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-info-600 flex-shrink-0 mt-0.5" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="m9 12 2 2 4-4"/></svg><span><strong>آيات تحتاج إلى مراجعة:</strong> الآيات 3 و 4 و 7</span></div>
+          </div>
+        </section>
+
+        <!-- Block 5: Resubmission panel -->
+        <section id="sf-resubmit" class="bg-warning-50 border-2 border-warning-300 rounded-2xl p-5 md:p-6">
+          <header class="flex items-start gap-4 mb-5">
+            <div class="flex-shrink-0 inline-flex items-center justify-center h-12 w-12 rounded-xl bg-warning-100 text-warning-700"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6" aria-hidden="true"><path d="M3 12a9 9 0 1 0 9-9 9.74 9.74 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg></div>
+            <div class="min-w-0">
+              <h2 class="text-base md:text-lg font-bold text-warning-900">المعلم طلب إعادة تسليم هذا الواجب</h2>
+              <p class="text-sm text-warning-800 mt-1 leading-7">راجع نقاط التحسين أعلاه ولاحظ الآيات التي تحتاج تركيزاً قبل المحاولة الثانية.</p>
+            </div>
+          </header>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-5">
+            <div class="bg-white rounded-xl p-3 flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-warning-600 flex-shrink-0" aria-hidden="true"><path d="M16 14v2.2l1.6 1"/><path d="M16 2v4"/><path d="M3 10h5"/><path d="M21 11.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h6"/><path d="M8 2v4"/><circle cx="16" cy="16" r="6"/></svg><div class="text-sm"><p class="text-xs text-text-muted">الموعد النهائي لإعادة التسليم</p><p class="font-semibold">10 مايو 2026 — قبل 23:59</p></div></div>
+            <div class="bg-white rounded-xl p-3 flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-warning-600 flex-shrink-0" aria-hidden="true"><path d="m17 2 4 4-4 4"/><path d="M3 11v-1a4 4 0 0 1 4-4h14"/><path d="m7 22-4-4 4-4"/><path d="M21 13v1a4 4 0 0 1-4 4H3"/></svg><div class="text-sm"><p class="text-xs text-text-muted">المحاولات المتبقية</p><p class="font-semibold">لديك محاولتان متبقيتان من أصل 3</p></div></div>
+          </div>
+          <a href="submit-assignment.html" class="inline-flex items-center gap-2 rounded-xl bg-primary-700 hover:bg-primary-800 text-white px-5 py-3 text-sm font-bold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4" aria-hidden="true"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/><path d="m21.854 2.147-10.94 10.939"/></svg>إعادة التسليم الآن</a>
+        </section>
+
+        <!-- Block 6: Attempts timeline -->
+        <section id="sf-attempts" class="bg-white rounded-2xl p-5 md:p-6 shadow-sm border border-slate-200">
+          <div class="flex items-center gap-2 mb-4"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-primary-700" aria-hidden="true"><path d="M3 12a9 9 0 1 0 9-9 9.74 9.74 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l4 2"/></svg><h2 class="text-base md:text-lg font-semibold">محاولاتك السابقة</h2></div>
+          <ol class="relative ps-8 border-s-2 border-slate-200 space-y-5">
+            <li class="relative">
+              <span class="absolute -inline-start-[2.4rem] inline-flex items-center justify-center h-8 w-8 rounded-full bg-warning-100 text-warning-700 ring-4 ring-white"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="currentColor"/></svg></span>
+              <div class="bg-warning-50 rounded-2xl border border-warning-200 p-4">
+                <div class="flex items-center justify-between mb-2 flex-wrap gap-2"><h3 class="text-sm font-semibold">المحاولة 1 — الحالية</h3><span class="inline-flex items-center gap-1 rounded-full bg-warning-100 text-warning-700 px-2 py-0.5 text-xs font-semibold">يحتاج تعديل</span></div>
+                <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-text-muted">
+                  <span>7 مايو 2026 — 09:14 ص</span><span aria-hidden="true">·</span>
+                  <span>تسجيل-الميم-الساكنة-المحاولة-1.mp3</span><span aria-hidden="true">·</span>
+                  <span class="font-semibold text-warning-700">65 / 100</span>
+                </div>
+              </div>
+            </li>
+          </ol>
+          <p class="text-xs text-text-muted italic mt-4 leading-7 bg-slate-50 rounded-lg p-3">* بعد إتمام المحاولة الثانية، ستظهر أعلى هذه القائمة وتنخفض المحاولة الأولى إلى الأسفل.</p>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <div data-sidebar-backdrop class="hidden fixed inset-0 z-30 bg-primary-950/60 backdrop-blur-sm lg:hidden" aria-hidden="true"></div>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>
