@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>لوحة الترتيب الشهري — منصة إدارتي</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../assets/css/output.css" />
+</head>
+<body class="bg-surface-50 text-text-base font-sans antialiased">
+<div class="min-h-screen flex">
+
+  <aside id="app-sidebar"
+    class="fixed inset-y-0 end-0 z-40 w-80 max-w-[85vw] bg-primary-900 flex flex-col translate-x-full transition-transform duration-200 ease-out lg:relative lg:inset-auto lg:sticky lg:top-0 lg:h-screen lg:w-72 lg:translate-x-0 lg:flex-shrink-0 lg:transition-none"
+    aria-label="قائمة الطالب">
+
+    <div class="flex h-16 items-center justify-between px-4 border-b border-primary-800 flex-shrink-0">
+      <a href="../../index.html" class="flex items-center gap-2 rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500">
+        <span class="text-xl font-extrabold text-white tracking-tight">إدارتي</span>
+        <span class="h-2 w-2 rounded-full bg-accent-500 flex-shrink-0" aria-hidden="true"></span>
+      </a>
+      <button data-sidebar-close aria-label="إغلاق القائمة"
+        class="lg:hidden inline-flex h-9 w-9 items-center justify-center rounded-lg text-white/70 hover:text-white hover:bg-primary-800 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+    </div>
+
+    <div class="px-4 pt-3 pb-1">
+      <span class="inline-flex items-center rounded-full bg-primary-800 px-2.5 py-1 text-xs font-medium text-accent-400">طالب</span>
+    </div>
+
+    <nav class="flex-1 overflow-y-auto py-2 scrollbar-hide" aria-label="روابط الطالب">
+      <ul class="space-y-0.5 px-3">
+        <li><a href="dashboard.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg><span class="text-sm">الرئيسية</span></a></li>
+        <li><a href="browse-courses.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg><span class="text-sm">استعراض الدورات</span></a></li>
+        <li><a href="my-courses.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg><span class="text-sm">دوراتي</span></a></li>
+        <li><a href="live-sessions.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg><span class="text-sm">الحصص المباشرة</span></a></li>
+        <li><a href="assignments.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></svg><span class="text-sm">الواجبات</span></a></li>
+        <li><a href="exams.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg><span class="text-sm">الاختبارات</span></a></li>
+        <li><a href="achievements.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></svg><span class="text-sm">الإنجازات</span></a></li>
+        <li><a href="learning-journey.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z"/><circle cx="12" cy="12" r="10"/></svg><span class="text-sm">رحلتي التعليمية</span></a></li>
+        <li><a href="reports.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><path d="M5 21v-6"/><path d="M12 21V3"/><path d="M19 21V9"/></svg><span class="text-sm">التقارير</span></a></li>
+        <li><a href="social-hub.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg><span class="text-sm">المجتمع التعليمي</span></a></li>
+        <li><a href="leaderboard.html" aria-current="page" class="flex items-center gap-3 px-3 py-2.5 rounded-lg is-active transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><path d="M10 14.66v1.626a2 2 0 0 1-.976 1.696A5 5 0 0 0 7 21.978"/><path d="M14 14.66v1.626a2 2 0 0 0 .976 1.696A5 5 0 0 1 17 21.978"/><path d="M18 9h1.5a1 1 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M6 9a6 6 0 0 0 12 0V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1z"/><path d="M6 9H4.5a1 1 0 0 1 0-5H6"/></svg><span class="text-sm">لوحة المتميزين</span></a></li>
+        <li><a href="calendar.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg><span class="text-sm">التقويم</span></a></li>
+        <li><a href="weekly-plan.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></svg><span class="text-sm">خطة الأسبوع</span></a></li>
+        <li><a href="payment-history.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg><span class="text-sm">سجل المدفوعات</span></a></li>
+        <li><a href="profile.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span class="text-sm">الملف الشخصي</span></a></li>
+      </ul>
+    </nav>
+
+    <div class="flex-shrink-0 px-3 pb-4 pt-2 border-t border-primary-800">
+      <a href="../../index.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/70 hover:bg-danger-700/30 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><path d="m16 17 5-5-5-5"/><path d="M21 12H9"/><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/></svg>
+        <span class="text-sm">تسجيل الخروج</span>
+      </a>
+    </div>
+
+  </aside>
+
+  <div class="flex flex-1 flex-col min-w-0">
+
+    <header id="app-header" class="sticky top-0 z-30 flex h-16 items-center justify-between gap-4 bg-white border-b border-slate-200 px-4 md:px-6 lg:px-8 flex-shrink-0">
+      <div class="flex items-center gap-3 min-w-0">
+        <button data-sidebar-open aria-label="فتح القائمة" aria-expanded="false" class="lg:hidden inline-flex h-10 w-10 items-center justify-center rounded-full text-text-base hover:bg-surface-50 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg>
+          <span class="sr-only">فتح القائمة</span>
+        </button>
+        <div class="min-w-0">
+          <h1 class="text-base md:text-lg font-bold text-text-base leading-tight truncate">لوحة الترتيب الشهري</h1>
+          <p class="text-xs text-text-muted leading-tight hidden md:block">عبد الرحمن مؤمن — الصف السادس</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-1.5 flex-shrink-0 relative">
+        <a href="notifications.html" aria-label="الإشعارات" class="relative inline-flex h-10 w-10 items-center justify-center rounded-full text-text-base hover:bg-surface-50 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true"><path d="M10.268 21a2 2 0 0 0 3.464 0"/><path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"/></svg>
+          <span class="absolute -top-0.5 -end-0.5 inline-flex h-5 min-w-[1.25rem] items-center justify-center rounded-full bg-danger-600 px-1 text-[0.625rem] font-bold text-white leading-none" aria-label="3 إشعارات">3</span>
+        </a>
+        <a href="messages.html" aria-label="الرسائل" class="relative inline-flex h-10 w-10 items-center justify-center rounded-full text-text-base hover:bg-surface-50 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/></svg>
+          <span class="absolute -top-0.5 -end-0.5 inline-flex h-5 min-w-[1.25rem] items-center justify-center rounded-full bg-accent-500 px-1 text-[0.625rem] font-bold text-white leading-none" aria-label="2 رسائل">2</span>
+        </a>
+        <div class="hidden md:block h-6 w-px bg-slate-200 mx-1" aria-hidden="true"></div>
+        <button type="button" data-dropdown-toggle="user-menu" class="flex items-center gap-2.5 rounded-xl px-2 py-1.5 hover:bg-surface-50 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+          <div class="h-9 w-9 rounded-full bg-primary-700 text-white inline-flex items-center justify-center text-sm font-semibold flex-shrink-0">ع.م</div>
+          <div class="hidden md:block text-start min-w-0 max-w-[10rem]">
+            <p class="text-sm font-semibold text-text-base leading-tight truncate">عبد الرحمن مؤمن</p>
+            <p class="text-xs text-text-muted leading-tight truncate">طالب</p>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden md:block h-4 w-4 text-text-muted flex-shrink-0" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div id="user-menu" data-dropdown class="hidden absolute top-full end-0 mt-1 w-48 rounded-xl border border-slate-200 bg-white shadow-lg z-50 py-1">
+          <a href="profile.html" class="flex items-center gap-2.5 px-4 py-2.5 text-sm text-text-base hover:bg-surface-50 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 text-text-muted" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            الملف الشخصي
+          </a>
+          <div class="my-1 border-t border-slate-100" aria-hidden="true"></div>
+          <a href="../../index.html" class="flex items-center gap-2.5 px-4 py-2.5 text-sm text-danger-600 hover:bg-danger-50 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4" aria-hidden="true"><path d="m16 17 5-5-5-5"/><path d="M21 12H9"/><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/></svg>
+            تسجيل الخروج
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-1 overflow-y-auto p-4 md:p-6 lg:p-8">
+      <div class="max-w-screen-xl mx-auto space-y-6">
+
+        <section id="lb-header">
+          <h2 class="text-xl md:text-2xl font-bold leading-tight">لوحة الترتيب الشهري</h2>
+          <p class="text-sm text-text-muted mt-2 leading-7">احتفل بتقدّمك — وقدّم التشجيع لزملائك</p>
+          <p class="text-xs text-slate-500 mt-1 leading-6">الترتيب يعكس الجهد، والتطوّر يعكس النموّ. كلاهما يستحق الاحتفاء.</p>
+        </section>
+
+        <ul id="lb-months" class="flex items-center gap-2 overflow-x-auto pb-2">
+          <li><a href="?month=2025-12" class="inline-flex items-center rounded-full bg-white border border-slate-200 px-3 py-1.5 text-xs font-medium text-text-muted hover:border-primary-300 transition-colors whitespace-nowrap">ديسمبر 2025</a></li>
+          <li><a href="?month=2026-01" class="inline-flex items-center rounded-full bg-white border border-slate-200 px-3 py-1.5 text-xs font-medium text-text-muted hover:border-primary-300 transition-colors whitespace-nowrap">يناير 2026</a></li>
+          <li><a href="?month=2026-02" class="inline-flex items-center rounded-full bg-white border border-slate-200 px-3 py-1.5 text-xs font-medium text-text-muted hover:border-primary-300 transition-colors whitespace-nowrap">فبراير 2026</a></li>
+          <li><a href="?month=2026-03" class="inline-flex items-center rounded-full bg-white border border-slate-200 px-3 py-1.5 text-xs font-medium text-text-muted hover:border-primary-300 transition-colors whitespace-nowrap">مارس 2026</a></li>
+          <li><button type="button" aria-current="page" class="inline-flex items-center rounded-full bg-accent-100 ring-2 ring-accent-500 px-3 py-1.5 text-xs font-medium text-accent-700 whitespace-nowrap">أبريل 2026</button></li>
+          <li><a href="?month=2026-05" class="inline-flex items-center rounded-full bg-white border border-slate-200 px-3 py-1.5 text-xs font-medium text-text-muted hover:border-primary-300 transition-colors whitespace-nowrap">مايو 2026</a></li>
+        </ul>
+
+        <section id="lb-personal" class="rounded-xl bg-amber-50/50 border border-amber-200/60 p-5 md:p-6">
+          <div class="flex flex-wrap items-center gap-4">
+            <div class="h-16 w-16 rounded-full bg-primary-700 text-white inline-flex items-center justify-center text-lg font-bold flex-shrink-0">ع.م</div>
+            <div class="space-y-1">
+              <h3 class="text-base font-bold text-text-base">عبد الرحمن مؤمن</h3>
+              <span class="inline-flex items-center rounded-full bg-primary-100 px-2.5 py-0.5 text-xs font-medium text-primary-700">الصف السادس — مسار القرآن الكريم</span>
+            </div>
+          </div>
+          <div class="flex flex-wrap items-center gap-3 mt-4">
+            <span class="text-sm font-medium text-text-base">ترتيبك في الترتيب العام: 6</span>
+            <span class="inline-flex items-center gap-1 text-sm font-semibold text-primary-700">215 نقطة</span>
+            <span class="inline-flex items-center gap-1 rounded-full bg-success-100 px-2.5 py-0.5 text-xs font-medium text-success-700">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3 w-3" aria-hidden="true"><path d="m18 15-6-6-6 6"/></svg>
+              صعدت 3 مراكز
+            </span>
+          </div>
+          <p class="text-sm text-slate-600 mt-3">استمرّ — أنت قريب من المراكز الأولى.</p>
+        </section>
+
+        <div id="lb-tabs" role="tablist" class="flex items-center gap-1 overflow-x-auto pb-2 border-b border-slate-200">
+          <button role="tab" aria-controls="lb-panel-overall" aria-selected="true" class="is-active inline-flex items-center whitespace-nowrap rounded-t-lg px-4 py-2.5 text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500">الترتيب العام</button>
+          <button role="tab" aria-controls="lb-panel-attendance" aria-selected="false" class="inline-flex items-center whitespace-nowrap rounded-t-lg px-4 py-2.5 text-sm font-medium text-text-muted hover:text-text-base transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500">الحضور</button>
+          <button role="tab" aria-controls="lb-panel-homework" aria-selected="false" class="inline-flex items-center whitespace-nowrap rounded-t-lg px-4 py-2.5 text-sm font-medium text-text-muted hover:text-text-base transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500">الواجبات</button>
+          <button role="tab" aria-controls="lb-panel-improved" aria-selected="false" class="inline-flex items-center whitespace-nowrap rounded-t-lg px-4 py-2.5 text-sm font-medium text-text-muted hover:text-text-base transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500">الأكثر تطوراً</button>
+          <button role="tab" aria-controls="lb-panel-quran" aria-selected="false" class="inline-flex items-center whitespace-nowrap rounded-t-lg px-4 py-2.5 text-sm font-medium text-text-muted hover:text-text-base transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500">تقدّم القرآن</button>
+          <button role="tab" aria-controls="lb-panel-participation" aria-selected="false" class="inline-flex items-center whitespace-nowrap rounded-t-lg px-4 py-2.5 text-sm font-medium text-text-muted hover:text-text-base transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500">المشاركة</button>
+        </div>
+
+        <details id="lb-explainer" open class="rounded-lg border border-info-100 bg-info-50 p-4">
+          <summary class="cursor-pointer font-medium text-info-700 flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 flex-shrink-0" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+            كيف نحسب النقاط؟
+          </summary>
+          <ul class="mt-3 space-y-2 text-sm text-slate-700">
+            <li><strong>الترتيب العام:</strong> مجموع نقاط كل الفئات.</li>
+            <li><strong>الحضور:</strong> 5 نقاط لكل حصة حضرت.</li>
+            <li><strong>الواجبات:</strong> 10 نقاط لكل واجب مقبول.</li>
+            <li><strong>الأكثر تطوراً:</strong> عدد المراكز التي صعدتها مقارنة بالشهر الماضي.</li>
+            <li><strong>تقدّم القرآن:</strong> نسبة إكمال محتوى المستوى.</li>
+            <li><strong>المشاركة:</strong> تفاعل في الحصص + التعليقات المعتمدة.</li>
+          </ul>
+        </details>
+
+        <div data-tabpanels>
+
+          <div role="tabpanel" id="lb-panel-overall">
+            <div class="overflow-x-auto rounded-xl border border-slate-200">
+              <table class="w-full text-sm">
+                <thead class="bg-slate-50 border-b border-slate-200">
+                  <tr>
+                    <th class="px-4 py-3 text-start font-medium text-text-muted">المركز</th>
+                    <th class="px-4 py-3 text-start font-medium text-text-muted">الطالب</th>
+                    <th class="px-4 py-3 text-start font-medium text-text-muted">النقاط</th>
+                    <th class="px-4 py-3 text-start font-medium text-text-muted">الشارة</th>
+                    <th class="px-4 py-3 text-start font-medium text-text-muted">التقدّم</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-100">
+                  <tr class="bg-amber-50/50"><td class="px-4 py-3 font-semibold">🥇 1</td><td class="px-4 py-3 font-medium">خالد ع.</td><td class="px-4 py-3">312</td><td class="px-4 py-3"><span class="inline-flex items-center rounded-full bg-accent-100 px-2 py-0.5 text-[0.625rem] font-medium text-accent-700">نجم الشهر</span></td><td class="px-4 py-3">95%</td></tr>
+                  <tr class="bg-slate-50/50"><td class="px-4 py-3 font-semibold">🥈 2</td><td class="px-4 py-3 font-medium">نورا ف.</td><td class="px-4 py-3">298</td><td class="px-4 py-3"><span class="inline-flex items-center rounded-full bg-success-100 px-2 py-0.5 text-[0.625rem] font-medium text-success-700">متفوّقة</span></td><td class="px-4 py-3">92%</td></tr>
+                  <tr class="bg-orange-50/30"><td class="px-4 py-3 font-semibold">🥉 3</td><td class="px-4 py-3 font-medium">يوسف ر.</td><td class="px-4 py-3">275</td><td class="px-4 py-3"><span class="inline-flex items-center rounded-full bg-primary-100 px-2 py-0.5 text-[0.625rem] font-medium text-primary-700">متقدّم</span></td><td class="px-4 py-3">88%</td></tr>
+                  <tr><td class="px-4 py-3">4</td><td class="px-4 py-3 font-medium">فاطمة ك.</td><td class="px-4 py-3">248</td><td class="px-4 py-3"><span class="inline-flex items-center rounded-full bg-info-100 px-2 py-0.5 text-[0.625rem] font-medium text-info-700">منتظمة</span></td><td class="px-4 py-3">85%</td></tr>
+                  <tr><td class="px-4 py-3">5</td><td class="px-4 py-3 font-medium">محمد س.</td><td class="px-4 py-3">232</td><td class="px-4 py-3"><span class="inline-flex items-center rounded-full bg-primary-100 px-2 py-0.5 text-[0.625rem] font-medium text-primary-700">مجتهد</span></td><td class="px-4 py-3">82%</td></tr>
+                  <tr class="bg-accent-50 ring-1 ring-inset ring-accent-500"><td class="px-4 py-3 font-bold">6</td><td class="px-4 py-3 font-bold">عبد الرحمن م.</td><td class="px-4 py-3 font-bold">215</td><td class="px-4 py-3"><span class="inline-flex items-center rounded-full bg-primary-100 px-2 py-0.5 text-[0.625rem] font-medium text-primary-700">قارئ متقن</span></td><td class="px-4 py-3 font-bold">78%</td></tr>
+                  <tr><td class="px-4 py-3">7</td><td class="px-4 py-3 font-medium">ليلى ر.</td><td class="px-4 py-3">198</td><td class="px-4 py-3"><span class="inline-flex items-center rounded-full bg-success-100 px-2 py-0.5 text-[0.625rem] font-medium text-success-700">متطوّرة</span></td><td class="px-4 py-3">73%</td></tr>
+                  <tr><td class="px-4 py-3">8</td><td class="px-4 py-3 font-medium">علي ج.</td><td class="px-4 py-3">184</td><td class="px-4 py-3"><span class="inline-flex items-center rounded-full bg-info-100 px-2 py-0.5 text-[0.625rem] font-medium text-info-700">مواظب</span></td><td class="px-4 py-3">70%</td></tr>
+                  <tr><td class="px-4 py-3">9</td><td class="px-4 py-3 font-medium">سارة م.</td><td class="px-4 py-3">168</td><td class="px-4 py-3"><span class="inline-flex items-center rounded-full bg-success-100 px-2 py-0.5 text-[0.625rem] font-medium text-success-700">منتظمة</span></td><td class="px-4 py-3">67%</td></tr>
+                  <tr><td class="px-4 py-3">10</td><td class="px-4 py-3 font-medium">حسن أ.</td><td class="px-4 py-3">160</td><td class="px-4 py-3"><span class="inline-flex items-center rounded-full bg-success-100 px-2 py-0.5 text-[0.625rem] font-medium text-success-700">محسن</span></td><td class="px-4 py-3">65%</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div role="tabpanel" id="lb-panel-attendance" class="hidden">
+            <div class="overflow-x-auto rounded-xl border border-slate-200">
+              <table class="w-full text-sm">
+                <thead class="bg-slate-50 border-b border-slate-200">
+                  <tr>
+                    <th class="px-4 py-3 text-start font-medium text-text-muted">المركز</th>
+                    <th class="px-4 py-3 text-start font-medium text-text-muted">الطالب</th>
+                    <th class="px-4 py-3 text-start font-medium text-text-muted">النقاط</th>
+                    <th class="px-4 py-3 text-start font-medium text-text-muted">الشارة</th>
+                    <th class="px-4 py-3 text-start font-medium text-text-muted">التقدّم</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-100">
+                  <tr class="bg-amber-50/50"><td class="px-4 py-3 font-semibold">🥇 1</td><td class="px-4 py-3 font-medium">خالد ع.</td><td class="px-4 py-3">100%</td><td class="px-4 py-3"><span class="inline-flex items-center rounded-full bg-accent-100 px-2 py-0.5 text-[0.625rem] font-medium text-accent-700">نجم الشهر</span></td><td class="px-4 py-3">100%</td></tr>
+                  <tr class="bg-slate-50/50"><td class="px-4 py-3 font-semibold">🥈 2</td><td class="px-4 py-3 font-medium">نورا ف.</td><td class="px-4 py-3">98%</td><td class="px-4 py-3"><span class="inline-flex items-center rounded-full bg-success-100 px-2 py-0.5 text-[0.625rem] font-medium text-success-700">متفوّقة</span></td><td class="px-4 py-3">98%</td></tr>
+                  <tr class="bg-orange-50/30"><td class="px-4 py-3 font-semibold">🥉 3</td><td class="px-4 py-3 font-medium">يوسف ر.</td><td class="px-4 py-3">95%</td><td class="px-4 py-3"><span class="inline-flex items-center rounded-full bg-primary-100 px-2 py-0.5 text-[0.625rem] font-medium text-primary-700">متقدّم</span></td><td class="px-4 py-3">95%</td></tr>
+                  <tr class="bg-accent-50 ring-1 ring-inset ring-accent-500"><td class="px-4 py-3 font-bold">4</td><td class="px-4 py-3 font-bold">عبد الرحمن م.</td><td class="px-4 py-3 font-bold">92%</td><td class="px-4 py-3"><span class="inline-flex items-center rounded-full bg-primary-100 px-2 py-0.5 text-[0.625rem] font-medium text-primary-700">قارئ متقن</span></td><td class="px-4 py-3 font-bold">92%</td></tr>
+                  <tr><td class="px-4 py-3">5</td><td class="px-4 py-3 font-medium">فاطمة ك.</td><td class="px-4 py-3">90%</td><td class="px-4 py-3"><span class="inline-flex items-center rounded-full bg-info-100 px-2 py-0.5 text-[0.625rem] font-medium text-info-700">منتظمة</span></td><td class="px-4 py-3">90%</td></tr>
+                  <tr><td class="px-4 py-3">6</td><td class="px-4 py-3 font-medium">محمد س.</td><td class="px-4 py-3">88%</td><td class="px-4 py-3"><span class="inline-flex items-center rounded-full bg-primary-100 px-2 py-0.5 text-[0.625rem] font-medium text-primary-700">مجتهد</span></td><td class="px-4 py-3">88%</td></tr>
+                  <tr><td class="px-4 py-3">7</td><td class="px-4 py-3 font-medium">علي ج.</td><td class="px-4 py-3">85%</td><td class="px-4 py-3"><span class="inline-flex items-center rounded-full bg-info-100 px-2 py-0.5 text-[0.625rem] font-medium text-info-700">مواظب</span></td><td class="px-4 py-3">85%</td></tr>
+                  <tr><td class="px-4 py-3">8</td><td class="px-4 py-3 font-medium">سارة م.</td><td class="px-4 py-3">78%</td><td class="px-4 py-3"><span class="inline-flex items-center rounded-full bg-success-100 px-2 py-0.5 text-[0.625rem] font-medium text-success-700">منتظمة</span></td><td class="px-4 py-3">78%</td></tr>
+                  <tr><td class="px-4 py-3">9</td><td class="px-4 py-3 font-medium">مريم ح.</td><td class="px-4 py-3">75%</td><td class="px-4 py-3"><span class="inline-flex items-center rounded-full bg-primary-100 px-2 py-0.5 text-[0.625rem] font-medium text-primary-700">متعلمة</span></td><td class="px-4 py-3">75%</td></tr>
+                  <tr><td class="px-4 py-3">10</td><td class="px-4 py-3 font-medium">حسن أ.</td><td class="px-4 py-3">72%</td><td class="px-4 py-3"><span class="inline-flex items-center rounded-full bg-success-100 px-2 py-0.5 text-[0.625rem] font-medium text-success-700">محسن</span></td><td class="px-4 py-3">72%</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div role="tabpanel" id="lb-panel-homework" class="hidden">
+            <div class="overflow-x-auto rounded-xl border border-slate-200">
+              <table class="w-full text-sm">
+                <thead class="bg-slate-50 border-b border-slate-200">
+                  <tr>
+                    <th class="px-4 py-3 text-start font-medium text-text-muted">المركز</th>
+                    <th class="px-4 py-3 text-start font-medium text-text-muted">الطالب</th>
+                    <th class="px-4 py-3 text-start font-medium text-text-muted">النقاط</th>
+                    <th class="px-4 py-3 text-start font-medium text-text-muted">الشارة</th>
+                    <th class="px-4 py-3 text-start font-medium text-text-muted">التقدّم</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-100">
+                  <tr class="bg-amber-50/50"><td class="px-4 py-3 font-semibold">🥇 1</td><td class="px-4 py-3 font-medium">نورا ف.</td><td class="px-4 py-3">100%</td><td class="px-4 py-3"><span class="inline-flex items-center rounded-full bg-success-100 px-2 py-0.5 text-[0.625rem] font-medium text-success-700">متفوّقة</span></td><td class="px-4 py-3">100%</td></tr>
+                  <tr class="bg-slate-50/50"><td class="px-4 py-3 font-semibold">🥈 2</td><td class="px-4 py-3 font-medium">خالد ع.</td><td class="px-4 py-3">98%</td><td class="px-4 py-3"><span class="inline-flex items-center rounded-full bg-accent-100 px-2 py-0.5 text-[0.625rem] font-medium text-accent-700">نجم الشهر</span></td><td class="px-4 py-3">98%</td></tr>
+                  <tr class="bg-orange-50/30"><td class="px-4 py-3 font-semibold">🥉 3</td><td class="px-4 py-3 font-medium">يوسف ر.</td><td class="px-4 py-3">95%</td><td class="px-4 py-3"><span class="inline-flex items-center rounded-full bg-primary-100 px-2 py-0.5 text-[0.625rem] font-medium text-primary-700">متقدّم</span></td><td class="px-4 py-3">95%</td></tr>
+                  <tr><td class="px-4 py-3">4</td><td class="px-4 py-3 font-medium">فاطمة ك.</td><td class="px-4 py-3">92%</td><td class="px-4 py-3"><span class="inline-flex items-center rounded-full bg-info-100 px-2 py-0.5 text-[0.625rem] font-medium text-info-700">منتظمة</span></td><td class="px-4 py-3">92%</td></tr>
+                  <tr class="bg-accent-50 ring-1 ring-inset ring-accent-500"><td class="px-4 py-3 font-bold">5</td><td class="px-4 py-3 font-bold">عبد الرحمن م.</td><td class="px-4 py-3 font-bold">88%</td><td class="px-4 py-3"><span class="inline-flex items-center rounded-full bg-primary-100 px-2 py-0.5 text-[0.625rem] font-medium text-primary-700">قارئ متقن</span></td><td class="px-4 py-3 font-bold">88%</td></tr>
+                  <tr><td class="px-4 py-3">6</td><td class="px-4 py-3 font-medium">محمد س.</td><td class="px-4 py-3">85%</td><td class="px-4 py-3"><span class="inline-flex items-center rounded-full bg-primary-100 px-2 py-0.5 text-[0.625rem] font-medium text-primary-700">مجتهد</span></td><td class="px-4 py-3">85%</td></tr>
+                  <tr><td class="px-4 py-3">7</td><td class="px-4 py-3 font-medium">علي ج.</td><td class="px-4 py-3">82%</td><td class="px-4 py-3"><span class="inline-flex items-center rounded-full bg-info-100 px-2 py-0.5 text-[0.625rem] font-medium text-info-700">مواظب</span></td><td class="px-4 py-3">82%</td></tr>
+                  <tr><td class="px-4 py-3">8</td><td class="px-4 py-3 font-medium">ليلى ر.</td><td class="px-4 py-3">78%</td><td class="px-4 py-3"><span class="inline-flex items-center rounded-full bg-success-100 px-2 py-0.5 text-[0.625rem] font-medium text-success-700">متطوّرة</span></td><td class="px-4 py-3">78%</td></tr>
+                  <tr><td class="px-4 py-3">9</td><td class="px-4 py-3 font-medium">سارة م.</td><td class="px-4 py-3">65%</td><td class="px-4 py-3"><span class="inline-flex items-center rounded-full bg-success-100 px-2 py-0.5 text-[0.625rem] font-medium text-success-700">منتظمة</span></td><td class="px-4 py-3">65%</td></tr>
+                  <tr><td class="px-4 py-3">10</td><td class="px-4 py-3 font-medium">مريم ح.</td><td class="px-4 py-3">60%</td><td class="px-4 py-3"><span class="inline-flex items-center rounded-full bg-primary-100 px-2 py-0.5 text-[0.625rem] font-medium text-primary-700">متعلمة</span></td><td class="px-4 py-3">60%</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div role="tabpanel" id="lb-panel-improved" class="hidden">
+            <p class="text-sm text-slate-600 mb-4 leading-7">هؤلاء الطلاب قطعوا أكبر مسافة من نقطة بدايتهم هذا الشهر — تطوّرهم يستحق الاحتفاء.</p>
+            <div class="overflow-x-auto rounded-xl border border-slate-200">
+              <table class="w-full text-sm">
+                <thead class="bg-slate-50 border-b border-slate-200">
+                  <tr>
+                    <th class="px-4 py-3 text-start font-medium text-text-muted">المركز</th>
+                    <th class="px-4 py-3 text-start font-medium text-text-muted">الطالب</th>
+                    <th class="px-4 py-3 text-start font-medium text-text-muted">النقاط</th>
+                    <th class="px-4 py-3 text-start font-medium text-text-muted">الشارة</th>
+                    <th class="px-4 py-3 text-start font-medium text-text-muted">التقدّم</th>
+                    <th class="px-4 py-3 text-start font-medium text-text-muted">الحركة</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-100">
+                  <tr class="bg-amber-50/50"><td class="px-4 py-3 font-semibold">🥇 1</td><td class="px-4 py-3 font-medium">ليلى ر.</td><td class="px-4 py-3">198</td><td class="px-4 py-3"><span class="inline-flex items-center rounded-full bg-accent-100 px-2 py-0.5 text-[0.625rem] font-medium text-accent-700">الأكثر تطوّراً</span></td><td class="px-4 py-3">73%</td><td class="px-4 py-3"><span class="inline-flex items-center gap-1 rounded-full bg-success-100 px-2 py-0.5 text-xs font-medium text-success-700">+12 مركزاً منذ مارس</span></td></tr>
+                  <tr class="bg-accent-50 ring-1 ring-inset ring-accent-500"><td class="px-4 py-3 font-bold">2</td><td class="px-4 py-3 font-bold">عبد الرحمن م.</td><td class="px-4 py-3 font-bold">215</td><td class="px-4 py-3"><span class="inline-flex items-center rounded-full bg-primary-100 px-2 py-0.5 text-[0.625rem] font-medium text-primary-700">قارئ متقن</span></td><td class="px-4 py-3 font-bold">78%</td><td class="px-4 py-3"><span class="inline-flex items-center gap-1 rounded-full bg-success-100 px-2 py-0.5 text-xs font-medium text-success-700">+4 مراكز</span></td></tr>
+                  <tr><td class="px-4 py-3">3</td><td class="px-4 py-3 font-medium">حسن أ.</td><td class="px-4 py-3">160</td><td class="px-4 py-3"><span class="inline-flex items-center rounded-full bg-success-100 px-2 py-0.5 text-[0.625rem] font-medium text-success-700">محسن</span></td><td class="px-4 py-3">65%</td><td class="px-4 py-3"><span class="inline-flex items-center gap-1 rounded-full bg-success-100 px-2 py-0.5 text-xs font-medium text-success-700">+3 مراكز</span></td></tr>
+                  <tr><td class="px-4 py-3">4</td><td class="px-4 py-3 font-medium">فاطمة ك.</td><td class="px-4 py-3">248</td><td class="px-4 py-3"><span class="inline-flex items-center rounded-full bg-info-100 px-2 py-0.5 text-[0.625rem] font-medium text-info-700">منتظمة</span></td><td class="px-4 py-3">85%</td><td class="px-4 py-3"><span class="inline-flex items-center gap-1 rounded-full bg-success-100 px-2 py-0.5 text-xs font-medium text-success-700">+3 مراكز</span></td></tr>
+                  <tr><td class="px-4 py-3">5</td><td class="px-4 py-3 font-medium">علي ج.</td><td class="px-4 py-3">184</td><td class="px-4 py-3"><span class="inline-flex items-center rounded-full bg-info-100 px-2 py-0.5 text-[0.625rem] font-medium text-info-700">مواظب</span></td><td class="px-4 py-3">70%</td><td class="px-4 py-3"><span class="inline-flex items-center gap-1 rounded-full bg-success-100 px-2 py-0.5 text-xs font-medium text-success-700">+2 مركز</span></td></tr>
+                  <tr><td class="px-4 py-3">6</td><td class="px-4 py-3 font-medium">يوسف ر.</td><td class="px-4 py-3">275</td><td class="px-4 py-3"><span class="inline-flex items-center rounded-full bg-primary-100 px-2 py-0.5 text-[0.625rem] font-medium text-primary-700">متقدّم</span></td><td class="px-4 py-3">88%</td><td class="px-4 py-3"><span class="inline-flex items-center gap-1 rounded-full bg-success-100 px-2 py-0.5 text-xs font-medium text-success-700">+2 مركز</span></td></tr>
+                  <tr><td class="px-4 py-3">7</td><td class="px-4 py-3 font-medium">محمد س.</td><td class="px-4 py-3">232</td><td class="px-4 py-3"><span class="inline-flex items-center rounded-full bg-primary-100 px-2 py-0.5 text-[0.625rem] font-medium text-primary-700">مجتهد</span></td><td class="px-4 py-3">82%</td><td class="px-4 py-3"><span class="inline-flex items-center gap-1 rounded-full bg-success-100 px-2 py-0.5 text-xs font-medium text-success-700">+1 مركز</span></td></tr>
+                  <tr><td class="px-4 py-3">8</td><td class="px-4 py-3 font-medium">سارة م.</td><td class="px-4 py-3">168</td><td class="px-4 py-3"><span class="inline-flex items-center rounded-full bg-success-100 px-2 py-0.5 text-[0.625rem] font-medium text-success-700">منتظمة</span></td><td class="px-4 py-3">67%</td><td class="px-4 py-3"><span class="inline-flex items-center gap-1 rounded-full bg-success-100 px-2 py-0.5 text-xs font-medium text-success-700">+1 مركز</span></td></tr>
+                  <tr><td class="px-4 py-3">9</td><td class="px-4 py-3 font-medium">نورا ف.</td><td class="px-4 py-3">298</td><td class="px-4 py-3"><span class="inline-flex items-center rounded-full bg-success-100 px-2 py-0.5 text-[0.625rem] font-medium text-success-700">متفوّقة</span></td><td class="px-4 py-3">92%</td><td class="px-4 py-3"><span class="inline-flex items-center gap-1 rounded-full bg-slate-100 px-2 py-0.5 text-xs font-medium text-slate-600">ثبّتت ترتيبها</span></td></tr>
+                  <tr><td class="px-4 py-3">10</td><td class="px-4 py-3 font-medium">خالد ع.</td><td class="px-4 py-3">312</td><td class="px-4 py-3"><span class="inline-flex items-center rounded-full bg-accent-100 px-2 py-0.5 text-[0.625rem] font-medium text-accent-700">نجم الشهر</span></td><td class="px-4 py-3">95%</td><td class="px-4 py-3"><span class="inline-flex items-center gap-1 rounded-full bg-slate-100 px-2 py-0.5 text-xs font-medium text-slate-600">ثبّت ترتيبه</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div role="tabpanel" id="lb-panel-quran" class="hidden">
+            <p class="text-sm text-slate-600 mb-4 leading-7">هذا الترتيب يشمل الطلاب المسجّلين في دورات القرآن — نقيس التقدّم في المسار، ليس الالتحاق به.</p>
+            <div class="overflow-x-auto rounded-xl border border-slate-200">
+              <table class="w-full text-sm">
+                <thead class="bg-slate-50 border-b border-slate-200">
+                  <tr>
+                    <th class="px-4 py-3 text-start font-medium text-text-muted">المركز</th>
+                    <th class="px-4 py-3 text-start font-medium text-text-muted">الطالب</th>
+                    <th class="px-4 py-3 text-start font-medium text-text-muted">النقاط</th>
+                    <th class="px-4 py-3 text-start font-medium text-text-muted">الشارة</th>
+                    <th class="px-4 py-3 text-start font-medium text-text-muted">التقدّم</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-100">
+                  <tr class="bg-amber-50/50"><td class="px-4 py-3 font-semibold">🥇 1</td><td class="px-4 py-3 font-medium">خالد ع.</td><td class="px-4 py-3">95</td><td class="px-4 py-3"><span class="inline-flex items-center rounded-full bg-accent-100 px-2 py-0.5 text-[0.625rem] font-medium text-accent-700">نجم الحفظ</span></td><td class="px-4 py-3">95%</td></tr>
+                  <tr class="bg-slate-50/50"><td class="px-4 py-3 font-semibold">🥈 2</td><td class="px-4 py-3 font-medium">يوسف ر.</td><td class="px-4 py-3">88</td><td class="px-4 py-3"><span class="inline-flex items-center rounded-full bg-success-100 px-2 py-0.5 text-[0.625rem] font-medium text-success-700">متفوّق التجويد</span></td><td class="px-4 py-3">88%</td></tr>
+                  <tr class="bg-orange-50/30"><td class="px-4 py-3 font-semibold">🥉 3</td><td class="px-4 py-3 font-medium">محمد س.</td><td class="px-4 py-3">85</td><td class="px-4 py-3"><span class="inline-flex items-center rounded-full bg-primary-100 px-2 py-0.5 text-[0.625rem] font-medium text-primary-700">حافظ ممتاز</span></td><td class="px-4 py-3">82%</td></tr>
+                  <tr class="bg-accent-50 ring-1 ring-inset ring-accent-500"><td class="px-4 py-3 font-bold">4</td><td class="px-4 py-3 font-bold">عبد الرحمن م.</td><td class="px-4 py-3 font-bold">80</td><td class="px-4 py-3"><span class="inline-flex items-center rounded-full bg-primary-100 px-2 py-0.5 text-[0.625rem] font-medium text-primary-700">قارئ متقن</span></td><td class="px-4 py-3 font-bold">78%</td></tr>
+                  <tr><td class="px-4 py-3">5</td><td class="px-4 py-3 font-medium">علي ج.</td><td class="px-4 py-3">72</td><td class="px-4 py-3"><span class="inline-flex items-center rounded-full bg-primary-100 px-2 py-0.5 text-[0.625rem] font-medium text-primary-700">متعلم</span></td><td class="px-4 py-3">70%</td></tr>
+                  <tr><td class="px-4 py-3">6</td><td class="px-4 py-3 font-medium">حسن أ.</td><td class="px-4 py-3">65</td><td class="px-4 py-3"><span class="inline-flex items-center rounded-full bg-success-100 px-2 py-0.5 text-[0.625rem] font-medium text-success-700">مجتهد</span></td><td class="px-4 py-3">65%</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="text-xs text-text-muted mt-3">6 طلاب مسجّلين في دورات القرآن — هؤلاء جميعهم في القائمة</p>
+          </div>
+
+          <div role="tabpanel" id="lb-panel-participation" class="hidden">
+            <div class="overflow-x-auto rounded-xl border border-slate-200">
+              <table class="w-full text-sm">
+                <thead class="bg-slate-50 border-b border-slate-200">
+                  <tr>
+                    <th class="px-4 py-3 text-start font-medium text-text-muted">المركز</th>
+                    <th class="px-4 py-3 text-start font-medium text-text-muted">الطالب</th>
+                    <th class="px-4 py-3 text-start font-medium text-text-muted">النقاط</th>
+                    <th class="px-4 py-3 text-start font-medium text-text-muted">الشارة</th>
+                    <th class="px-4 py-3 text-start font-medium text-text-muted">التقدّم</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-100">
+                  <tr class="bg-amber-50/50"><td class="px-4 py-3 font-semibold">🥇 1</td><td class="px-4 py-3 font-medium">نورا ف.</td><td class="px-4 py-3">95</td><td class="px-4 py-3"><span class="inline-flex items-center rounded-full bg-success-100 px-2 py-0.5 text-[0.625rem] font-medium text-success-700">متفوّقة</span></td><td class="px-4 py-3">95%</td></tr>
+                  <tr class="bg-slate-50/50"><td class="px-4 py-3 font-semibold">🥈 2</td><td class="px-4 py-3 font-medium">خالد ع.</td><td class="px-4 py-3">90</td><td class="px-4 py-3"><span class="inline-flex items-center rounded-full bg-accent-100 px-2 py-0.5 text-[0.625rem] font-medium text-accent-700">نجم الشهر</span></td><td class="px-4 py-3">90%</td></tr>
+                  <tr class="bg-orange-50/30"><td class="px-4 py-3 font-semibold">🥉 3</td><td class="px-4 py-3 font-medium">فاطمة ك.</td><td class="px-4 py-3">88</td><td class="px-4 py-3"><span class="inline-flex items-center rounded-full bg-info-100 px-2 py-0.5 text-[0.625rem] font-medium text-info-700">منتظمة</span></td><td class="px-4 py-3">88%</td></tr>
+                  <tr><td class="px-4 py-3">4</td><td class="px-4 py-3 font-medium">يوسف ر.</td><td class="px-4 py-3">82</td><td class="px-4 py-3"><span class="inline-flex items-center rounded-full bg-primary-100 px-2 py-0.5 text-[0.625rem] font-medium text-primary-700">متقدّم</span></td><td class="px-4 py-3">82%</td></tr>
+                  <tr><td class="px-4 py-3">5</td><td class="px-4 py-3 font-medium">محمد س.</td><td class="px-4 py-3">78</td><td class="px-4 py-3"><span class="inline-flex items-center rounded-full bg-primary-100 px-2 py-0.5 text-[0.625rem] font-medium text-primary-700">مجتهد</span></td><td class="px-4 py-3">78%</td></tr>
+                  <tr><td class="px-4 py-3">6</td><td class="px-4 py-3 font-medium">سارة م.</td><td class="px-4 py-3">72</td><td class="px-4 py-3"><span class="inline-flex items-center rounded-full bg-success-100 px-2 py-0.5 text-[0.625rem] font-medium text-success-700">منتظمة</span></td><td class="px-4 py-3">72%</td></tr>
+                  <tr class="bg-accent-50 ring-1 ring-inset ring-accent-500"><td class="px-4 py-3 font-bold">7</td><td class="px-4 py-3 font-bold">عبد الرحمن م.</td><td class="px-4 py-3 font-bold">68</td><td class="px-4 py-3"><span class="inline-flex items-center rounded-full bg-primary-100 px-2 py-0.5 text-[0.625rem] font-medium text-primary-700">قارئ متقن</span></td><td class="px-4 py-3 font-bold">68%</td></tr>
+                  <tr><td class="px-4 py-3">8</td><td class="px-4 py-3 font-medium">علي ج.</td><td class="px-4 py-3">65</td><td class="px-4 py-3"><span class="inline-flex items-center rounded-full bg-info-100 px-2 py-0.5 text-[0.625rem] font-medium text-info-700">مواظب</span></td><td class="px-4 py-3">65%</td></tr>
+                  <tr><td class="px-4 py-3">9</td><td class="px-4 py-3 font-medium">ليلى ر.</td><td class="px-4 py-3">60</td><td class="px-4 py-3"><span class="inline-flex items-center rounded-full bg-success-100 px-2 py-0.5 text-[0.625rem] font-medium text-success-700">متطوّرة</span></td><td class="px-4 py-3">60%</td></tr>
+                  <tr><td class="px-4 py-3">10</td><td class="px-4 py-3 font-medium">مريم ح.</td><td class="px-4 py-3">55</td><td class="px-4 py-3"><span class="inline-flex items-center rounded-full bg-primary-100 px-2 py-0.5 text-[0.625rem] font-medium text-primary-700">متعلمة</span></td><td class="px-4 py-3">55%</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+
+        <section id="lb-closing" class="rounded-xl bg-accent-50 border border-accent-200/60 p-5 md:p-6 text-center space-y-3">
+          <h3 class="text-base font-bold text-text-base">لم تظهر في القائمة هذا الشهر؟</h3>
+          <p class="text-sm text-slate-600 leading-7">كل طالب يمشي على وتيرته. تابع جهدك، وستظهر نتيجتك في الأشهر القادمة.</p>
+          <a href="monthly-report.html" class="inline-flex items-center justify-center rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">اقرأ تقريرك الشهري</a>
+        </section>
+
+      </div>
+    </main>
+
+  </div>
+
+</div>
+
+<script src="../../assets/js/main.js"></script>
+</body>
+</html>
