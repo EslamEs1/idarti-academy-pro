@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>إعدادات الإشعارات — منصة إدارتي</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../assets/css/output.css" />
+</head>
+<body class="bg-surface-50 text-text-base font-sans antialiased">
+<div class="min-h-screen flex">
+
+  <aside id="app-sidebar"
+    class="fixed inset-y-0 end-0 z-40 w-80 max-w-[85vw] bg-primary-900 flex flex-col translate-x-full transition-transform duration-200 ease-out lg:relative lg:inset-auto lg:sticky lg:top-0 lg:h-screen lg:w-72 lg:translate-x-0 lg:flex-shrink-0 lg:transition-none"
+    aria-label="قائمة الإدارة">
+
+    <div class="flex h-16 items-center justify-between px-4 border-b border-primary-800 flex-shrink-0">
+      <a href="../../index.html" class="flex items-center gap-2 rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500">
+        <span class="text-xl font-extrabold text-white tracking-tight">إدارتي</span>
+        <span class="h-2 w-2 rounded-full bg-accent-500 flex-shrink-0" aria-hidden="true"></span>
+      </a>
+      <button data-sidebar-close aria-label="إغلاق القائمة"
+        class="lg:hidden inline-flex h-9 w-9 items-center justify-center rounded-lg text-white/70 hover:text-white hover:bg-primary-800 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+    </div>
+
+    <div class="px-4 pt-3 pb-1">
+      <span class="inline-flex items-center rounded-full bg-accent-700/30 px-2.5 py-1 text-xs font-medium text-accent-300">مدير المنصة</span>
+    </div>
+
+    <nav class="flex-1 overflow-y-auto py-2" aria-label="روابط الإدارة">
+      <ul class="space-y-0.5 px-3">
+
+        <li>
+          <a href="dashboard.html"
+             class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+            <span class="text-sm">الرئيسية</span>
+          </a>
+        </li>
+
+        <li class="pt-3 pb-1">
+          <p class="px-3 text-[0.65rem] font-semibold uppercase tracking-widest text-white/35">إدارة المستخدمين</p>
+        </li>
+
+        <li>
+          <a href="students.html"
+             class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
+            <span class="text-sm">الطلاب</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="families.html"
+             class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/></svg>
+            <span class="text-sm">العائلات</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="teachers.html"
+             class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><path d="M10 15H6a4 4 0 0 0-4 4v2"/><path d="m14.305 16.53.923-.382"/><path d="m15.228 13.852-.923-.383"/><path d="m16.852 12.228-.383-.923"/><path d="m16.852 17.772-.383.924"/><path d="m19.148 12.228.383-.923"/><path d="m19.53 18.696-.382-.924"/><path d="m20.772 13.852.924-.383"/><path d="m20.772 16.148.924.383"/><circle cx="18" cy="15" r="3"/><circle cx="9" cy="7" r="4"/></svg>
+            <span class="text-sm">المعلمون</span>
+          </a>
+        </li>
+
+        <li class="pt-3 pb-1">
+          <p class="px-3 text-[0.65rem] font-semibold uppercase tracking-widest text-white/35">الأكاديمي</p>
+        </li>
+
+        <li>
+          <a href="courses.html"
+             class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+            <span class="text-sm">الدورات</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="live-sessions.html"
+             class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg>
+            <span class="text-sm">الحصص المباشرة</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="assignments.html"
+             class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></svg>
+            <span class="text-sm">الواجبات</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="exams.html"
+             class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+            <span class="text-sm">الاختبارات</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="certificates.html"
+             class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></svg>
+            <span class="text-sm">الشهادات</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="reports.html"
+             class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><path d="M5 21v-6"/><path d="M12 21V3"/><path d="M19 21V9"/></svg>
+            <span class="text-sm">التقارير</span>
+          </a>
+        </li>
+
+        <li class="pt-3 pb-1">
+          <p class="px-3 text-[0.65rem] font-semibold uppercase tracking-widest text-white/35">المالية</p>
+        </li>
+
+        <li>
+          <a href="payments.html"
+             class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
+            <span class="text-sm">المدفوعات</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="invoices.html"
+             class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><path d="M12 17V7"/><path d="M16 8h-6a2 2 0 0 0 0 4h4a2 2 0 0 1 0 4H8"/><path d="M4 3a1 1 0 0 1 1-1 1.3 1.3 0 0 1 .7.2l.933.6a1.3 1.3 0 0 0 1.4 0l.934-.6a1.3 1.3 0 0 1 1.4 0l.933.6a1.3 1.3 0 0 0 1.4 0l.933-.6a1.3 1.3 0 0 1 1.4 0l.934.6a1.3 1.3 0 0 0 1.4 0l.933-.6A1.3 1.3 0 0 1 19 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1 1.3 1.3 0 0 1-.7-.2l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.934.6a1.3 1.3 0 0 1-1.4 0l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-1.4 0l-.934-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-.7.2 1 1 0 0 1-1-1z"/></svg>
+            <span class="text-sm">الفواتير</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="tax-settings.html"
+             class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><line x1="19" x2="5" y1="5" y2="19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg>
+            <span class="text-sm">إعدادات الضريبة</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="family-balances.html"
+             class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"/></svg>
+            <span class="text-sm">أرصدة العائلات</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="teacher-finance.html"
+             class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><path d="M11 15h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 17"/><path d="m7 21 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.75-2.91l-4.2 3.9"/><path d="m2 16 6 6"/><circle cx="16" cy="9" r="2.9"/><circle cx="6" cy="5" r="3"/></svg>
+            <span class="text-sm">مالية المعلمين</span>
+          </a>
+        </li>
+
+        <li class="pt-3 pb-1">
+          <p class="px-3 text-[0.65rem] font-semibold uppercase tracking-widest text-white/35">النظام</p>
+        </li>
+
+        <li>
+          <a href="roles-permissions.html"
+             class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+            <span class="text-sm">الأدوار والصلاحيات</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="social-hub.html"
+             class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg>
+            <span class="text-sm">المجتمع التعليمي</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="platform-settings.html" aria-current="page"
+             class="flex items-center gap-3 px-3 py-2.5 rounded-lg is-active transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915"/><circle cx="12" cy="12" r="3"/></svg>
+            <span class="text-sm">إعدادات المنصة</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="audit-log.html"
+             class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/><line x1="16" x2="8" y1="17" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            <span class="text-sm">سجل المراجعة</span>
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+
+    <div class="flex-shrink-0 px-3 pb-4 pt-2 border-t border-primary-800">
+      <a href="../../index.html"
+         class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/70 hover:bg-danger-700/30 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><path d="m16 17 5-5-5-5"/><path d="M21 12H9"/><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/></svg>
+        <span class="text-sm">تسجيل الخروج</span>
+      </a>
+    </div>
+
+  </aside>
+
+  <div class="flex flex-1 flex-col min-w-0">
+
+    <header id="app-header"
+      class="sticky top-0 z-30 flex h-16 items-center justify-between gap-4 bg-white border-b border-slate-200 px-4 md:px-6 lg:px-8 flex-shrink-0">
+
+      <div class="flex items-center gap-3 min-w-0">
+        <button data-sidebar-open aria-label="فتح القائمة" aria-expanded="false"
+          class="lg:hidden inline-flex h-10 w-10 items-center justify-center rounded-full text-text-base hover:bg-surface-50 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg>
+          <span class="sr-only">فتح القائمة</span>
+        </button>
+        <div class="min-w-0">
+          <h1 class="text-base md:text-lg font-bold text-text-base leading-tight truncate">لوحة الإدارة</h1>
+          <p class="text-xs text-text-muted leading-tight hidden md:block">نظرة عامة — أبريل 2026</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-1.5 flex-shrink-0 relative">
+
+        <button type="button" aria-label="الإشعارات"
+          class="relative inline-flex h-10 w-10 items-center justify-center rounded-full text-text-base hover:bg-surface-50 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true"><path d="M10.268 21a2 2 0 0 0 3.464 0"/><path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"/></svg>
+          <span class="absolute -top-0.5 -end-0.5 inline-flex h-5 min-w-[1.25rem] items-center justify-center rounded-full bg-danger-600 px-1 text-[0.625rem] font-bold text-white leading-none" aria-label="12 إشعاراً">12</span>
+        </button>
+
+        <a href="messages.html" aria-label="الرسائل"
+          class="relative inline-flex h-10 w-10 items-center justify-center rounded-full text-text-base hover:bg-surface-50 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/></svg>
+          <span class="absolute -top-0.5 -end-0.5 inline-flex h-5 min-w-[1.25rem] items-center justify-center rounded-full bg-accent-500 px-1 text-[0.625rem] font-bold text-white leading-none" aria-label="3 رسائل">3</span>
+        </a>
+
+        <div class="hidden md:block h-6 w-px bg-slate-200 mx-1" aria-hidden="true"></div>
+
+        <button type="button" data-dropdown-toggle="user-menu"
+          class="flex items-center gap-2.5 rounded-xl px-2 py-1.5 hover:bg-surface-50 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+          <div class="h-9 w-9 rounded-full bg-primary-900 text-accent-400 inline-flex items-center justify-center text-sm font-semibold flex-shrink-0">م.م</div>
+          <div class="hidden md:block text-start min-w-0 max-w-[10rem]">
+            <p class="text-sm font-semibold text-text-base leading-tight truncate">مدير المنصة</p>
+            <p class="text-xs text-text-muted leading-tight truncate">مدير المنصة</p>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden md:block h-4 w-4 text-text-muted flex-shrink-0" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+
+        <div id="user-menu" data-dropdown
+             class="hidden absolute top-full end-0 mt-1 w-48 rounded-xl border border-slate-200 bg-white shadow-lg z-50 py-1">
+          <a href="platform-settings.html"
+             class="flex items-center gap-2.5 px-4 py-2.5 text-sm text-text-base hover:bg-surface-50 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 text-text-muted" aria-hidden="true"><path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915"/><circle cx="12" cy="12" r="3"/></svg>
+            إعدادات المنصة
+          </a>
+          <div class="my-1 border-t border-slate-100" aria-hidden="true"></div>
+          <a href="../../index.html"
+             class="flex items-center gap-2.5 px-4 py-2.5 text-sm text-danger-600 hover:bg-danger-50 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4" aria-hidden="true"><path d="m16 17 5-5-5-5"/><path d="M21 12H9"/><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/></svg>
+            تسجيل الخروج
+          </a>
+        </div>
+
+      </div>
+    </header>
+
+    <main class="flex-1 overflow-y-auto p-4 md:p-6 lg:p-8">
+
+      <nav class="flex items-center gap-2 text-sm text-text-muted mb-6" aria-label="مسار التنقل">
+        <a href="platform-settings.html" class="hover:text-accent-600 transition-colors">إعدادات المنصة</a>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5 flex-shrink-0" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+        <span class="text-text-base font-semibold">إعدادات الإشعارات</span>
+      </nav>
+
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
+        <div>
+          <h1 class="text-xl md:text-2xl font-extrabold text-text-base">إعدادات الإشعارات</h1>
+          <p class="text-sm text-text-muted mt-1">التحكم في القنوات والفئات المُرسَلة من المنصة</p>
+        </div>
+        <button type="button" class="inline-flex items-center gap-2 rounded-lg bg-success-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-success-700 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-success-500 focus-visible:outline-offset-2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4" aria-hidden="true"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+          حفظ جميع التغييرات
+        </button>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+        <div class="lg:col-span-2">
+          <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-5 md:p-6">
+            <div class="mb-6">
+              <h2 class="text-base font-bold text-text-base">الفئات والقنوات</h2>
+              <p class="text-sm text-text-muted mt-1">الفئات المعطّلة لا تُرسَل أي إشعار، حتى لو كانت القناة مفعّلة على المنصة</p>
+            </div>
+
+            <div class="overflow-x-auto">
+              <table class="w-full">
+                <thead>
+                  <tr class="border-b border-slate-200">
+                    <th class="text-start text-sm font-semibold text-text-base pb-3 pe-4 min-w-[200px]">الفئة</th>
+                    <th class="text-center text-sm font-semibold text-text-base pb-3 px-3">المنصة</th>
+                    <th class="text-center text-sm font-semibold text-text-base pb-3 px-3">البريد</th>
+                    <th class="text-center text-sm font-semibold text-text-base pb-3 px-3">واتساب</th>
+                    <th class="text-center text-sm font-semibold text-text-base pb-3 px-3">SMS</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="border-b border-slate-100">
+                    <td class="py-4 pe-4">
+                      <p class="text-sm font-semibold text-text-base">تذكير الواجبات</p>
+                      <p class="text-xs text-text-muted mt-0.5">يُرسَل قبل 24 ساعة من موعد تسليم الواجب وعند تجاوز الموعد</p>
+                    </td>
+                    <td class="py-4 text-center px-3">
+                      <label class="relative inline-flex cursor-pointer items-center">
+                        <input type="checkbox" class="peer sr-only" checked>
+                        <div class="h-6 w-11 rounded-full bg-neutral-300 after:content-[''] after:absolute after:top-0.5 after:start-0.5 after:h-5 after:w-5 after:rounded-full after:bg-white after:transition-all peer-checked:bg-primary-600 peer-checked:after:translate-x-5 rtl:peer-checked:after:-translate-x-5"></div>
+                      </label>
+                    </td>
+                    <td class="py-4 text-center px-3">
+                      <label class="relative inline-flex cursor-pointer items-center">
+                        <input type="checkbox" class="peer sr-only" checked>
+                        <div class="h-6 w-11 rounded-full bg-neutral-300 after:content-[''] after:absolute after:top-0.5 after:start-0.5 after:h-5 after:w-5 after:rounded-full after:bg-white after:transition-all peer-checked:bg-primary-600 peer-checked:after:translate-x-5 rtl:peer-checked:after:-translate-x-5"></div>
+                      </label>
+                    </td>
+                    <td class="py-4 text-center px-3">
+                      <label class="relative inline-flex cursor-pointer items-center">
+                        <input type="checkbox" class="peer sr-only">
+                        <div class="h-6 w-11 rounded-full bg-neutral-300 after:content-[''] after:absolute after:top-0.5 after:start-0.5 after:h-5 after:w-5 after:rounded-full after:bg-white after:transition-all peer-checked:bg-primary-600 peer-checked:after:translate-x-5 rtl:peer-checked:after:-translate-x-5"></div>
+                      </label>
+                    </td>
+                    <td class="py-4 text-center px-3">
+                      <label class="relative inline-flex cursor-pointer items-center">
+                        <input type="checkbox" class="peer sr-only">
+                        <div class="h-6 w-11 rounded-full bg-neutral-300 after:content-[''] after:absolute after:top-0.5 after:start-0.5 after:h-5 after:w-5 after:rounded-full after:bg-white after:transition-all peer-checked:bg-primary-600 peer-checked:after:translate-x-5 rtl:peer-checked:after:-translate-x-5"></div>
+                      </label>
+                    </td>
+                  </tr>
+
+                  <tr class="border-b border-slate-100">
+                    <td class="py-4 pe-4">
+                      <p class="text-sm font-semibold text-text-base">تذكير الحصة</p>
+                      <p class="text-xs text-text-muted mt-0.5">يُرسَل قبل 30 دقيقة من بداية الحصة المباشرة</p>
+                    </td>
+                    <td class="py-4 text-center px-3">
+                      <label class="relative inline-flex cursor-pointer items-center">
+                        <input type="checkbox" class="peer sr-only" checked>
+                        <div class="h-6 w-11 rounded-full bg-neutral-300 after:content-[''] after:absolute after:top-0.5 after:start-0.5 after:h-5 after:w-5 after:rounded-full after:bg-white after:transition-all peer-checked:bg-primary-600 peer-checked:after:translate-x-5 rtl:peer-checked:after:-translate-x-5"></div>
+                      </label>
+                    </td>
+                    <td class="py-4 text-center px-3">
+                      <label class="relative inline-flex cursor-pointer items-center">
+                        <input type="checkbox" class="peer sr-only" checked>
+                        <div class="h-6 w-11 rounded-full bg-neutral-300 after:content-[''] after:absolute after:top-0.5 after:start-0.5 after:h-5 after:w-5 after:rounded-full after:bg-white after:transition-all peer-checked:bg-primary-600 peer-checked:after:translate-x-5 rtl:peer-checked:after:-translate-x-5"></div>
+                      </label>
+                    </td>
+                    <td class="py-4 text-center px-3">
+                      <label class="relative inline-flex cursor-pointer items-center">
+                        <input type="checkbox" class="peer sr-only" checked>
+                        <div class="h-6 w-11 rounded-full bg-neutral-300 after:content-[''] after:absolute after:top-0.5 after:start-0.5 after:h-5 after:w-5 after:rounded-full after:bg-white after:transition-all peer-checked:bg-primary-600 peer-checked:after:translate-x-5 rtl:peer-checked:after:-translate-x-5"></div>
+                      </label>
+                    </td>
+                    <td class="py-4 text-center px-3">
+                      <label class="relative inline-flex cursor-pointer items-center">
+                        <input type="checkbox" class="peer sr-only">
+                        <div class="h-6 w-11 rounded-full bg-neutral-300 after:content-[''] after:absolute after:top-0.5 after:start-0.5 after:h-5 after:w-5 after:rounded-full after:bg-white after:transition-all peer-checked:bg-primary-600 peer-checked:after:translate-x-5 rtl:peer-checked:after:-translate-x-5"></div>
+                      </label>
+                    </td>
+                  </tr>
+
+                  <tr class="border-b border-slate-100">
+                    <td class="py-4 pe-4">
+                      <p class="text-sm font-semibold text-text-base">تذكير الدفع</p>
+                      <p class="text-xs text-text-muted mt-0.5">يُرسَل قبل 3 أيام من تاريخ استحقاق الفاتورة وعند تجاوز التاريخ</p>
+                    </td>
+                    <td class="py-4 text-center px-3">
+                      <label class="relative inline-flex cursor-pointer items-center">
+                        <input type="checkbox" class="peer sr-only" checked>
+                        <div class="h-6 w-11 rounded-full bg-neutral-300 after:content-[''] after:absolute after:top-0.5 after:start-0.5 after:h-5 after:w-5 after:rounded-full after:bg-white after:transition-all peer-checked:bg-primary-600 peer-checked:after:translate-x-5 rtl:peer-checked:after:-translate-x-5"></div>
+                      </label>
+                    </td>
+                    <td class="py-4 text-center px-3">
+                      <label class="relative inline-flex cursor-pointer items-center">
+                        <input type="checkbox" class="peer sr-only" checked>
+                        <div class="h-6 w-11 rounded-full bg-neutral-300 after:content-[''] after:absolute after:top-0.5 after:start-0.5 after:h-5 after:w-5 after:rounded-full after:bg-white after:transition-all peer-checked:bg-primary-600 peer-checked:after:translate-x-5 rtl:peer-checked:after:-translate-x-5"></div>
+                      </label>
+                    </td>
+                    <td class="py-4 text-center px-3">
+                      <label class="relative inline-flex cursor-pointer items-center">
+                        <input type="checkbox" class="peer sr-only" checked>
+                        <div class="h-6 w-11 rounded-full bg-neutral-300 after:content-[''] after:absolute after:top-0.5 after:start-0.5 after:h-5 after:w-5 after:rounded-full after:bg-white after:transition-all peer-checked:bg-primary-600 peer-checked:after:translate-x-5 rtl:peer-checked:after:-translate-x-5"></div>
+                      </label>
+                    </td>
+                    <td class="py-4 text-center px-3">
+                      <label class="relative inline-flex cursor-pointer items-center">
+                        <input type="checkbox" class="peer sr-only" checked>
+                        <div class="h-6 w-11 rounded-full bg-neutral-300 after:content-[''] after:absolute after:top-0.5 after:start-0.5 after:h-5 after:w-5 after:rounded-full after:bg-white after:transition-all peer-checked:bg-primary-600 peer-checked:after:translate-x-5 rtl:peer-checked:after:-translate-x-5"></div>
+                      </label>
+                    </td>
+                  </tr>
+
+                  <tr class="border-b border-slate-100">
+                    <td class="py-4 pe-4">
+                      <p class="text-sm font-semibold text-text-base">تقارير ولي الأمر</p>
+                      <p class="text-xs text-text-muted mt-0.5">يُرسَل في أول يوم من كل شهر مع رابط التقرير الشهري</p>
+                    </td>
+                    <td class="py-4 text-center px-3">
+                      <label class="relative inline-flex cursor-pointer items-center">
+                        <input type="checkbox" class="peer sr-only" checked>
+                        <div class="h-6 w-11 rounded-full bg-neutral-300 after:content-[''] after:absolute after:top-0.5 after:start-0.5 after:h-5 after:w-5 after:rounded-full after:bg-white after:transition-all peer-checked:bg-primary-600 peer-checked:after:translate-x-5 rtl:peer-checked:after:-translate-x-5"></div>
+                      </label>
+                    </td>
+                    <td class="py-4 text-center px-3">
+                      <label class="relative inline-flex cursor-pointer items-center">
+                        <input type="checkbox" class="peer sr-only" checked>
+                        <div class="h-6 w-11 rounded-full bg-neutral-300 after:content-[''] after:absolute after:top-0.5 after:start-0.5 after:h-5 after:w-5 after:rounded-full after:bg-white after:transition-all peer-checked:bg-primary-600 peer-checked:after:translate-x-5 rtl:peer-checked:after:-translate-x-5"></div>
+                      </label>
+                    </td>
+                    <td class="py-4 text-center px-3">
+                      <label class="relative inline-flex cursor-pointer items-center">
+                        <input type="checkbox" class="peer sr-only" checked>
+                        <div class="h-6 w-11 rounded-full bg-neutral-300 after:content-[''] after:absolute after:top-0.5 after:start-0.5 after:h-5 after:w-5 after:rounded-full after:bg-white after:transition-all peer-checked:bg-primary-600 peer-checked:after:translate-x-5 rtl:peer-checked:after:-translate-x-5"></div>
+                      </label>
+                    </td>
+                    <td class="py-4 text-center px-3">
+                      <label class="relative inline-flex cursor-pointer items-center">
+                        <input type="checkbox" class="peer sr-only">
+                        <div class="h-6 w-11 rounded-full bg-neutral-300 after:content-[''] after:absolute after:top-0.5 after:start-0.5 after:h-5 after:w-5 after:rounded-full after:bg-white after:transition-all peer-checked:bg-primary-600 peer-checked:after:translate-x-5 rtl:peer-checked:after:-translate-x-5"></div>
+                      </label>
+                    </td>
+                  </tr>
+
+                  <tr class="border-b border-slate-100">
+                    <td class="py-4 pe-4">
+                      <p class="text-sm font-semibold text-text-base">إشعارات الإنجازات</p>
+                      <p class="text-xs text-text-muted mt-0.5">يُرسَل فور حصول الطالب على شارة أو شهادة جديدة</p>
+                    </td>
+                    <td class="py-4 text-center px-3">
+                      <label class="relative inline-flex cursor-pointer items-center">
+                        <input type="checkbox" class="peer sr-only" checked>
+                        <div class="h-6 w-11 rounded-full bg-neutral-300 after:content-[''] after:absolute after:top-0.5 after:start-0.5 after:h-5 after:w-5 after:rounded-full after:bg-white after:transition-all peer-checked:bg-primary-600 peer-checked:after:translate-x-5 rtl:peer-checked:after:-translate-x-5"></div>
+                      </label>
+                    </td>
+                    <td class="py-4 text-center px-3">
+                      <label class="relative inline-flex cursor-pointer items-center">
+                        <input type="checkbox" class="peer sr-only" checked>
+                        <div class="h-6 w-11 rounded-full bg-neutral-300 after:content-[''] after:absolute after:top-0.5 after:start-0.5 after:h-5 after:w-5 after:rounded-full after:bg-white after:transition-all peer-checked:bg-primary-600 peer-checked:after:translate-x-5 rtl:peer-checked:after:-translate-x-5"></div>
+                      </label>
+                    </td>
+                    <td class="py-4 text-center px-3">
+                      <label class="relative inline-flex cursor-pointer items-center">
+                        <input type="checkbox" class="peer sr-only">
+                        <div class="h-6 w-11 rounded-full bg-neutral-300 after:content-[''] after:absolute after:top-0.5 after:start-0.5 after:h-5 after:w-5 after:rounded-full after:bg-white after:transition-all peer-checked:bg-primary-600 peer-checked:after:translate-x-5 rtl:peer-checked:after:-translate-x-5"></div>
+                      </label>
+                    </td>
+                    <td class="py-4 text-center px-3">
+                      <label class="relative inline-flex cursor-pointer items-center">
+                        <input type="checkbox" class="peer sr-only">
+                        <div class="h-6 w-11 rounded-full bg-neutral-300 after:content-[''] after:absolute after:top-0.5 after:start-0.5 after:h-5 after:w-5 after:rounded-full after:bg-white after:transition-all peer-checked:bg-primary-600 peer-checked:after:translate-x-5 rtl:peer-checked:after:-translate-x-5"></div>
+                      </label>
+                    </td>
+                  </tr>
+
+                  <tr class="border-b border-slate-100">
+                    <td class="py-4 pe-4">
+                      <p class="text-sm font-semibold text-text-base">تذكير مراجعة المعلم</p>
+                      <p class="text-xs text-text-muted mt-0.5">يُرسَل أسبوعياً للمعلمين عند وجود واجبات أو اختبارات تنتظر المراجعة</p>
+                    </td>
+                    <td class="py-4 text-center px-3">
+                      <label class="relative inline-flex cursor-pointer items-center">
+                        <input type="checkbox" class="peer sr-only" checked>
+                        <div class="h-6 w-11 rounded-full bg-neutral-300 after:content-[''] after:absolute after:top-0.5 after:start-0.5 after:h-5 after:w-5 after:rounded-full after:bg-white after:transition-all peer-checked:bg-primary-600 peer-checked:after:translate-x-5 rtl:peer-checked:after:-translate-x-5"></div>
+                      </label>
+                    </td>
+                    <td class="py-4 text-center px-3">
+                      <label class="relative inline-flex cursor-pointer items-center">
+                        <input type="checkbox" class="peer sr-only">
+                        <div class="h-6 w-11 rounded-full bg-neutral-300 after:content-[''] after:absolute after:top-0.5 after:start-0.5 after:h-5 after:w-5 after:rounded-full after:bg-white after:transition-all peer-checked:bg-primary-600 peer-checked:after:translate-x-5 rtl:peer-checked:after:-translate-x-5"></div>
+                      </label>
+                    </td>
+                    <td class="py-4 text-center px-3">
+                      <label class="relative inline-flex cursor-pointer items-center">
+                        <input type="checkbox" class="peer sr-only">
+                        <div class="h-6 w-11 rounded-full bg-neutral-300 after:content-[''] after:absolute after:top-0.5 after:start-0.5 after:h-5 after:w-5 after:rounded-full after:bg-white after:transition-all peer-checked:bg-primary-600 peer-checked:after:translate-x-5 rtl:peer-checked:after:-translate-x-5"></div>
+                      </label>
+                    </td>
+                    <td class="py-4 text-center px-3">
+                      <label class="relative inline-flex cursor-pointer items-center">
+                        <input type="checkbox" class="peer sr-only">
+                        <div class="h-6 w-11 rounded-full bg-neutral-300 after:content-[''] after:absolute after:top-0.5 after:start-0.5 after:h-5 after:w-5 after:rounded-full after:bg-white after:transition-all peer-checked:bg-primary-600 peer-checked:after:translate-x-5 rtl:peer-checked:after:-translate-x-5"></div>
+                      </label>
+                    </td>
+                  </tr>
+
+                  <tr class="relative">
+                    <td class="py-0 pe-0" colspan="5">
+                      <div class="relative">
+                        <div class="absolute inset-0 rounded-lg bg-neutral-100/70 z-10 flex items-center justify-center">
+                          <span class="inline-flex items-center rounded-full bg-neutral-200 px-3 py-1 text-xs font-semibold text-neutral-600">معطّلة</span>
+                        </div>
+                        <div class="flex items-center opacity-50">
+                          <div class="py-4 pe-4 min-w-[200px] flex-shrink-0">
+                            <p class="text-sm font-semibold text-text-base">تذكير دورة جديدة</p>
+                            <p class="text-xs text-text-muted mt-0.5">هذا الإشعار غير فعّال — يمكن إعادة تفعيله من إعدادات المنصة</p>
+                          </div>
+                          <div class="py-4 text-center px-3 flex-shrink-0">
+                            <label class="relative inline-flex items-center opacity-50 cursor-not-allowed">
+                              <input type="checkbox" class="peer sr-only" disabled>
+                              <div class="h-6 w-11 rounded-full bg-neutral-300 after:content-[''] after:absolute after:top-0.5 after:start-0.5 after:h-5 after:w-5 after:rounded-full after:bg-white after:transition-all peer-checked:bg-primary-600 peer-checked:after:translate-x-5 rtl:peer-checked:after:-translate-x-5"></div>
+                            </label>
+                          </div>
+                          <div class="py-4 text-center px-3 flex-shrink-0">
+                            <label class="relative inline-flex items-center opacity-50 cursor-not-allowed">
+                              <input type="checkbox" class="peer sr-only" disabled>
+                              <div class="h-6 w-11 rounded-full bg-neutral-300 after:content-[''] after:absolute after:top-0.5 after:start-0.5 after:h-5 after:w-5 after:rounded-full after:bg-white after:transition-all peer-checked:bg-primary-600 peer-checked:after:translate-x-5 rtl:peer-checked:after:-translate-x-5"></div>
+                            </label>
+                          </div>
+                          <div class="py-4 text-center px-3 flex-shrink-0">
+                            <label class="relative inline-flex items-center opacity-50 cursor-not-allowed">
+                              <input type="checkbox" class="peer sr-only" disabled>
+                              <div class="h-6 w-11 rounded-full bg-neutral-300 after:content-[''] after:absolute after:top-0.5 after:start-0.5 after:h-5 after:w-5 after:rounded-full after:bg-white after:transition-all peer-checked:bg-primary-600 peer-checked:after:translate-x-5 rtl:peer-checked:after:-translate-x-5"></div>
+                            </label>
+                          </div>
+                          <div class="py-4 text-center px-3 flex-shrink-0">
+                            <label class="relative inline-flex items-center opacity-50 cursor-not-allowed">
+                              <input type="checkbox" class="peer sr-only" disabled>
+                              <div class="h-6 w-11 rounded-full bg-neutral-300 after:content-[''] after:absolute after:top-0.5 after:start-0.5 after:h-5 after:w-5 after:rounded-full after:bg-white after:transition-all peer-checked:bg-primary-600 peer-checked:after:translate-x-5 rtl:peer-checked:after:-translate-x-5"></div>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-1 space-y-4">
+
+          <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-5">
+            <h2 class="text-base font-bold text-text-base mb-4">قنوات الاتصال</h2>
+            <div class="space-y-3">
+
+              <div class="rounded-lg border border-info-200 bg-info-50/50 p-3.5">
+                <p class="text-sm font-semibold text-text-base">المنصة</p>
+                <p class="text-xs text-text-muted mt-1">إشعار داخل المنصة في رمز الجرس + قائمة الإشعارات</p>
+                <p class="text-xs text-info-600 font-medium mt-2">متاح لجميع الباقات</p>
+              </div>
+
+              <div class="rounded-lg border border-success-200 bg-success-50/50 p-3.5">
+                <p class="text-sm font-semibold text-text-base">البريد</p>
+                <p class="text-xs text-text-muted mt-1">بريد إلكتروني مع تنسيق HTML — يدعم العربية واللغات الأخرى</p>
+                <p class="text-xs text-success-600 font-medium mt-2">مجاني</p>
+              </div>
+
+              <div class="rounded-lg border border-warning-200 bg-warning-50/50 p-3.5">
+                <p class="text-sm font-semibold text-text-base">واتساب</p>
+                <p class="text-xs text-text-muted mt-1">رسائل واتساب عبر Twilio</p>
+                <p class="text-xs text-warning-600 font-medium mt-2">متاح للمناطق المختارة (السعودية، الإمارات، مصر)</p>
+              </div>
+
+              <div class="rounded-lg border border-accent-200 bg-accent-50/50 p-3.5">
+                <p class="text-sm font-semibold text-text-base">SMS</p>
+                <p class="text-xs text-text-muted mt-1">رسائل نصية قصيرة</p>
+                <p class="text-xs text-accent-600 font-medium mt-2">50 رسالة شهرياً ضمن الباقة الحالية، تكلفة إضافية للزيادة</p>
+              </div>
+
+            </div>
+          </div>
+
+          <p class="text-xs text-text-muted text-center">التغييرات على إعدادات الإشعارات تُطبَّق فوراً بعد الحفظ على جميع المستخدمين الذين تنطبق عليهم الفئة.</p>
+
+        </div>
+
+      </div>
+
+    </main>
+
+  </div>
+</div>
+
+<div id="app-backdrop" class="fixed inset-0 bg-black/40 z-30 hidden"></div>
+<script src="../../assets/js/main.js" defer></script>
+</body>
+</html>
