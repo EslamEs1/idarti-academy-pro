@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>لوحة الإدارة — منصة إدارتي</title>
+  <title>نقل المعلم — ASN-2024-1185 — منصة إدارتي</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
@@ -12,7 +12,6 @@
 <body class="bg-surface-50 text-text-base font-sans antialiased">
 <div class="min-h-screen flex">
 
-  <!-- ═══ SIDEBAR: Admin, dashboard active ═══ -->
   <aside id="app-sidebar"
     class="fixed inset-y-0 end-0 z-40 w-80 max-w-[85vw] bg-primary-900 flex flex-col translate-x-full transition-transform duration-200 ease-out lg:relative lg:inset-auto lg:sticky lg:top-0 lg:h-screen lg:w-72 lg:translate-x-0 lg:flex-shrink-0 lg:transition-none"
     aria-label="قائمة الإدارة">
@@ -36,8 +35,8 @@
       <ul class="space-y-0.5 px-3">
 
         <li>
-          <a href="dashboard.html" aria-current="page"
-             class="flex items-center gap-3 px-3 py-2.5 rounded-lg is-active transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+          <a href="dashboard.html"
+             class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
             <span class="text-sm">الرئيسية</span>
           </a>
@@ -62,9 +61,10 @@
             <span class="text-sm">العائلات</span>
           </a>
         </li>
+
         <li>
-          <a href="student-teacher-assignments.html"
-             class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+          <a href="student-teacher-assignments.html" aria-current="page"
+             class="flex items-center gap-3 px-3 py-2.5 rounded-lg is-active transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
             <span class="text-sm">تعيين الطلاب للمعلمين</span>
           </a>
@@ -210,6 +210,14 @@
           </a>
         </li>
 
+        <li>
+          <a href="audit-log.html"
+             class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/><line x1="16" x2="8" y1="17" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            <span class="text-sm">سجل المراجعة</span>
+          </a>
+        </li>
+
       </ul>
     </nav>
 
@@ -223,10 +231,8 @@
 
   </aside>
 
-  <!-- ═══ MAIN AREA ═══ -->
   <div class="flex flex-1 flex-col min-w-0">
 
-    <!-- Header -->
     <header id="app-header"
       class="sticky top-0 z-30 flex h-16 items-center justify-between gap-4 bg-white border-b border-slate-200 px-4 md:px-6 lg:px-8 flex-shrink-0">
 
@@ -286,167 +292,205 @@
       </div>
     </header>
 
-    <!-- Dashboard Content -->
     <main class="flex-1 overflow-y-auto p-4 md:p-6 lg:p-8">
 
-      <!-- Top row: 4 stat cards -->
-      <div class="grid grid-cols-2 xl:grid-cols-4 gap-4">
-
-        <!-- Stat 1: Students -->
-        <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-5">
-          <div class="flex items-start justify-between mb-3">
-            <p class="text-xs font-semibold text-text-muted uppercase tracking-wide">الطلاب</p>
-            <div class="h-9 w-9 rounded-lg bg-primary-50 text-primary-900 inline-flex items-center justify-center flex-shrink-0">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
-            </div>
-          </div>
-          <p class="text-3xl font-extrabold tabular-nums text-text-base">342</p>
-          <p class="text-xs text-text-muted mt-1">طالباً مسجلاً</p>
-          <span class="inline-flex items-center gap-1.5 rounded-full px-2 py-0.5 text-xs font-medium bg-success-100 text-success-700 mt-2">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3 w-3" aria-hidden="true"><path d="m22 7-8.5 8.5-5-5L2 17"/><path d="M16 7h6v6"/></svg>
-            +12 هذا الشهر
-          </span>
-        </div>
-
-        <!-- Stat 2: Teachers -->
-        <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-5">
-          <div class="flex items-start justify-between mb-3">
-            <p class="text-xs font-semibold text-text-muted uppercase tracking-wide">المعلمون</p>
-            <div class="h-9 w-9 rounded-lg bg-info-50 text-info-700 inline-flex items-center justify-center flex-shrink-0">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true"><path d="M10 15H6a4 4 0 0 0-4 4v2"/><path d="m14.305 16.53.923-.382"/><path d="m15.228 13.852-.923-.383"/><path d="m16.852 12.228-.383-.923"/><path d="m16.852 17.772-.383.924"/><path d="m19.148 12.228.383-.923"/><path d="m19.53 18.696-.382-.924"/><path d="m20.772 13.852.924-.383"/><path d="m20.772 16.148.924.383"/><circle cx="18" cy="15" r="3"/><circle cx="9" cy="7" r="4"/></svg>
-            </div>
-          </div>
-          <p class="text-3xl font-extrabold tabular-nums text-text-base">28</p>
-          <p class="text-xs text-text-muted mt-1">معلماً نشطاً</p>
-          <span class="inline-flex items-center gap-1.5 rounded-full px-2 py-0.5 text-xs font-medium bg-info-100 text-info-700 mt-2">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3 w-3" aria-hidden="true"><path d="m22 7-8.5 8.5-5-5L2 17"/><path d="M16 7h6v6"/></svg>
-            +1 هذا الشهر
-          </span>
-        </div>
-
-        <!-- Stat 3: Active Courses -->
-        <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-5">
-          <div class="flex items-start justify-between mb-3">
-            <p class="text-xs font-semibold text-text-muted uppercase tracking-wide">الدورات النشطة</p>
-            <div class="h-9 w-9 rounded-lg bg-success-50 text-success-700 inline-flex items-center justify-center flex-shrink-0">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-            </div>
-          </div>
-          <p class="text-3xl font-extrabold tabular-nums text-text-base">14</p>
-          <p class="text-xs text-text-muted mt-1">دورة جارية</p>
-          <span class="inline-flex items-center gap-1.5 rounded-full px-2 py-0.5 text-xs font-medium bg-success-100 text-success-700 mt-2">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3 w-3" aria-hidden="true"><path d="m22 7-8.5 8.5-5-5L2 17"/><path d="M16 7h6v6"/></svg>
-            +2 هذا الشهر
-          </span>
-        </div>
-
-        <!-- Stat 4: Monthly Revenue -->
-        <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-5">
-          <div class="flex items-start justify-between mb-3">
-            <p class="text-xs font-semibold text-text-muted uppercase tracking-wide">الإيرادات الشهرية</p>
-            <div class="h-9 w-9 rounded-lg bg-accent-50 text-accent-600 inline-flex items-center justify-center flex-shrink-0">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
-            </div>
-          </div>
-          <p class="text-3xl font-extrabold tabular-nums text-text-base">48,250</p>
-          <p class="text-xs text-text-muted mt-1">ر.س — أبريل 2026</p>
-          <span class="inline-flex items-center gap-1.5 rounded-full px-2 py-0.5 text-xs font-medium bg-success-100 text-success-700 mt-2">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3 w-3" aria-hidden="true"><path d="m22 7-8.5 8.5-5-5L2 17"/><path d="M16 7h6v6"/></svg>
-            +8.4% مقارنة بمارس
-          </span>
-        </div>
-
+      <!-- Page header bar -->
+      <div id="transfer-header" class="mb-6">
+        <nav class="flex items-center gap-1.5 text-xs text-text-muted mb-3 flex-wrap" aria-label="مسار التنقل">
+          <a href="student-teacher-assignments.html" class="hover:text-primary-600 transition-colors">تعيين الطلاب للمعلمين</a>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5 rotate-180" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+          <span class="hover:text-primary-600">تفاصيل التعيين ASN-2024-1185</span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5 rotate-180" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+          <span class="text-text-base font-medium">نقل المعلم</span>
+        </nav>
+        <h2 class="text-xl md:text-2xl font-bold text-text-base mb-1">نقل الطالب من معلم إلى آخر</h2>
+        <p class="text-sm text-text-muted">إجراء آمن يحفظ السجلات التاريخية للمعلم السابق</p>
       </div>
 
-      <!-- Bottom row: 2 content cards -->
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 mt-6">
-
-        <!-- Card 5: Pending Invoices -->
-        <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
-          <div class="px-5 py-4 border-b border-slate-100 flex items-center justify-between">
-            <div>
-              <h2 class="text-sm font-semibold text-text-base">الفواتير قيد الانتظار</h2>
-              <p class="text-xs text-text-muted mt-0.5">7 فواتير · مجموع 6,450 ر.س</p>
-            </div>
-            <span class="text-2xl font-extrabold tabular-nums text-warning-600">7</span>
+      <!-- Current-assignment summary card (read-only) -->
+      <div id="transfer-summary" class="bg-white rounded-2xl border border-slate-200 shadow-sm p-5 mb-6">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="text-base font-bold text-text-base">ملخص التعيين الحالي</h3>
+          <span class="inline-flex items-center gap-1.5 rounded-lg bg-primary-100 px-3 py-1 text-xs font-mono font-medium text-primary-700">ASN-2024-1185</span>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div>
+            <p class="text-xs text-text-muted mb-1">الطالب</p>
+            <p class="text-sm font-semibold text-text-base">سارة مؤمن</p>
+            <p class="text-xs text-text-muted">STD-2023-0144 · 9 سنوات · جدة · ناطق بالعربية</p>
           </div>
-          <ul class="divide-y divide-slate-100">
-            <li class="flex items-center justify-between px-5 py-3.5 gap-3">
-              <div class="min-w-0">
-                <p class="text-xs font-semibold text-text-base truncate">عائلة الزهراني</p>
-                <p class="text-xs text-text-muted">850 ر.س</p>
-              </div>
-              <span class="inline-flex items-center gap-1.5 rounded-full px-2 py-0.5 text-xs font-medium bg-danger-100 text-danger-600 flex-shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3 w-3" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
-                متأخر السداد
-              </span>
-            </li>
-            <li class="flex items-center justify-between px-5 py-3.5 gap-3">
-              <div class="min-w-0">
-                <p class="text-xs font-semibold text-text-base truncate">عائلة القحطاني</p>
-                <p class="text-xs text-text-muted">1,200 ر.س</p>
-              </div>
-              <span class="inline-flex items-center gap-1.5 rounded-full px-2 py-0.5 text-xs font-medium bg-warning-100 text-warning-600 flex-shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3 w-3" aria-hidden="true"><path d="M10.268 21a2 2 0 0 0 3.464 0"/><path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"/></svg>
-                قيد الانتظار
-              </span>
-            </li>
-            <li class="flex items-center justify-between px-5 py-3.5 gap-3">
-              <div class="min-w-0">
-                <p class="text-xs font-semibold text-text-base truncate">عائلة العتيبي</p>
-                <p class="text-xs text-text-muted">600 ر.س</p>
-              </div>
-              <span class="inline-flex items-center gap-1.5 rounded-full px-2 py-0.5 text-xs font-medium bg-warning-100 text-warning-600 flex-shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3 w-3" aria-hidden="true"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 6v6l4 2"/></svg>
-                مدفوع جزئياً
-              </span>
-            </li>
-          </ul>
-          <div class="px-5 py-3 bg-surface-50 border-t border-slate-100">
-            <a href="invoices.html" class="text-xs font-medium text-accent-600 hover:text-accent-700 hover:underline transition-colors">عرض كل الفواتير</a>
+          <div>
+            <p class="text-xs text-text-muted mb-1">العائلة</p>
+            <p class="text-sm font-semibold text-text-base">عائلة مؤمن — <span class="font-mono text-primary-600">FAM-2023-0211</span></p>
+          </div>
+          <div>
+            <p class="text-xs text-text-muted mb-1">الدورة والمستوى</p>
+            <p class="text-sm font-semibold text-text-base">دورة القرآن الكريم — المستوى الثاني</p>
+          </div>
+          <div>
+            <p class="text-xs text-text-muted mb-1">المعلم الحالي</p>
+            <p class="text-sm font-bold text-primary-600">الأستاذة منى سعد</p>
+            <p class="text-xs text-text-muted font-mono">TCH-2023-0012</p>
+          </div>
+          <div>
+            <p class="text-xs text-text-muted mb-1">نوع التعيين / الجلسة / الدفع</p>
+            <p class="text-sm font-semibold text-text-base">معلم رئيسي / جماعية / دورة كاملة — 380.00 ريال</p>
+          </div>
+          <div>
+            <p class="text-xs text-text-muted mb-1">تاريخ البدء / الجلسات المتبقية</p>
+            <p class="text-sm font-semibold text-text-base">2024-09-15 / 14 من 24</p>
           </div>
         </div>
-
-        <!-- Card 6: System Alerts -->
-        <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
-          <div class="px-5 py-4 border-b border-slate-100">
-            <h2 class="text-sm font-semibold text-text-base">تنبيهات النظام</h2>
-          </div>
-          <ul class="divide-y divide-slate-100">
-            <li class="flex items-start gap-3 px-5 py-4">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 text-warning-500 flex-shrink-0 mt-0.5" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
-              <div class="min-w-0 flex-1">
-                <p class="text-xs font-semibold text-text-base">معلم لم يسجل دخوله منذ 3 أيام</p>
-                <p class="text-xs text-text-muted mt-0.5">أ. سعد القحطاني</p>
-              </div>
-              <a href="teachers.html" class="text-xs text-accent-600 hover:underline font-medium flex-shrink-0">مراجعة</a>
-            </li>
-            <li class="flex items-start gap-3 px-5 py-4">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 text-info-600 flex-shrink-0 mt-0.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-              <div class="min-w-0 flex-1">
-                <p class="text-xs font-semibold text-text-base">طلب صلاحية إدارية جديد</p>
-                <p class="text-xs text-text-muted mt-0.5">ولي أمر الطالب يوسف العتيبي</p>
-              </div>
-              <a href="roles-permissions.html" class="text-xs text-accent-600 hover:underline font-medium flex-shrink-0">مراجعة</a>
-            </li>
-            <li class="flex items-start gap-3 px-5 py-4">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 text-info-600 flex-shrink-0 mt-0.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-              <div class="min-w-0 flex-1">
-                <p class="text-xs font-semibold text-text-base">استثناء ضريبي تم تطبيقه</p>
-                <p class="text-xs text-text-muted mt-0.5">على 4 فواتير — أبريل 2026</p>
-              </div>
-              <a href="tax-settings.html" class="text-xs text-accent-600 hover:underline font-medium flex-shrink-0">تفاصيل</a>
-            </li>
-          </ul>
-        </div>
-
       </div>
+
+      <!-- Transfer form card -->
+      <div id="transfer-form" class="bg-white rounded-2xl border border-slate-200 shadow-sm p-5 mb-6">
+        <h3 class="text-base font-bold text-text-base mb-5">بيانات النقل</h3>
+        <form class="space-y-6" onsubmit="return false">
+
+          <!-- Control 1: المعلم الجديد -->
+          <div>
+            <label for="new-teacher" class="block text-sm font-medium text-text-base mb-2">المعلم الجديد</label>
+            <select id="new-teacher" name="new_teacher"
+              class="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-text-base focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-100">
+              <option value="tch-0011" class="text-text-muted opacity-60" disabled title="هذا المعلم وصل للسعة القصوى">الأستاذ أحمد بن عبد الله — TCH-2023-0011 (وصل للسعة القصوى 12/12)</option>
+              <option value="tch-0013" selected>الأستاذ خالد العبدلي — TCH-2023-0013</option>
+              <option value="tch-0021">الأستاذة هبة — TCH-2023-0021</option>
+            </select>
+            <p class="mt-1.5 text-xs text-warning-600">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline h-3.5 w-3.5 me-1" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" x2="12" y1="9" y2="13"/><line x1="12" x2="12.01" y1="17" y2="17"/></svg>
+              الأستاذ أحمد وصل للسعة القصوى — يُنصح بتحديد معلم آخر
+            </p>
+          </div>
+
+          <!-- Control 2: تاريخ النقل -->
+          <div>
+            <label for="transfer-date" class="block text-sm font-medium text-text-base mb-2">تاريخ النقل</label>
+            <input type="date" id="transfer-date" name="transfer_date" value="2026-05-15"
+              class="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-text-base focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-100" />
+          </div>
+
+          <!-- Control 3: سبب النقل (6 radios — canonical order) -->
+          <fieldset>
+            <legend class="block text-sm font-medium text-text-base mb-3">سبب النقل</legend>
+            <div class="space-y-2.5">
+              <label class="flex items-center gap-3 cursor-pointer">
+                <input type="radio" name="transfer_reason" value="parent-request" class="h-4 w-4 text-primary-600 border-slate-300 focus:ring-primary-500">
+                <span class="text-sm text-text-base">طلب ولي الأمر</span>
+              </label>
+              <label class="flex items-center gap-3 cursor-pointer">
+                <input type="radio" name="transfer_reason" value="teacher-unavailable" class="h-4 w-4 text-primary-600 border-slate-300 focus:ring-primary-500">
+                <span class="text-sm text-text-base">عدم توفر المعلم</span>
+              </label>
+              <label class="flex items-center gap-3 cursor-pointer">
+                <input type="radio" name="transfer_reason" value="level-change" class="h-4 w-4 text-primary-600 border-slate-300 focus:ring-primary-500">
+                <span class="text-sm text-text-base">تغيير المستوى</span>
+              </label>
+              <label class="flex items-center gap-3 cursor-pointer">
+                <input type="radio" name="transfer_reason" value="performance-improvement" class="h-4 w-4 text-primary-600 border-slate-300 focus:ring-primary-500">
+                <span class="text-sm text-text-base">تحسين الأداء</span>
+              </label>
+              <label class="flex items-center gap-3 cursor-pointer">
+                <input type="radio" name="transfer_reason" value="schedule-conflict" checked class="h-4 w-4 text-primary-600 border-slate-300 focus:ring-primary-500">
+                <span class="text-sm text-text-base">تعارض في الجدول</span>
+              </label>
+              <label class="flex items-center gap-3 cursor-pointer">
+                <input type="radio" name="transfer_reason" value="admin-decision" class="h-4 w-4 text-primary-600 border-slate-300 focus:ring-primary-500">
+                <span class="text-sm text-text-base">قرار إداري</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <!-- Control 4: نطاق التطبيق (3 radios — canonical order) -->
+          <fieldset>
+            <legend class="block text-sm font-medium text-text-base mb-3">نطاق التطبيق</legend>
+            <div class="space-y-2.5">
+              <label class="flex items-center gap-3 cursor-pointer">
+                <input type="radio" name="transfer_scope" value="future-sessions" checked class="h-4 w-4 text-primary-600 border-slate-300 focus:ring-primary-500">
+                <span class="text-sm text-text-base">الجلسات المستقبلية فقط</span>
+                <span class="inline-flex items-center rounded-full bg-success-100 px-2 py-0.5 text-[0.65rem] font-medium text-success-700">الافتراضي الآمن</span>
+              </label>
+              <label class="flex items-center gap-3 cursor-pointer">
+                <input type="radio" name="transfer_scope" value="current-month" class="h-4 w-4 text-primary-600 border-slate-300 focus:ring-primary-500">
+                <span class="text-sm text-text-base">الشهر الحالي بعد التاريخ المحدد</span>
+              </label>
+              <label class="flex items-center gap-3 cursor-pointer">
+                <input type="radio" name="transfer_scope" value="immediate" class="h-4 w-4 text-primary-600 border-slate-300 focus:ring-primary-500">
+                <span class="text-sm text-text-base">نقل فوري</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <!-- Control 5: ملاحظات إدارية -->
+          <div>
+            <label for="transfer-notes" class="block text-sm font-medium text-text-base mb-2">ملاحظات إدارية</label>
+            <textarea id="transfer-notes" name="notes" rows="4"
+              class="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-text-base focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-100 resize-none">بناءً على اتصال الوالد محمود مؤمن لتوحيد جدول الأخت سارة مع جدول أخيها عبد الرحمن لأنهما يدرسان في نفس المدرسة ولديهما مواعيد دراسية متشابهة.</textarea>
+          </div>
+
+        </form>
+      </div>
+
+      <!-- إشعار حفظ السجل التاريخي — warning-amber callout (immediately above CTA) -->
+      <div id="transfer-callout" class="border-2 border-warning-400 bg-warning-50 rounded-2xl p-5 mb-6">
+        <div class="flex items-start gap-3">
+          <div class="h-10 w-10 rounded-full bg-warning-100 text-warning-600 inline-flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" x2="12" y1="9" y2="13"/><line x1="12" x2="12.01" y1="17" y2="17"/></svg>
+          </div>
+          <div>
+            <h3 class="text-base font-bold text-warning-800 mb-2">إشعار حفظ السجل التاريخي</h3>
+            <p class="text-sm text-warning-700 leading-relaxed">سيتم الاحتفاظ بجميع التقارير والحضور والواجبات والسجلات المالية مرتبطةً بالمعلم الحالي — لن يُحذف أي سجل سابق. الطالب سينتقل إلى المعلم الجديد ابتداءً من تاريخ النقل المحدد، ولكن سجلاته السابقة ستظل مرتبطة بالمعلم السابق للمرجعية التاريخية.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action bar -->
+      <div id="transfer-actions" class="bg-white rounded-2xl border border-slate-200 shadow-sm p-5 flex flex-wrap gap-3">
+        <button type="button" data-modal-open="modal-confirm-transfer"
+          class="inline-flex items-center gap-2 rounded-xl bg-warning-500 px-5 py-2.5 text-sm font-semibold text-white hover:bg-warning-600 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4" aria-hidden="true"><path d="m16 3 4 4-4 4"/><path d="M20 7H4"/><path d="m8 21-4-4 4-4"/><path d="M4 17h16"/></svg>
+          تأكيد النقل
+        </button>
+        <a href="student-teacher-assignments.html"
+           class="inline-flex items-center gap-2 rounded-xl border border-slate-300 bg-white px-5 py-2.5 text-sm font-semibold text-text-base hover:bg-surface-50 transition-colors">
+          إلغاء
+        </a>
+      </div>
+
     </main>
 
+    <footer class="flex-shrink-0 border-t border-slate-200 bg-white px-6 py-4">
+      <p class="text-xs text-text-muted text-center">منصة إدارتي — جميع الحقوق محفوظة © 2026</p>
+    </footer>
+
+  </div><!-- /.flex-1 -->
+
+</div><!-- /.min-h-screen -->
+
+<!-- Backdrop -->
+<div id="app-backdrop" data-sidebar-backdrop class="hidden fixed inset-0 z-30 bg-black/40 lg:hidden" aria-hidden="true"></div>
+
+<!-- Modal: تأكيد نقل المعلم -->
+<div id="modal-confirm-transfer" role="dialog" aria-modal="true" aria-labelledby="modal-transfer-title" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4">
+  <div class="absolute inset-0 bg-black/50" data-modal-close></div>
+  <div class="relative bg-white rounded-2xl shadow-xl w-full max-w-lg p-6">
+    <div class="flex items-start gap-3 mb-4">
+      <div class="h-10 w-10 rounded-full bg-warning-100 text-warning-600 inline-flex items-center justify-center flex-shrink-0">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true"><path d="m16 3 4 4-4 4"/><path d="M20 7H4"/><path d="m8 21-4-4 4-4"/><path d="M4 17h16"/></svg>
+      </div>
+      <div>
+        <h2 id="modal-transfer-title" class="text-lg font-bold text-text-base">تأكيد نقل المعلم</h2>
+        <p class="text-sm text-text-muted mt-1 leading-relaxed">سيتم نقل سارة مؤمن من الأستاذة منى سعد إلى الأستاذ خالد العبدلي ابتداءً من 2026-05-15 بسبب «تعارض في الجدول». يبقى ربط جميع السجلات السابقة (التقارير، الحضور، الواجبات، السجلات المالية) بالأستاذة منى سعد دون تغيير.</p>
+        <p class="text-xs text-text-muted mt-2 italic">هذا عرض مرئي فقط — لن يتم تنفيذ الإجراء فعلياً.</p>
+      </div>
+    </div>
+    <div class="flex gap-3 justify-end">
+      <button type="button" data-modal-close class="inline-flex items-center gap-2 rounded-xl border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-text-base hover:bg-surface-50 transition-colors">إلغاء</button>
+      <button type="button" data-modal-close class="inline-flex items-center gap-2 rounded-xl bg-warning-500 px-4 py-2 text-sm font-semibold text-white hover:bg-warning-600 transition-colors">تأكيد النقل</button>
+    </div>
   </div>
 </div>
 
-<div id="app-backdrop" class="fixed inset-0 bg-black/40 z-30 hidden"></div>
-<script src="../../assets/js/main.js" defer></script>
+<script src="../../assets/js/main.js"></script>
 </body>
 </html>
