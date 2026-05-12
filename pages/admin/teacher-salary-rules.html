@@ -13,7 +13,7 @@
 <div class="min-h-screen flex">
 
   <aside id="app-sidebar"
-  class="fixed inset-y-0 end-0 z-40 w-80 max-w-[85vw] bg-primary-900 flex flex-col
+  class="fixed inset-y-0 start-0 z-40 w-80 max-w-[85vw] bg-primary-900 flex flex-col
          translate-x-full transition-transform duration-200 ease-out
          lg:relative lg:inset-auto lg:sticky lg:top-0 lg:h-screen lg:w-72 lg:translate-x-0 lg:flex-shrink-0 lg:transition-none"
   aria-label="قائمة الإدارة">
@@ -433,6 +433,10 @@
   </div>
 
 </aside>
+
+  <div data-sidebar-backdrop
+       class="hidden fixed inset-0 z-30 bg-primary-950/60 backdrop-blur-sm lg:hidden"
+       aria-hidden="true"></div>
 
   <div class="flex flex-1 flex-col min-w-0">
 

@@ -3,7 +3,7 @@
 
   /* ── Sidebar drawer ─────────────────────────────────────────────── */
   var sidebar  = document.getElementById('app-sidebar');
-  var backdrop = document.getElementById('app-backdrop');
+  var backdrop = document.getElementById('app-backdrop') || document.querySelector('[data-sidebar-backdrop]');
   var burgers  = document.querySelectorAll('[data-sidebar-open]');
   var closes   = document.querySelectorAll('[data-sidebar-close]');
 
