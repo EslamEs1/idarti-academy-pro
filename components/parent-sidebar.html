@@ -1,9 +1,4 @@
-<!-- REFERENCE — DO NOT LOAD AT RUNTIME.
-     Hand-copy into each parent page's <aside id="app-sidebar"> slot.
-     Add is-active + aria-current="page" to the matching entry's <a> tag.
-     Depth-2 paths (pages/parent/*.html): Log Out = ../../index.html
-     For depth-1 (pages/ui-kit.html): Log Out = ../index.html
--->
+<!-- REFERENCE template — DO NOT LOAD AT RUNTIME. Hand-copy into each page slot. -->
 
 <aside id="app-sidebar"
   class="fixed inset-y-0 end-0 z-40 w-80 max-w-[85vw] bg-primary-900 flex flex-col
@@ -29,11 +24,12 @@
     <span class="inline-flex items-center rounded-full bg-primary-800 px-2.5 py-1 text-xs font-medium text-accent-400">ولي أمر</span>
   </div>
 
-  <!-- Navigation list (11 entries, FR-010) -->
+  <!-- Navigation list (119 entries) -->
   <nav class="flex-1 overflow-y-auto py-2" aria-label="روابط ولي الأمر">
     <ul class="space-y-0.5 px-3">
 
-      <!-- 1. Dashboard {{ACTIVE: dashboard}} -->
+      <!-- 1. الرئيسية {ACTIVE: dashboard} -->
+
       <li>
         <a href="dashboard.html"
            class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
@@ -42,7 +38,8 @@
         </a>
       </li>
 
-      <!-- 2. My Children {{ACTIVE: my-children}} -->
+      <!-- 2. أبنائي {ACTIVE: my-children} -->
+
       <li>
         <a href="my-children.html"
            class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
@@ -51,7 +48,8 @@
         </a>
       </li>
 
-      <!-- 3. Child Reports {{ACTIVE: child-reports}} -->
+      <!-- 3. تقارير الأبناء {ACTIVE: child-reports} -->
+
       <li>
         <a href="child-reports.html"
            class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
@@ -60,7 +58,8 @@
         </a>
       </li>
 
-      <!-- 4. Attendance {{ACTIVE: attendance}} -->
+      <!-- 4. الحضور والغياب {ACTIVE: attendance} -->
+
       <li>
         <a href="attendance.html"
            class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
@@ -69,7 +68,8 @@
         </a>
       </li>
 
-      <!-- 5. Homework Follow-up {{ACTIVE: homework-followup}} -->
+      <!-- 5. متابعة الواجبات {ACTIVE: homework-followup} -->
+
       <li>
         <a href="homework-followup.html"
            class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
@@ -78,7 +78,8 @@
         </a>
       </li>
 
-      <!-- 6. Certificates {{ACTIVE: certificates}} -->
+      <!-- 6. الشهادات {ACTIVE: certificates} -->
+
       <li>
         <a href="certificates.html"
            class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
@@ -87,7 +88,8 @@
         </a>
       </li>
 
-      <!-- 7. Invoices {{ACTIVE: invoices}} -->
+      <!-- 7. الفواتير {ACTIVE: invoices} -->
+
       <li>
         <a href="invoices.html"
            class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
@@ -96,7 +98,18 @@
         </a>
       </li>
 
-      <!-- 8. Family Balance {{ACTIVE: family-balance}} -->
+      <!-- 8. تفاصيل الفاتورة {ACTIVE: invoice-details} -->
+
+      <li>
+        <a href="invoice-details.html"
+           class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 17.5v-11"/></svg>
+          <span class="text-sm">تفاصيل الفاتورة</span>
+        </a>
+      </li>
+
+      <!-- 9. رصيد العائلة {ACTIVE: family-balance} -->
+
       <li>
         <a href="family-balance.html"
            class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
@@ -105,7 +118,8 @@
         </a>
       </li>
 
-      <!-- 9. Messages {{ACTIVE: messages}} -->
+      <!-- 10. الرسائل {ACTIVE: messages} -->
+
       <li>
         <a href="messages.html"
            class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
@@ -114,7 +128,18 @@
         </a>
       </li>
 
-      <!-- 10. Profile {{ACTIVE: profile}} -->
+      <!-- 11. المجتمع التعليمي {ACTIVE: social-hub} -->
+
+      <li>
+        <a href="social-hub.html"
+           class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg>
+          <span class="text-sm">المجتمع التعليمي</span>
+        </a>
+      </li>
+
+      <!-- 12. الملف الشخصي {ACTIVE: profile} -->
+
       <li>
         <a href="profile.html"
            class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
@@ -126,13 +151,13 @@
     </ul>
   </nav>
 
-  <!-- Log Out — bottom (11th entry, FR-042) -->
-  <div class="flex-shrink-0 px-3 pb-4 pt-2 border-t border-primary-800">
-    <a href="../../index.html"
-       class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/70 hover:bg-danger-700/30 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><path d="m16 17 5-5-5-5"/><path d="M21 12H9"/><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/></svg>
-      <span class="text-sm">تسجيل الخروج</span>
-    </a>
-  </div>
+  <!-- Log Out -->
+    <div class="flex-shrink-0 px-3 pb-4 pt-2 border-t border-primary-800">
+      <a href="../../index.html"
+         class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/70 hover:bg-danger-700/30 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><path d="m16 17 5-5-5-5"/><path d="M21 12H9"/><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/></svg>
+        <span class="text-sm">تسجيل الخروج</span>
+      </a>
+    </div>
 
 </aside>

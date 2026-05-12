@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>تصحيح الواجبات — لوحة المعلم — منصة إدارتي</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../assets/css/output.css" />
+</head>
+<body class="bg-surface-50 text-text-base font-sans antialiased">
+<div class="min-h-screen flex">
+
+  <!-- ═══ TEACHER SIDEBAR (11 entries) ═══ -->
+  <!-- REFERENCE template — DO NOT LOAD AT RUNTIME. Hand-copy into each page slot. -->
+
+<aside id="app-sidebar"
+  class="fixed inset-y-0 end-0 z-40 w-80 max-w-[85vw] bg-primary-900 flex flex-col
+         translate-x-full transition-transform duration-200 ease-out
+         lg:relative lg:inset-auto lg:sticky lg:top-0 lg:h-screen lg:w-72 lg:translate-x-0 lg:flex-shrink-0 lg:transition-none"
+  aria-label="قائمة المعلم">
+
+  <!-- Logo area -->
+  <div class="flex h-16 items-center justify-between px-4 border-b border-primary-800 flex-shrink-0">
+    <a href="../../index.html" class="flex items-center gap-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 rounded">
+      <span class="text-xl font-extrabold text-white tracking-tight">إدارتي</span>
+      <span class="h-2 w-2 rounded-full bg-accent-500 flex-shrink-0" aria-hidden="true"></span>
+    </a>
+    <button data-sidebar-close
+      class="lg:hidden inline-flex h-9 w-9 items-center justify-center rounded-lg text-white/70 hover:text-white hover:bg-primary-800 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500"
+      aria-label="إغلاق القائمة">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+    </button>
+  </div>
+
+  <!-- Role badge -->
+  <div class="px-4 pt-3 pb-1">
+    <span class="inline-flex items-center rounded-full bg-success-700/40 px-2.5 py-1 text-xs font-medium text-success-200">معلّم</span>
+  </div>
+
+  <!-- Navigation list (127 entries) -->
+  <nav class="flex-1 overflow-y-auto py-2" aria-label="روابط المعلم">
+    <ul class="space-y-0.5 px-3">
+
+      <li>
+        <a href="dashboard.html"
+           class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+          <span class="text-sm">الرئيسية</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="my-classes.html"
+           class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+          <span class="text-sm">حصصي</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="live-sessions.html"
+           class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg>
+          <span class="text-sm">الحصص المباشرة</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="my-assigned-students.html"
+           class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <span class="text-sm">طلابي</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="assigned-student-details.html"
+           class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
+          <span class="text-sm">تفاصيل طالب</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="homework-review.html" aria-current="page"
+           class="flex items-center gap-3 px-3 py-2.5 rounded-lg is-active transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg>
+          <span class="text-sm">تصحيح الواجبات</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="homework-submission-details.html"
+           class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></svg>
+          <span class="text-sm">تفاصيل تسليم واجب</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="student-reports.html"
+           class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><path d="M5 21v-6"/><path d="M12 21V3"/><path d="M19 21V9"/></svg>
+          <span class="text-sm">تقارير الطلاب</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="attendance.html"
+           class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="m9 16 2 2 4-4"/></svg>
+          <span class="text-sm">الحضور</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="earnings.html"
+           class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"/></svg>
+          <span class="text-sm">الأرباح</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="settlement-details.html"
+           class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 17.5v-11"/></svg>
+          <span class="text-sm">تفاصيل التسوية</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="advances.html"
+           class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><path d="M11 15h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 17"/><path d="m7 21 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.75-2.91l-4.2 3.9"/><path d="m2 16 6 6"/><circle cx="16" cy="9" r="2.9"/><circle cx="6" cy="5" r="3"/></svg>
+          <span class="text-sm">السلف</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="calendar.html"
+           class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg>
+          <span class="text-sm">التقويم</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="messages.html"
+           class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/></svg>
+          <span class="text-sm">الرسائل</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="social-hub.html"
+           class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg>
+          <span class="text-sm">المجتمع التعليمي</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="profile.html"
+           class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/80 hover:bg-primary-800 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <span class="text-sm">الملف الشخصي</span>
+        </a>
+      </li>
+
+    </ul>
+  </nav>
+
+  <!-- Log Out -->
+    <div class="flex-shrink-0 px-3 pb-4 pt-2 border-t border-primary-800">
+      <a href="../../index.html"
+         class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/70 hover:bg-danger-700/30 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><path d="m16 17 5-5-5-5"/><path d="M21 12H9"/><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/></svg>
+        <span class="text-sm">تسجيل الخروج</span>
+      </a>
+    </div>
+
+</aside>
+
+  <div class="flex flex-1 flex-col min-w-0">
+    <header id="app-header" class="sticky top-0 z-30 flex h-16 items-center justify-between gap-4 bg-white border-b border-slate-200 px-4 md:px-6 lg:px-8 flex-shrink-0">
+      <div class="flex items-center gap-3 min-w-0">
+        <button data-sidebar-open aria-label="فتح القائمة" class="lg:hidden inline-flex h-10 w-10 items-center justify-center rounded-full text-text-base hover:bg-surface-50"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg><span class="sr-only">فتح القائمة</span></button>
+        <div class="min-w-0"><h1 class="text-base md:text-lg font-bold leading-tight truncate">تصحيح الواجبات</h1><p class="text-xs text-text-muted leading-tight hidden md:block">مايو 2026 — لوحة المعلم</p></div>
+      </div>
+      <div class="flex items-center gap-1.5 flex-shrink-0 relative">
+        <button type="button" aria-label="الإشعارات" class="relative inline-flex h-10 w-10 items-center justify-center rounded-full text-text-base hover:bg-surface-50"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true"><path d="M10.268 21a2 2 0 0 0 3.464 0"/><path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"/></svg><span class="absolute -top-0.5 -end-0.5 inline-flex h-5 min-w-[1.25rem] items-center justify-center rounded-full bg-danger-600 px-1 text-[0.625rem] font-bold text-white" aria-label="5 إشعارات">5</span></button>
+        <a href="messages.html" aria-label="الرسائل" class="relative inline-flex h-10 w-10 items-center justify-center rounded-full text-text-base hover:bg-surface-50"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/></svg><span class="absolute -top-0.5 -end-0.5 inline-flex h-5 min-w-[1.25rem] items-center justify-center rounded-full bg-accent-500 px-1 text-[0.625rem] font-bold text-white" aria-label="8 رسائل">8</span></a>
+        <div class="hidden md:block h-6 w-px bg-slate-200 mx-1" aria-hidden="true"></div>
+        <button type="button" data-dropdown-toggle="user-menu" class="flex items-center gap-2.5 rounded-xl px-2 py-1.5 hover:bg-surface-50">
+          <div class="h-9 w-9 rounded-full bg-success-700 text-white inline-flex items-center justify-center text-sm font-semibold">أ.ب</div>
+          <div class="hidden md:block text-start max-w-[10rem]"><p class="text-sm font-semibold leading-tight truncate">أ. أحمد البكري</p><p class="text-xs text-text-muted leading-tight">معلّم</p></div>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden md:block h-4 w-4 text-text-muted" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div id="user-menu" data-dropdown class="hidden absolute top-full end-0 mt-1 w-48 rounded-xl border border-slate-200 bg-white shadow-lg z-50 py-1">
+          <a href="profile.html" class="flex items-center gap-2.5 px-4 py-2.5 text-sm hover:bg-surface-50">الملف الشخصي</a>
+          <div class="my-1 border-t border-slate-100" aria-hidden="true"></div>
+          <a href="../../index.html" class="flex items-center gap-2.5 px-4 py-2.5 text-sm text-danger-600 hover:bg-danger-50">تسجيل الخروج</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-1 overflow-y-auto p-4 md:p-6 lg:p-8">
+      <div class="max-w-screen-xl mx-auto space-y-6">
+
+        <!-- Block 1: Header -->
+        <section id="hr-header">
+          <div class="flex items-start justify-between gap-3 flex-wrap">
+            <div>
+              <h2 class="text-xl md:text-2xl font-bold leading-tight">مراجعة الواجبات</h2>
+              <p class="text-sm text-text-muted mt-1 leading-7">صباح الخير، أ. أحمد. راجع تسليمات طلابك وقدّم ملاحظات تربوية واضحة.</p>
+            </div>
+            <div class="text-xs text-text-muted bg-white border border-slate-200 rounded-lg px-3 py-2 inline-flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 text-info-600" aria-hidden="true"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/></svg>
+              <span>اليوم: 8 مايو 2026</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Block 2: Summary cards (4) -->
+        <section id="hr-summary" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div class="bg-info-50 border border-info-200 rounded-2xl p-4 md:p-5 flex items-start gap-3">
+            <div class="flex-shrink-0 inline-flex items-center justify-center h-10 w-10 rounded-xl bg-info-100 text-info-700"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true"><path d="M22 12h-6l-2 3h-4l-2-3H2"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/></svg></div>
+            <div class="min-w-0"><p class="text-2xl font-bold text-info-700 leading-none">4</p><p class="text-sm text-text-base font-medium mt-1">بانتظار المراجعة</p></div>
+          </div>
+          <div class="bg-success-50 border border-success-200 rounded-2xl p-4 md:p-5 flex items-start gap-3">
+            <div class="flex-shrink-0 inline-flex items-center justify-center h-10 w-10 rounded-xl bg-success-100 text-success-700"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></div>
+            <div class="min-w-0"><p class="text-2xl font-bold text-success-700 leading-none">2</p><p class="text-sm text-text-base font-medium mt-1">تم القبول اليوم</p></div>
+          </div>
+          <div class="bg-warning-50 border border-warning-200 rounded-2xl p-4 md:p-5 flex items-start gap-3">
+            <div class="flex-shrink-0 inline-flex items-center justify-center h-10 w-10 rounded-xl bg-warning-100 text-warning-700"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></div>
+            <div class="min-w-0"><p class="text-2xl font-bold text-warning-700 leading-none">1</p><p class="text-sm text-text-base font-medium mt-1">تحتاج تعديل</p></div>
+          </div>
+          <div class="bg-danger-50 border border-danger-200 rounded-2xl p-4 md:p-5 flex items-start gap-3">
+            <div class="flex-shrink-0 inline-flex items-center justify-center h-10 w-10 rounded-xl bg-danger-100 text-danger-700"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true"><polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"/><line x1="12" x2="12" y1="8" y2="12"/></svg></div>
+            <div class="min-w-0"><p class="text-2xl font-bold text-danger-700 leading-none">1</p><p class="text-sm text-text-base font-medium mt-1">تسليمات متأخرة</p></div>
+          </div>
+        </section>
+
+        <!-- Block 3: Filters -->
+        <section id="hr-filters" class="bg-white rounded-2xl p-5 md:p-6 shadow-sm border border-slate-200 space-y-4">
+          <div class="relative">
+            <span class="absolute inset-y-0 inline-end-3 flex items-center pointer-events-none text-text-muted"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg></span>
+            <input type="text" name="hr-search" placeholder="ابحث باسم الطالب أو الواجب..." class="w-full ps-4 pe-10 py-2.5 rounded-xl border border-slate-300 text-sm bg-surface-50 focus:bg-white focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 focus:outline-none" />
+          </div>
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-3">
+            <div><label for="hr-filter-course" class="block text-xs font-medium text-text-muted mb-1">الدورة</label><select id="hr-filter-course" class="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm focus:border-primary-500 focus:outline-none"><option>كل الدورات</option><option>القرآن الكريم — المستوى الثالث</option><option>القرآن الكريم — المستوى الثاني</option><option>اللغة العربية — التعبير</option><option>الدراسات الإسلامية — السيرة</option><option>الرياضيات — الأساسيات</option></select></div>
+            <div><label for="hr-filter-student" class="block text-xs font-medium text-text-muted mb-1">الطالب</label><select id="hr-filter-student" class="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm focus:border-primary-500 focus:outline-none"><option>كل الطلاب</option><option>عبد الرحمن مؤمن</option><option>محمد السعيدي</option><option>عمر القحطاني</option><option>أحمد الغامدي</option><option>فيصل العتيبي</option><option>ريم الدوسري</option><option>ليلى المنصور</option><option>سارة الحربي</option></select></div>
+            <div><label for="hr-filter-status" class="block text-xs font-medium text-text-muted mb-1">الحالة</label><select id="hr-filter-status" class="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm focus:border-primary-500 focus:outline-none"><option>كل الحالات</option><option>بانتظار المراجعة</option><option>مقبول</option><option>مقبول مع ملاحظات</option><option>يحتاج تعديل</option><option>مرفوض</option><option>تأجيل المراجعة</option><option>متأخر</option></select></div>
+            <div><label for="hr-filter-date" class="block text-xs font-medium text-text-muted mb-1">التاريخ</label><select id="hr-filter-date" class="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm focus:border-primary-500 focus:outline-none"><option>كل التواريخ</option><option>اليوم</option><option>آخر 24 ساعة</option><option>آخر 7 أيام</option><option>مخصص...</option></select></div>
+          </div>
+        </section>
+
+        <!-- Block 4: Submissions queue (8 rows) -->
+        <section id="hr-queue">
+          <div class="flex items-center justify-between mb-3"><h2 class="text-base font-semibold">قائمة التسليمات <span class="text-xs font-normal text-text-muted">(8)</span></h2><p class="text-xs text-text-muted">مرتبة حسب وقت التسليم — الأحدث أولاً</p></div>
+
+          <!-- Desktop table -->
+          <div class="hidden md:block bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+            <table class="w-full text-sm border-collapse">
+              <thead class="bg-slate-50 text-text-muted"><tr><th class="text-start font-semibold px-4 py-3">الطالب</th><th class="text-start font-semibold px-4 py-3">الواجب</th><th class="text-start font-semibold px-4 py-3">الدورة</th><th class="text-start font-semibold px-4 py-3">وقت التسليم</th><th class="text-start font-semibold px-4 py-3">الحالة</th><th class="text-start font-semibold px-4 py-3">المحاولة</th><th class="text-start font-semibold px-4 py-3">إجراء</th></tr></thead>
+              <tbody class="divide-y divide-slate-100">
+
+                <!-- Row 1 — featured persona anchor -->
+                <tr class="bg-info-50/30 hover:bg-info-50/60 transition-colors">
+                  <td class="px-4 py-3 align-top"><div class="flex items-center gap-3"><div class="h-9 w-9 rounded-full bg-primary-700 text-white inline-flex items-center justify-center text-xs font-semibold flex-shrink-0">ع.م</div><div><p class="text-sm font-semibold">عبد الرحمن مؤمن</p><p class="text-xs text-text-muted">المستوى الثالث</p></div></div></td>
+                  <td class="px-4 py-3 align-top"><p class="text-sm font-medium leading-tight">تلاوة سورة الضحى مع تطبيق أحكام التجويد</p></td>
+                  <td class="px-4 py-3 align-top text-xs">القرآن الكريم — المستوى الثالث</td>
+                  <td class="px-4 py-3 align-top"><p class="text-xs font-medium">اليوم 09:14 ص</p><p class="text-xs text-text-muted mt-0.5">قبل ساعتين</p></td>
+                  <td class="px-4 py-3 align-top"><span class="inline-flex items-center gap-1 rounded-full bg-info-100 text-info-700 px-2 py-0.5 text-xs font-semibold"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3 w-3" aria-hidden="true"><path d="M22 12h-6l-2 3h-4l-2-3H2"/></svg>بانتظار المراجعة</span></td>
+                  <td class="px-4 py-3 align-top text-xs">المحاولة 1 من 3</td>
+                  <td class="px-4 py-3 align-top"><a href="homework-submission-details.html" class="inline-flex items-center gap-1 rounded-lg bg-primary-700 hover:bg-primary-800 text-white px-3 py-1.5 text-xs font-semibold transition-colors"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5" aria-hidden="true"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/></svg>مراجعة</a></td>
+                </tr>
+
+                <!-- Row 2 -->
+                <tr class="hover:bg-slate-50 transition-colors">
+                  <td class="px-4 py-3 align-top"><div class="flex items-center gap-3"><div class="h-9 w-9 rounded-full bg-info-700 text-white inline-flex items-center justify-center text-xs font-semibold flex-shrink-0">م.س</div><div><p class="text-sm font-semibold">محمد السعيدي</p><p class="text-xs text-text-muted">المستوى الثاني</p></div></div></td>
+                  <td class="px-4 py-3 align-top"><p class="text-sm font-medium leading-tight">كتابة فقرة عن "أهمية القراءة في الإسلام"</p></td>
+                  <td class="px-4 py-3 align-top text-xs">اللغة العربية — التعبير</td>
+                  <td class="px-4 py-3 align-top"><p class="text-xs font-medium">اليوم 08:42 ص</p><p class="text-xs text-text-muted mt-0.5">قبل 3 ساعات</p></td>
+                  <td class="px-4 py-3 align-top"><span class="inline-flex items-center gap-1 rounded-full bg-info-100 text-info-700 px-2 py-0.5 text-xs font-semibold">بانتظار المراجعة</span></td>
+                  <td class="px-4 py-3 align-top text-xs">المحاولة 1 من 3</td>
+                  <td class="px-4 py-3 align-top"><a href="homework-submission-details.html" class="inline-flex items-center gap-1 rounded-lg border border-primary-700 text-primary-700 hover:bg-primary-50 px-3 py-1.5 text-xs font-semibold transition-colors">مراجعة</a></td>
+                </tr>
+
+                <!-- Row 3 — resubmission -->
+                <tr class="hover:bg-slate-50 transition-colors">
+                  <td class="px-4 py-3 align-top"><div class="flex items-center gap-3"><div class="h-9 w-9 rounded-full bg-warning-700 text-white inline-flex items-center justify-center text-xs font-semibold flex-shrink-0">ع.ق</div><div><p class="text-sm font-semibold">عمر القحطاني</p><p class="text-xs text-text-muted">المستوى الثالث</p></div></div></td>
+                  <td class="px-4 py-3 align-top"><p class="text-sm font-medium leading-tight">تلاوة سورة الفلق مع التجويد</p></td>
+                  <td class="px-4 py-3 align-top text-xs">القرآن الكريم — المستوى الثالث</td>
+                  <td class="px-4 py-3 align-top"><p class="text-xs font-medium">أمس 21:18 م</p><p class="text-xs text-text-muted mt-0.5">قبل 14 ساعة</p></td>
+                  <td class="px-4 py-3 align-top"><span class="inline-flex items-center gap-1 rounded-full bg-info-100 text-info-700 px-2 py-0.5 text-xs font-semibold">بانتظار المراجعة</span></td>
+                  <td class="px-4 py-3 align-top text-xs"><span class="inline-flex items-center gap-1 rounded-full bg-warning-50 text-warning-700 px-1.5 py-0.5 font-medium"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3 w-3" aria-hidden="true"><path d="M3 12a9 9 0 1 0 9-9"/><path d="M3 3v5h5"/></svg>المحاولة 2 من 3 (إعادة تسليم)</span></td>
+                  <td class="px-4 py-3 align-top"><a href="homework-submission-details.html" class="inline-flex items-center gap-1 rounded-lg border border-primary-700 text-primary-700 hover:bg-primary-50 px-3 py-1.5 text-xs font-semibold transition-colors">مراجعة</a></td>
+                </tr>
+
+                <!-- Row 4 -->
+                <tr class="hover:bg-slate-50 transition-colors">
+                  <td class="px-4 py-3 align-top"><div class="flex items-center gap-3"><div class="h-9 w-9 rounded-full bg-success-700 text-white inline-flex items-center justify-center text-xs font-semibold flex-shrink-0">أ.غ</div><div><p class="text-sm font-semibold">أحمد الغامدي</p><p class="text-xs text-text-muted">المستوى الأول</p></div></div></td>
+                  <td class="px-4 py-3 align-top"><p class="text-sm font-medium leading-tight">حلّ أسئلة الفصل الأول من السيرة</p></td>
+                  <td class="px-4 py-3 align-top text-xs">الدراسات الإسلامية — السيرة</td>
+                  <td class="px-4 py-3 align-top"><p class="text-xs font-medium">أمس 18:05 م</p><p class="text-xs text-text-muted mt-0.5">قبل 17 ساعة</p></td>
+                  <td class="px-4 py-3 align-top"><span class="inline-flex items-center gap-1 rounded-full bg-info-100 text-info-700 px-2 py-0.5 text-xs font-semibold">بانتظار المراجعة</span></td>
+                  <td class="px-4 py-3 align-top text-xs">المحاولة 1 من 3</td>
+                  <td class="px-4 py-3 align-top"><a href="homework-submission-details.html" class="inline-flex items-center gap-1 rounded-lg border border-primary-700 text-primary-700 hover:bg-primary-50 px-3 py-1.5 text-xs font-semibold transition-colors">مراجعة</a></td>
+                </tr>
+
+                <!-- Row 5 — accepted today -->
+                <tr class="hover:bg-success-50/30 transition-colors">
+                  <td class="px-4 py-3 align-top"><div class="flex items-center gap-3"><div class="h-9 w-9 rounded-full bg-accent-700 text-white inline-flex items-center justify-center text-xs font-semibold flex-shrink-0">ف.ع</div><div><p class="text-sm font-semibold">فيصل العتيبي</p><p class="text-xs text-text-muted">المستوى الثاني</p></div></div></td>
+                  <td class="px-4 py-3 align-top"><p class="text-sm font-medium leading-tight">حفظ آيات من سورة الإسراء (1-15)</p></td>
+                  <td class="px-4 py-3 align-top text-xs">القرآن الكريم — المستوى الثاني</td>
+                  <td class="px-4 py-3 align-top"><p class="text-xs font-medium">أمس 14:30 م</p><p class="text-xs text-success-700 mt-0.5 font-semibold">تم التقييم اليوم</p></td>
+                  <td class="px-4 py-3 align-top"><span class="inline-flex items-center gap-1 rounded-full bg-success-100 text-success-700 px-2 py-0.5 text-xs font-semibold"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3 w-3" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>مقبول</span></td>
+                  <td class="px-4 py-3 align-top text-xs">المحاولة 1 من 3</td>
+                  <td class="px-4 py-3 align-top"><a href="homework-submission-details.html" class="text-xs text-text-muted hover:underline">عرض المراجعة</a></td>
+                </tr>
+
+                <!-- Row 6 — accepted today -->
+                <tr class="hover:bg-success-50/30 transition-colors">
+                  <td class="px-4 py-3 align-top"><div class="flex items-center gap-3"><div class="h-9 w-9 rounded-full bg-accent-700 text-white inline-flex items-center justify-center text-xs font-semibold flex-shrink-0">ر.د</div><div><p class="text-sm font-semibold">ريم الدوسري</p><p class="text-xs text-text-muted">المستوى الثالث</p></div></div></td>
+                  <td class="px-4 py-3 align-top"><p class="text-sm font-medium leading-tight">تأمل في معاني سورة القدر</p></td>
+                  <td class="px-4 py-3 align-top text-xs">الدراسات الإسلامية — التفسير</td>
+                  <td class="px-4 py-3 align-top"><p class="text-xs font-medium">اليوم 11:02 ص</p><p class="text-xs text-success-700 mt-0.5 font-semibold">تم التقييم اليوم</p></td>
+                  <td class="px-4 py-3 align-top"><span class="inline-flex items-center gap-1 rounded-full bg-success-100 text-success-700 px-2 py-0.5 text-xs font-semibold">مقبول</span></td>
+                  <td class="px-4 py-3 align-top text-xs">المحاولة 1 من 3</td>
+                  <td class="px-4 py-3 align-top"><a href="homework-submission-details.html" class="text-xs text-text-muted hover:underline">عرض المراجعة</a></td>
+                </tr>
+
+                <!-- Row 7 — needs revision -->
+                <tr class="hover:bg-warning-50/30 transition-colors">
+                  <td class="px-4 py-3 align-top"><div class="flex items-center gap-3"><div class="h-9 w-9 rounded-full bg-info-700 text-white inline-flex items-center justify-center text-xs font-semibold flex-shrink-0">ل.م</div><div><p class="text-sm font-semibold">ليلى المنصور</p><p class="text-xs text-text-muted">المستوى الثاني</p></div></div></td>
+                  <td class="px-4 py-3 align-top"><p class="text-sm font-medium leading-tight">حلّ تمارين النحو ص 45</p></td>
+                  <td class="px-4 py-3 align-top text-xs">اللغة العربية — النحو</td>
+                  <td class="px-4 py-3 align-top"><p class="text-xs font-medium">منذ 3 أيام</p><p class="text-xs text-text-muted mt-0.5">5 مايو 2026</p></td>
+                  <td class="px-4 py-3 align-top"><span class="inline-flex items-center gap-1 rounded-full bg-warning-100 text-warning-700 px-2 py-0.5 text-xs font-semibold"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3 w-3" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>يحتاج تعديل</span></td>
+                  <td class="px-4 py-3 align-top text-xs">المحاولة 1 من 3</td>
+                  <td class="px-4 py-3 align-top"><a href="homework-submission-details.html" class="text-xs text-text-muted hover:underline">عرض المراجعة</a></td>
+                </tr>
+
+                <!-- Row 8 — late -->
+                <tr class="hover:bg-danger-50/30 transition-colors">
+                  <td class="px-4 py-3 align-top"><div class="flex items-center gap-3"><div class="h-9 w-9 rounded-full bg-danger-600 text-white inline-flex items-center justify-center text-xs font-semibold flex-shrink-0">س.ح</div><div><p class="text-sm font-semibold">سارة الحربي</p><p class="text-xs text-text-muted">المستوى الأول</p></div></div></td>
+                  <td class="px-4 py-3 align-top"><p class="text-sm font-medium leading-tight">تسميع جدول الضرب من 1 إلى 10</p></td>
+                  <td class="px-4 py-3 align-top text-xs">الرياضيات — الأساسيات</td>
+                  <td class="px-4 py-3 align-top"><p class="text-xs font-medium text-danger-700">منذ 5 أيام</p><p class="text-xs text-danger-600 mt-0.5">مهلة منتهية</p></td>
+                  <td class="px-4 py-3 align-top"><span class="inline-flex items-center gap-1 rounded-full bg-danger-100 text-danger-700 px-2 py-0.5 text-xs font-semibold"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3 w-3" aria-hidden="true"><polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"/></svg>متأخر</span></td>
+                  <td class="px-4 py-3 align-top text-xs">المحاولة 1 من 3</td>
+                  <td class="px-4 py-3 align-top"><a href="homework-submission-details.html" class="inline-flex items-center gap-1 rounded-lg border border-primary-700 text-primary-700 hover:bg-primary-50 px-3 py-1.5 text-xs font-semibold transition-colors">مراجعة</a></td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Mobile cards -->
+          <div class="md:hidden space-y-3">
+            <article class="bg-white rounded-2xl border-info-300 border-s-4 border border-slate-200 p-4 shadow-sm space-y-3"><div class="flex items-center gap-3"><div class="h-9 w-9 rounded-full bg-primary-700 text-white inline-flex items-center justify-center text-xs font-semibold">ع.م</div><div><p class="text-sm font-semibold">عبد الرحمن مؤمن</p><p class="text-xs text-text-muted">المستوى الثالث</p></div></div><h3 class="text-sm font-medium leading-tight">تلاوة سورة الضحى مع تطبيق أحكام التجويد</h3><p class="text-xs text-text-muted">القرآن الكريم — المستوى الثالث</p><div class="flex items-center justify-between text-xs pt-2 border-t border-slate-100"><div><p class="text-text-muted">قبل ساعتين</p><p class="font-medium">اليوم 09:14 ص</p></div><span class="inline-flex items-center gap-1 rounded-full bg-info-100 text-info-700 px-2 py-0.5 font-semibold">بانتظار المراجعة</span></div><div class="flex items-center justify-between pt-2 border-t border-slate-100"><span class="text-xs text-text-muted">المحاولة 1 من 3</span><a href="homework-submission-details.html" class="inline-flex items-center gap-1 rounded-lg bg-primary-700 text-white px-3 py-1.5 text-xs font-semibold">مراجعة ←</a></div></article>
+            <article class="bg-white rounded-2xl border border-slate-200 p-4 shadow-sm space-y-3"><div class="flex items-center gap-3"><div class="h-9 w-9 rounded-full bg-info-700 text-white inline-flex items-center justify-center text-xs font-semibold">م.س</div><div><p class="text-sm font-semibold">محمد السعيدي</p><p class="text-xs text-text-muted">المستوى الثاني</p></div></div><h3 class="text-sm font-medium leading-tight">كتابة فقرة عن "أهمية القراءة في الإسلام"</h3><p class="text-xs text-text-muted">اللغة العربية — التعبير</p><div class="flex items-center justify-between text-xs pt-2 border-t border-slate-100"><span class="font-medium">اليوم 08:42 ص</span><span class="inline-flex items-center gap-1 rounded-full bg-info-100 text-info-700 px-2 py-0.5 font-semibold">بانتظار المراجعة</span></div><div class="flex items-center justify-between pt-2 border-t border-slate-100"><span class="text-xs text-text-muted">المحاولة 1 من 3</span><a href="homework-submission-details.html" class="text-xs font-semibold text-primary-700">مراجعة ←</a></div></article>
+            <article class="bg-white rounded-2xl border border-slate-200 p-4 shadow-sm space-y-3"><div class="flex items-center gap-3"><div class="h-9 w-9 rounded-full bg-warning-700 text-white inline-flex items-center justify-center text-xs font-semibold">ع.ق</div><div><p class="text-sm font-semibold">عمر القحطاني</p><p class="text-xs text-text-muted">المستوى الثالث</p></div></div><h3 class="text-sm font-medium leading-tight">تلاوة سورة الفلق مع التجويد</h3><p class="text-xs text-text-muted">القرآن الكريم — المستوى الثالث</p><div class="flex items-center justify-between text-xs pt-2 border-t border-slate-100"><span class="font-medium">أمس 21:18 م</span><span class="inline-flex items-center gap-1 rounded-full bg-info-100 text-info-700 px-2 py-0.5 font-semibold">بانتظار المراجعة</span></div><div class="flex items-center justify-between pt-2 border-t border-slate-100"><span class="text-xs text-warning-700 font-medium">المحاولة 2 من 3 (إعادة)</span><a href="homework-submission-details.html" class="text-xs font-semibold text-primary-700">مراجعة ←</a></div></article>
+            <article class="bg-white rounded-2xl border border-slate-200 p-4 shadow-sm space-y-3"><div class="flex items-center gap-3"><div class="h-9 w-9 rounded-full bg-success-700 text-white inline-flex items-center justify-center text-xs font-semibold">أ.غ</div><div><p class="text-sm font-semibold">أحمد الغامدي</p><p class="text-xs text-text-muted">المستوى الأول</p></div></div><h3 class="text-sm font-medium leading-tight">حلّ أسئلة الفصل الأول من السيرة</h3><p class="text-xs text-text-muted">الدراسات الإسلامية — السيرة</p><div class="flex items-center justify-between text-xs pt-2 border-t border-slate-100"><span class="font-medium">أمس 18:05 م</span><span class="inline-flex items-center gap-1 rounded-full bg-info-100 text-info-700 px-2 py-0.5 font-semibold">بانتظار المراجعة</span></div><div class="flex items-center justify-between pt-2 border-t border-slate-100"><span class="text-xs text-text-muted">المحاولة 1 من 3</span><a href="homework-submission-details.html" class="text-xs font-semibold text-primary-700">مراجعة ←</a></div></article>
+            <article class="bg-white rounded-2xl border-success-200 border-s-4 border border-slate-200 p-4 shadow-sm space-y-3"><div class="flex items-center gap-3"><div class="h-9 w-9 rounded-full bg-accent-700 text-white inline-flex items-center justify-center text-xs font-semibold">ف.ع</div><div><p class="text-sm font-semibold">فيصل العتيبي</p><p class="text-xs text-text-muted">المستوى الثاني</p></div></div><h3 class="text-sm font-medium leading-tight">حفظ آيات من سورة الإسراء (1-15)</h3><p class="text-xs text-text-muted">القرآن الكريم — المستوى الثاني</p><div class="flex items-center justify-between text-xs pt-2 border-t border-slate-100"><span class="text-success-700 font-medium">تم التقييم اليوم</span><span class="inline-flex items-center gap-1 rounded-full bg-success-100 text-success-700 px-2 py-0.5 font-semibold">مقبول</span></div></article>
+            <article class="bg-white rounded-2xl border-success-200 border-s-4 border border-slate-200 p-4 shadow-sm space-y-3"><div class="flex items-center gap-3"><div class="h-9 w-9 rounded-full bg-accent-700 text-white inline-flex items-center justify-center text-xs font-semibold">ر.د</div><div><p class="text-sm font-semibold">ريم الدوسري</p><p class="text-xs text-text-muted">المستوى الثالث</p></div></div><h3 class="text-sm font-medium leading-tight">تأمل في معاني سورة القدر</h3><p class="text-xs text-text-muted">الدراسات الإسلامية — التفسير</p><div class="flex items-center justify-between text-xs pt-2 border-t border-slate-100"><span class="text-success-700 font-medium">تم التقييم اليوم</span><span class="inline-flex items-center gap-1 rounded-full bg-success-100 text-success-700 px-2 py-0.5 font-semibold">مقبول</span></div></article>
+            <article class="bg-white rounded-2xl border-warning-200 border-s-4 border border-slate-200 p-4 shadow-sm space-y-3"><div class="flex items-center gap-3"><div class="h-9 w-9 rounded-full bg-info-700 text-white inline-flex items-center justify-center text-xs font-semibold">ل.م</div><div><p class="text-sm font-semibold">ليلى المنصور</p><p class="text-xs text-text-muted">المستوى الثاني</p></div></div><h3 class="text-sm font-medium leading-tight">حلّ تمارين النحو ص 45</h3><p class="text-xs text-text-muted">اللغة العربية — النحو</p><div class="flex items-center justify-between text-xs pt-2 border-t border-slate-100"><span>منذ 3 أيام</span><span class="inline-flex items-center gap-1 rounded-full bg-warning-100 text-warning-700 px-2 py-0.5 font-semibold">يحتاج تعديل</span></div></article>
+            <article class="bg-white rounded-2xl border-danger-200 border-s-4 border border-slate-200 p-4 shadow-sm space-y-3"><div class="flex items-center gap-3"><div class="h-9 w-9 rounded-full bg-danger-600 text-white inline-flex items-center justify-center text-xs font-semibold">س.ح</div><div><p class="text-sm font-semibold">سارة الحربي</p><p class="text-xs text-text-muted">المستوى الأول</p></div></div><h3 class="text-sm font-medium leading-tight">تسميع جدول الضرب من 1 إلى 10</h3><p class="text-xs text-text-muted">الرياضيات — الأساسيات</p><div class="flex items-center justify-between text-xs pt-2 border-t border-slate-100"><span class="text-danger-700 font-medium">منذ 5 أيام</span><span class="inline-flex items-center gap-1 rounded-full bg-danger-100 text-danger-700 px-2 py-0.5 font-semibold">متأخر</span></div><div class="flex items-center justify-between pt-2 border-t border-slate-100"><span class="text-xs text-text-muted">المحاولة 1 من 3</span><a href="homework-submission-details.html" class="text-xs font-semibold text-primary-700">مراجعة ←</a></div></article>
+          </div>
+
+          <p class="text-xs text-text-muted text-center mt-4">صفحة 1 من 1 — 8 من 8 تسليمات</p>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <div data-sidebar-backdrop class="hidden fixed inset-0 z-30 bg-primary-950/60 backdrop-blur-sm lg:hidden" aria-hidden="true"></div>
+  <script src="../../assets/js/main.js" defer></script>
+</body>
+</html>

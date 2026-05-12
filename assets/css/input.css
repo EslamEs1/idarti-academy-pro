@@ -23,3 +23,17 @@
     @apply !translate-x-0;
   }
 }
+
+@media print {
+  @page { margin: 0; size: A4 landscape; }
+  body { background: white !important; }
+  #app-sidebar, #app-header, #cp-actions, #cp-prototype-notice, #mr-actions, #mr-prototype-notice, #cr-actions, #cr-prototype-notice, [data-sidebar-backdrop] {
+    display: none !important;
+  }
+  #cp-certificate {
+    box-shadow: none !important;
+    margin: 0 auto !important;
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+}

@@ -37,10 +37,10 @@
   <!-- ── End: notification + message + user ──────────────────────── -->
   <div class="flex items-center gap-1.5 flex-shrink-0">
 
-    <!-- Notification button -->
+    <!-- Notification bell — links to notifications page (Spec 002: button→anchor) -->
     <!-- When notificationCount = 0: remove the <span> badge entirely -->
     <!-- When notificationCount ≥ 100: replace count with "99+" -->
-    <button type="button"
+    <a href="notifications.html"
       aria-label="الإشعارات"
       class="relative inline-flex h-10 w-10 items-center justify-center rounded-full text-text-base hover:bg-surface-50 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500 focus-visible:outline-offset-2">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true">
@@ -50,7 +50,7 @@
       <span class="absolute -top-0.5 -end-0.5 inline-flex h-5 min-w-[1.25rem] items-center justify-center rounded-full bg-danger-600 px-1 text-[0.625rem] font-bold text-white leading-none">
         {{notificationCount}}
       </span>
-    </button>
+    </a>
 
     <!-- Message button -->
     <!-- Adjust href to the correct messages.html for each role -->
