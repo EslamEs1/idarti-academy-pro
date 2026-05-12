@@ -184,11 +184,110 @@
 
     <!-- Content -->
     <main class="flex-1 p-4 md:p-6 lg:p-8">
-      <div class="bg-white rounded-xl border border-slate-200 p-8 text-center">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0" aria-hidden="true"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 17.5v-11"/></svg>
-        <h2 class="mt-4 text-xl font-bold text-text-base">تفاصيل الفاتورة</h2>
-        <p class="mt-2 text-sm text-text-muted">هذه الصفحة قيد الإنشاء</p>
+
+class="flex-1 overflow-y-auto p-4 md:p-6 lg:p-8"
+
+      <!-- Breadcrumb -->
+      <nav class="mb-4 text-xs text-text-muted" aria-label="التنقل">
+        <ol class="flex items-center gap-1.5">
+          <li><a href="invoices.html" class="hover:text-accent-600 transition-colors">الفواتير</a></li>
+          <li aria-hidden="true">/</li>
+          <li><span aria-current="page" class="text-text-base font-medium">INV-2026-0231</span></li>
+        </ol>
+      </nav>
+
+      <div class="mb-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+        <div>
+          <h2 class="text-xl md:text-2xl font-bold text-text-base">فاتورة INV-2026-0231</h2>
+          <p class="text-sm text-text-muted mt-1">اشتراك مايو 2026 — عبد الرحمن مؤمن</p>
+        </div>
+        <span class="inline-flex items-center gap-1.5 rounded-full bg-warning-100 text-warning-700 border border-warning-200 px-3 py-1.5 text-sm font-semibold flex-shrink-0">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          غير مدفوعة
+        </span>
       </div>
+
+      <!-- Invoice header -->
+      <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-6 mb-6">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <div>
+            <p class="text-xs font-semibold text-text-muted mb-1">رقم الفاتورة</p>
+            <p class="text-sm font-bold text-text-base font-mono">INV-2026-0231</p>
+          </div>
+          <div>
+            <p class="text-xs font-semibold text-text-muted mb-1">تاريخ الإصدار</p>
+            <p class="text-sm text-text-base tabular-nums">2026-05-01</p>
+          </div>
+          <div>
+            <p class="text-xs font-semibold text-text-muted mb-1">تاريخ الاستحقاق</p>
+            <p class="text-sm text-warning-600 font-semibold tabular-nums">2026-05-15</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Line items -->
+      <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden mb-6">
+        <div class="px-5 py-4 border-b border-slate-100">
+          <h3 class="text-sm font-semibold text-text-base">البنود</h3>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-slate-100 bg-surface-50">
+                <th class="px-5 py-3 text-start text-xs font-semibold text-text-muted">البند</th>
+                <th class="px-5 py-3 text-start text-xs font-semibold text-text-muted">التفاصيل</th>
+                <th class="px-5 py-3 text-end text-xs font-semibold text-text-muted">المبلغ</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100">
+              <tr>
+                <td class="px-5 py-3 text-text-base">اشتراك دورة القرآن الكريم — مايو 2026</td>
+                <td class="px-5 py-3 text-text-muted">المستوى الثالث · 8 حصص جماعية + 4 حصص خاصة</td>
+                <td class="px-5 py-3 text-end tabular-nums font-semibold">350.00 ريال</td>
+              </tr>
+              <tr>
+                <td class="px-5 py-3 text-text-base">مادة تجويد إضافية</td>
+                <td class="px-5 py-3 text-text-muted">حصتين إضافيتين</td>
+                <td class="px-5 py-3 text-end tabular-nums font-semibold">87.00 ريال</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr class="border-t-2 border-slate-200 bg-surface-50">
+                <td class="px-5 py-3 font-bold text-text-base" colspan="2">الإجمالي</td>
+                <td class="px-5 py-3 text-end tabular-nums font-bold text-lg">437.00 ريال</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+
+      <!-- Payment info -->
+      <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-6 mb-6">
+        <h3 class="text-sm font-semibold text-text-base border-b border-slate-100 pb-3 mb-4">معلومات الدفع</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <p class="text-xs font-semibold text-text-muted mb-1">حالة الدفع</p>
+            <p class="text-sm font-semibold text-warning-600">غير مدفوعة</p>
+          </div>
+          <div>
+            <p class="text-xs font-semibold text-text-muted mb-1">المبلغ المتبقي</p>
+            <p class="text-sm font-bold text-text-base tabular-nums">437.00 ريال</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Actions -->
+      <div class="flex items-center gap-3">
+        <a href="#" class="inline-flex items-center gap-1.5 rounded-lg bg-primary-900 px-5 py-2.5 text-sm font-semibold text-white hover:bg-primary-800 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
+          ادفع الآن
+        </a>
+        <button class="inline-flex items-center gap-1.5 rounded-lg border border-slate-200 bg-white px-5 py-2.5 text-sm font-semibold text-text-base hover:bg-surface-50 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+          تحميل PDF
+        </button>
+      </div>
+
     </main>
 
   </div>
